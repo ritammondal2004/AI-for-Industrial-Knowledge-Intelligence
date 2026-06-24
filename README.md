@@ -1,4 +1,6 @@
+## Project Structure
 
+```text
 industrial-knowledge-intelligence/
 ├── data/
 │   ├── raw/
@@ -9,30 +11,43 @@ industrial-knowledge-intelligence/
 │   └── processed/
 │       ├── chunks.jsonl
 │       ├── entities.jsonl
-│       └── chroma_db/           ← ChromaDB writes here automatically
-|
+│       └── chroma_db/           # ChromaDB vector store
+│
 ├── backend/
-│   ├── main.py                  ← FastAPI app, mounts routers 
+│   ├── main.py                  # FastAPI application entrypoint
 │   ├── routes/
 │   │   ├── __init__.py
-│   │   ├── query.py             ← POST /query  (RAG question-answering)
-│   │   ├── ingest.py            ← POST /ingest (trigger document processing)
-│   │   └── graph.py             ← GET /graph   (entity relationships for viz)
+│   │   ├── query.py             # POST /query (RAG QA endpoint)
+│   │   ├── ingest.py            # POST /ingest (document ingestion)
+│   │   └── graph.py             # GET /graph (knowledge graph data)
+│   │
 │   ├── services/
 │   │   ├── __init__.py
-│   │   ├── rag_chain.py         ← LangChain RAG logic
-│   │   ├── ingestion.py         ← PDF/CSV parsing + chunking
-│   │   └── graph_builder.py     ← entity/relationship extraction + graph ops
-│   └── models.py                ← Pydantic request/response schemas
+│   │   ├── rag_chain.py         # LangChain RAG pipeline
+│   │   ├── ingestion.py         # Parsing, chunking, embeddings
+│   │   └── graph_builder.py     # Entity & relationship extraction
+│   │
+│   └── models.py                # Pydantic schemas
 │
 ├── frontend/
-│   └── app.py                   ← Streamlit, calls backend via requests/httpx
+│   └── app.py                   # Streamlit frontend
 │
-|
-│
-├── .env                         ← API keys (GOOGLE_API_KEY etc.) — gitignored
-├── .gitignore                   ← data/processed/, .env, __pycache__/, venv/
+├── .env                         # API keys (gitignored)
+├── .gitignore
 ├── requirements.txt
-└── README.md  
+└── README.md
+```
 
-# to run `uvicorn backend.main:app --reload`
+## Run Locally
+
+### Start FastAPI Backend
+
+```bash
+uvicorn backend.main:app --reload
+```
+
+### Start Streamlit Frontend
+
+```bash
+streamlit run frontend/app.py
+```
