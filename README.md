@@ -33,7 +33,7 @@ industrial-knowledge-intelligence/
 │   └── app.py                   # Streamlit frontend
 │
 ├── .env                         # API keys (gitignored)
-├── .gitignore
+├── .gitignore                    
 ├── requirements.txt
 └── README.md
 ```
