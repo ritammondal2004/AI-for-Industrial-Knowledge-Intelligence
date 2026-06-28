@@ -8,32 +8,44 @@ industrial-knowledge-intelligence/
 │   │   ├── maintenance_logs/
 │   │   ├── procedures/
 │   │   └── incident_reports/
-│   └── processed/
-│       ├── chunks.jsonl
-│       ├── entities.jsonl
-│       └── chroma_db/           # ChromaDB vector store
+│   ├── processed/
+│   │   ├── chunks.jsonl
+│   │   ├── entities.jsonl
+│   │   └── chroma_db/              # ChromaDB vector store
+│   └── uploads/                    # temp storage for query-time file uploads (gitignored)
 │
 ├── backend/
-│   ├── main.py                  # FastAPI application entrypoint
-│   ├── routes/
+│   ├── main.py                     # FastAPI app entrypoint
+│   ├── config.py                   # model names, chunk size, paths — one place to tune
+│   ├── routes/                               
+│   │   ├── __init__.py                 
+│   │   ├── query.py                # POST /query — text + optional file upload
+│   │   ├── ingest.py                # POST /ingest — batch document ingestion
+│   │   └── graph.py                 # GET /graph — entity relationships for viz
+│   │                                              
+│   ├── services/                         
 │   │   ├── __init__.py
-│   │   ├── query.py             # POST /query (RAG QA endpoint)
-│   │   ├── ingest.py            # POST /ingest (document ingestion)
-│   │   └── graph.py             # GET /graph (knowledge graph data)
+│   │   ├── document_parser.py      # shared: PDF/DOCX/CSV text+table extraction 
+│   │   ├── image_captioner.py      # extract images from PDFs, caption via Gemini multimodal
+│   │   ├── chunking.py             # chunking strategy,  can be tuned without touching parsing logic
+│   │   ├── embeddings.py            # wraps Google embeddings + ChromaDB add/query calls
+│   │   ├── rag_chain.py             # LangChain RAG pipeline, multimodal-aware (text, image, doc context)
+│   │   └── graph_builder.py         # entity/relationship extraction + NetworkX build
 │   │
-│   ├── services/
-│   │   ├── __init__.py
-│   │   ├── rag_chain.py         # LangChain RAG pipeline
-│   │   ├── ingestion.py         # Parsing, chunking, embeddings
-│   │   └── graph_builder.py     # Entity & relationship extraction
-│   │
-│   └── models.py                # Pydantic schemas
+│   └── models.py                    # Pydantic schemas (QueryRequest now includes optional file, etc.)
 │
 ├── frontend/
-│   └── app.py                   # Streamlit frontend
+│   └── app.py                       # Streamlit — chat UI, file uploader, citations, graph viz panel
 │
-├── .env                         # API keys (gitignored)
-├── .gitignore                    
+├── eval/
+│   ├── qa_test_set.jsonl             # hand-written Q&A pairs for measuring retrieval accuracy
+│   └── run_eval.py                   # script to run the test set 
+│
+├── notebooks/
+│   └── exploration.ipynb             # test chunking, inspect extraction quality, debug retrieval
+│
+├── .env                              # API keys (gitignored)
+├── .gitignore
 ├── requirements.txt
 └── README.md
 ```
