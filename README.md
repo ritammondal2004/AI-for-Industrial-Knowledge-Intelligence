@@ -4,10 +4,12 @@
 industrial-knowledge-intelligence/
 ├── data/
 │   ├── raw/
-│   │   ├── manuals/
-│   │   ├── maintenance_logs/
-│   │   ├── procedures/
-│   │   └── incident_reports/
+│   │   ├── Incident_reports/
+|   |   ├── Maintenance_logs/
+│   │   ├── Manuals/
+│   │   ├── Procedures/ 
+|   |   └── Regulations/
+|   |
 │   ├── processed/
 │   │   ├── chunks.jsonl
 │   │   ├── entities.jsonl
@@ -19,17 +21,17 @@ industrial-knowledge-intelligence/
 │   ├── config.py                   # model names, chunk size, paths — one place to tune
 │   ├── routes/                               
 │   │   ├── __init__.py                 
-│   │   ├── query.py                # POST /query — text + optional file upload
+│   │   ├── query.py                 # POST /query — text + optional file upload
 │   │   ├── ingest.py                # POST /ingest — batch document ingestion
 │   │   └── graph.py                 # GET /graph — entity relationships for viz
 │   │                                              
 │   ├── services/                         
 │   │   ├── __init__.py
-│   │   ├── document_parser.py      # shared: PDF/DOCX/CSV text+table extraction 
-│   │   ├── image_captioner.py      # extract images from PDFs, caption via Gemini multimodal
-│   │   ├── chunking.py             # chunking strategy,  can be tuned without touching parsing logic
-│   │   ├── embeddings.py            # wraps Google embeddings + ChromaDB add/query calls
-│   │   ├── rag_chain.py             # LangChain RAG pipeline, multimodal-aware (text, image, doc context)
+│   │   ├── document_parser.py       # process_document() — the universal function above
+│   │   ├── image_captioner.py       # extract images from PDFs, caption via Gemini multimodal
+│   │   ├── chunking.py              # chunking strategy,  can be tuned without touching parsing logic
+│   │   ├── embeddings.py            # embed + ChromaDB add/query wrappers
+│   │   ├── rag_chain.py             # orchestrates retrieval + generation for /query
 │   │   └── graph_builder.py         # entity/relationship extraction + NetworkX build
 │   │
 │   └── models.py                    # Pydantic schemas (QueryRequest now includes optional file, etc.)
