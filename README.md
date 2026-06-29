@@ -11,8 +11,9 @@ industrial-knowledge-intelligence/
 |   |   └── Regulations/
 |   |       
 │   ├── processed/
-│   │   ├── chunks.json/
-│   │   ├── entities.json/
+│   │   ├── caption_cache.json/
+│   │   ├── ingestion_progress.json/
+|   |   ├── extracted_pages
 │   │   └── chroma_db/              # ChromaDB vector store
 |   |                 
 │   └── uploads/                    # temp storage for query-time file uploads (gitignored)
