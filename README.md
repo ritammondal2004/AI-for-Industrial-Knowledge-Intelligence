@@ -9,11 +9,12 @@ industrial-knowledge-intelligence/
 │   │   ├── Manuals/
 │   │   ├── Procedures/ 
 |   |   └── Regulations/
-|   |
+|   |       
 │   ├── processed/
-│   │   ├── chunks.jsonl
-│   │   ├── entities.jsonl
+│   │   ├── chunks.json/
+│   │   ├── entities.json/
 │   │   └── chroma_db/              # ChromaDB vector store
+|   |                 
 │   └── uploads/                    # temp storage for query-time file uploads (gitignored)
 │
 ├── backend/
@@ -24,9 +25,9 @@ industrial-knowledge-intelligence/
 │   │   ├── query.py                 # POST /query — text + optional file upload
 │   │   ├── ingest.py                # POST /ingest — batch document ingestion
 │   │   └── graph.py                 # GET /graph — entity relationships for viz
-│   │                                              
-│   ├── services/                         
-│   │   ├── __init__.py
+│   │                                               
+│   ├── services/                           
+│   │   ├── __init__.py  
 │   │   ├── document_parser.py       # process_document() — the universal function above
 │   │   ├── image_captioner.py       # extract images from PDFs, caption via Gemini multimodal
 │   │   ├── chunking.py              # chunking strategy,  can be tuned without touching parsing logic
@@ -36,7 +37,7 @@ industrial-knowledge-intelligence/
 │   │
 │   └── models.py                    # Pydantic schemas (QueryRequest now includes optional file, etc.)
 │
-├── frontend/
+├── frontend/      
 │   └── app.py                       # Streamlit — chat UI, file uploader, citations, graph viz panel
 │
 ├── eval/
