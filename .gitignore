@@ -1,0 +1,26 @@
+# Generated data
+data/processed/
+
+# Chroma
+**/chroma_db/
+
+# Knowledge graph
+*.gpickle
+
+# SQLite
+*.sqlite3 
+
+# Binary indexes
+*.bin
+
+# Pickle
+*.pkl
+
+# Cache
+caption_cache.json
+ingestion_progress.json
+kg_progress.json
+
+# Python
+__pycache__/
+.ipynb_checkpoints/
