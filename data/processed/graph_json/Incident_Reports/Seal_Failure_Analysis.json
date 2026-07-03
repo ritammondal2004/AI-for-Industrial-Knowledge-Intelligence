@@ -1,0 +1,299 @@
+{
+  "entities": [
+    {
+      "name": "Pump",
+      "type": "Equipment"
+    },
+    {
+      "name": "Mechanical seal",
+      "type": "Equipment"
+    },
+    {
+      "name": "Packing",
+      "type": "Equipment"
+    },
+    {
+      "name": "Impeller",
+      "type": "Component"
+    },
+    {
+      "name": "Sleeve",
+      "type": "Component"
+    },
+    {
+      "name": "Shaft",
+      "type": "Component"
+    },
+    {
+      "name": "Bearings",
+      "type": "Component"
+    },
+    {
+      "name": "Stuffing box",
+      "type": "Component"
+    },
+    {
+      "name": "Seal faces",
+      "type": "Component"
+    },
+    {
+      "name": "O-ring",
+      "type": "Component"
+    },
+    {
+      "name": "Environmental controls",
+      "type": "Component"
+    },
+    {
+      "name": "Chemical plant",
+      "type": "Location"
+    },
+    {
+      "name": "Maintenance shop",
+      "type": "Location"
+    },
+    {
+      "name": "Seal failure analysis",
+      "type": "Procedure"
+    },
+    {
+      "name": "Boring out stuffing box",
+      "type": "Procedure"
+    },
+    {
+      "name": "Impeller adjustment",
+      "type": "Procedure"
+    },
+    {
+      "name": "Equipment troubleshooting",
+      "type": "Procedure"
+    },
+    {
+      "name": "Dry running",
+      "type": "Hazard"
+    },
+    {
+      "name": "Loss of environmental controls",
+      "type": "Hazard"
+    },
+    {
+      "name": "Improper installation",
+      "type": "Hazard"
+    },
+    {
+      "name": "Corrosive environment",
+      "type": "Hazard"
+    },
+    {
+      "name": "Seal failure",
+      "type": "Failure"
+    },
+    {
+      "name": "Packing failure",
+      "type": "Failure"
+    },
+    {
+      "name": "O-ring failure",
+      "type": "Failure"
+    },
+    {
+      "name": "Bearing failure",
+      "type": "Failure"
+    },
+    {
+      "name": "Corrosion",
+      "type": "Failure"
+    },
+    {
+      "name": "Faces worn or opened",
+      "type": "Failure"
+    },
+    {
+      "name": "I.D./O.D. rub",
+      "type": "Failure"
+    },
+    {
+      "name": "Short service life",
+      "type": "Incident"
+    },
+    {
+      "name": "Operating temperature",
+      "type": "Parameter"
+    },
+    {
+      "name": "Flush rate",
+      "type": "Parameter"
+    },
+    {
+      "name": "Stuffing box pressure",
+      "type": "Parameter"
+    }
+  ],
+  "relations": [
+    {
+      "source": "Pump",
+      "relation": "contains",
+      "target": "Mechanical seal"
+    },
+    {
+      "source": "Pump",
+      "relation": "contains",
+      "target": "Packing"
+    },
+    {
+      "source": "Pump",
+      "relation": "contains",
+      "target": "Impeller"
+    },
+    {
+      "source": "Pump",
+      "relation": "contains",
+      "target": "Sleeve"
+    },
+    {
+      "source": "Pump",
+      "relation": "contains",
+      "target": "Shaft"
+    },
+    {
+      "source": "Pump",
+      "relation": "contains",
+      "target": "Bearings"
+    },
+    {
+      "source": "Pump",
+      "relation": "contains",
+      "target": "Stuffing box"
+    },
+    {
+      "source": "Mechanical seal",
+      "relation": "contains",
+      "target": "Seal faces"
+    },
+    {
+      "source": "Mechanical seal",
+      "relation": "contains",
+      "target": "O-ring"
+    },
+    {
+      "source": "Mechanical seal",
+      "relation": "contains",
+      "target": "Environmental controls"
+    },
+    {
+      "source": "Mechanical seal",
+      "relation": "suffers_from",
+      "target": "Seal failure"
+    },
+    {
+      "source": "Packing",
+      "relation": "suffers_from",
+      "target": "Packing failure"
+    },
+    {
+      "source": "Bearings",
+      "relation": "suffers_from",
+      "target": "Bearing failure"
+    },
+    {
+      "source": "O-ring",
+      "relation": "suffers_from",
+      "target": "O-ring failure"
+    },
+    {
+      "source": "Seal faces",
+      "relation": "suffers_from",
+      "target": "Faces worn or opened"
+    },
+    {
+      "source": "Mechanical seal",
+      "relation": "suffers_from",
+      "target": "I.D./O.D. rub"
+    },
+    {
+      "source": "Dry running",
+      "relation": "causes",
+      "target": "Seal failure"
+    },
+    {
+      "source": "Improper installation",
+      "relation": "causes",
+      "target": "Seal failure"
+    },
+    {
+      "source": "Loss of environmental controls",
+      "relation": "causes",
+      "target": "Seal failure"
+    },
+    {
+      "source": "Corrosive environment",
+      "relation": "causes",
+      "target": "Corrosion"
+    },
+    {
+      "source": "Corrosion",
+      "relation": "causes",
+      "target": "Seal failure"
+    },
+    {
+      "source": "Bearing failure",
+      "relation": "causes",
+      "target": "Seal failure"
+    },
+    {
+      "source": "Seal failure",
+      "relation": "causes",
+      "target": "Short service life"
+    },
+    {
+      "source": "Seal failure",
+      "relation": "requires_procedure",
+      "target": "Seal failure analysis"
+    },
+    {
+      "source": "Pump",
+      "relation": "requires_procedure",
+      "target": "Equipment troubleshooting"
+    },
+    {
+      "source": "Equipment troubleshooting",
+      "relation": "contains",
+      "target": "Seal failure analysis"
+    },
+    {
+      "source": "Seal failure analysis",
+      "relation": "located_in",
+      "target": "Maintenance shop"
+    },
+    {
+      "source": "Chemical plant",
+      "relation": "contains",
+      "target": "Maintenance shop"
+    },
+    {
+      "source": "Seal failure analysis",
+      "relation": "triggers",
+      "target": "Boring out stuffing box"
+    },
+    {
+      "source": "Seal failure analysis",
+      "relation": "triggers",
+      "target": "Impeller adjustment"
+    },
+    {
+      "source": "Environmental controls",
+      "relation": "regulates",
+      "target": "Operating temperature"
+    },
+    {
+      "source": "Environmental controls",
+      "relation": "regulates",
+      "target": "Flush rate"
+    },
+    {
+      "source": "Environmental controls",
+      "relation": "regulates",
+      "target": "Stuffing box pressure"
+    }
+  ]
+}

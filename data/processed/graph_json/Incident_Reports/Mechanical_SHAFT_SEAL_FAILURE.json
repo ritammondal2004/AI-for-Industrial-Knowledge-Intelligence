@@ -1,0 +1,383 @@
+{
+  "entities": [
+    {
+      "name": "Pump",
+      "type": "Equipment"
+    },
+    {
+      "name": "Mechanical shaft seal",
+      "type": "Equipment"
+    },
+    {
+      "name": "Motor",
+      "type": "Equipment"
+    },
+    {
+      "name": "Shakti LiqTec",
+      "type": "Instrument"
+    },
+    {
+      "name": "Pressure relief valve",
+      "type": "Component"
+    },
+    {
+      "name": "Rotating part",
+      "type": "Component"
+    },
+    {
+      "name": "O-ring",
+      "type": "Component"
+    },
+    {
+      "name": "Seal ring",
+      "type": "Component"
+    },
+    {
+      "name": "Seal face",
+      "type": "Component"
+    },
+    {
+      "name": "Metal bellows",
+      "type": "Component"
+    },
+    {
+      "name": "Spring",
+      "type": "Component"
+    },
+    {
+      "name": "Seat",
+      "type": "Component"
+    },
+    {
+      "name": "Shaft",
+      "type": "Component"
+    },
+    {
+      "name": "Sleeve",
+      "type": "Component"
+    },
+    {
+      "name": "Seal chamber",
+      "type": "Location"
+    },
+    {
+      "name": "Drive-end-flange",
+      "type": "Location"
+    },
+    {
+      "name": "Tungsten carbide",
+      "type": "Material"
+    },
+    {
+      "name": "Aluminum oxide",
+      "type": "Material"
+    },
+    {
+      "name": "Stainless steel",
+      "type": "Material"
+    },
+    {
+      "name": "Carbon graphite",
+      "type": "Material"
+    },
+    {
+      "name": "Cobalt binder",
+      "type": "Material"
+    },
+    {
+      "name": "Glass phase",
+      "type": "Material"
+    },
+    {
+      "name": "Pumped medium",
+      "type": "Chemical"
+    },
+    {
+      "name": "Water",
+      "type": "Chemical"
+    },
+    {
+      "name": "Air",
+      "type": "Chemical"
+    },
+    {
+      "name": "Priming",
+      "type": "Procedure"
+    },
+    {
+      "name": "Failure analysis",
+      "type": "Procedure"
+    },
+    {
+      "name": "Venting",
+      "type": "Procedure"
+    },
+    {
+      "name": "Dry running",
+      "type": "Hazard"
+    },
+    {
+      "name": "Frictional heat",
+      "type": "Hazard"
+    },
+    {
+      "name": "Shaft misalignment",
+      "type": "Hazard"
+    },
+    {
+      "name": "System pressure change",
+      "type": "Hazard"
+    },
+    {
+      "name": "System temperature change",
+      "type": "Hazard"
+    },
+    {
+      "name": "High humidity",
+      "type": "Hazard"
+    },
+    {
+      "name": "Shaft seal failure",
+      "type": "Failure"
+    },
+    {
+      "name": "Pump downtime",
+      "type": "Failure"
+    },
+    {
+      "name": "Hang-up",
+      "type": "Failure"
+    },
+    {
+      "name": "Thermal cracks",
+      "type": "Failure"
+    },
+    {
+      "name": "Abrasive wear",
+      "type": "Failure"
+    },
+    {
+      "name": "Clogging",
+      "type": "Failure"
+    },
+    {
+      "name": "Sticking",
+      "type": "Failure"
+    },
+    {
+      "name": "Selective corrosion",
+      "type": "Failure"
+    },
+    {
+      "name": "Heavy erosion",
+      "type": "Failure"
+    },
+    {
+      "name": "Viscosity",
+      "type": "Parameter"
+    },
+    {
+      "name": "Temperature",
+      "type": "Parameter"
+    },
+    {
+      "name": "Boiling point",
+      "type": "Parameter"
+    },
+    {
+      "name": "Starting torque",
+      "type": "Parameter"
+    },
+    {
+      "name": "Coolant pressure",
+      "type": "Parameter"
+    }
+  ],
+  "relations": [
+    {
+      "source": "Pump",
+      "relation": "contains",
+      "target": "Mechanical shaft seal"
+    },
+    {
+      "source": "Mechanical shaft seal",
+      "relation": "contains",
+      "target": "Rotating part"
+    },
+    {
+      "source": "Mechanical shaft seal",
+      "relation": "contains",
+      "target": "O-ring"
+    },
+    {
+      "source": "Mechanical shaft seal",
+      "relation": "contains",
+      "target": "Seal ring"
+    },
+    {
+      "source": "Mechanical shaft seal",
+      "relation": "contains",
+      "target": "Seal face"
+    },
+    {
+      "source": "Mechanical shaft seal",
+      "relation": "contains",
+      "target": "Metal bellows"
+    },
+    {
+      "source": "Mechanical shaft seal",
+      "relation": "contains",
+      "target": "Spring"
+    },
+    {
+      "source": "Mechanical shaft seal",
+      "relation": "contains",
+      "target": "Seat"
+    },
+    {
+      "source": "Mechanical shaft seal",
+      "relation": "located_in",
+      "target": "Seal chamber"
+    },
+    {
+      "source": "Shaft seal failure",
+      "relation": "causes",
+      "target": "Pump downtime"
+    },
+    {
+      "source": "Dry running",
+      "relation": "causes",
+      "target": "Frictional heat"
+    },
+    {
+      "source": "Poor venting",
+      "relation": "causes",
+      "target": "Dry running"
+    },
+    {
+      "source": "Air",
+      "relation": "accumulates_in",
+      "target": "Seal chamber"
+    },
+    {
+      "source": "Frictional heat",
+      "relation": "causes",
+      "target": "Thermal cracks"
+    },
+    {
+      "source": "Thermal cracks",
+      "relation": "located_on",
+      "target": "Seal face"
+    },
+    {
+      "source": "Shaft misalignment",
+      "relation": "causes",
+      "target": "Shaft seal failure"
+    },
+    {
+      "source": "O-ring",
+      "relation": "suffers_from",
+      "target": "Hang-up"
+    },
+    {
+      "source": "System pressure change",
+      "relation": "triggers",
+      "target": "Hang-up"
+    },
+    {
+      "source": "System temperature change",
+      "relation": "triggers",
+      "target": "Hang-up"
+    },
+    {
+      "source": "Metal bellows",
+      "relation": "suffers_from",
+      "target": "Clogging"
+    },
+    {
+      "source": "Seal ring",
+      "relation": "suffers_from",
+      "target": "Sticking"
+    },
+    {
+      "source": "Tungsten carbide",
+      "relation": "suffers_from",
+      "target": "Selective corrosion"
+    },
+    {
+      "source": "Cobalt binder",
+      "relation": "contains",
+      "target": "Tungsten carbide"
+    },
+    {
+      "source": "Glass phase",
+      "relation": "contains",
+      "target": "Aluminum oxide"
+    },
+    {
+      "source": "Aluminum oxide",
+      "relation": "suffers_from",
+      "target": "Selective corrosion"
+    },
+    {
+      "source": "Selective corrosion",
+      "relation": "causes",
+      "target": "Heavy erosion"
+    },
+    {
+      "source": "Water",
+      "relation": "causes",
+      "target": "Selective corrosion"
+    },
+    {
+      "source": "Priming",
+      "relation": "prevents",
+      "target": "Dry running"
+    },
+    {
+      "source": "Shakti LiqTec",
+      "relation": "monitors",
+      "target": "Dry running"
+    },
+    {
+      "source": "Shakti LiqTec",
+      "relation": "shuts_down",
+      "target": "Pump"
+    },
+    {
+      "source": "High humidity",
+      "relation": "located_in",
+      "target": "Drive-end-flange"
+    },
+    {
+      "source": "Pressure relief valve",
+      "relation": "regulates",
+      "target": "Coolant pressure"
+    },
+    {
+      "source": "Motor",
+      "relation": "governed_by",
+      "target": "Coolant pressure"
+    },
+    {
+      "source": "Viscosity",
+      "relation": "affects",
+      "target": "Frictional heat"
+    },
+    {
+      "source": "Temperature",
+      "relation": "affects",
+      "target": "Boiling point"
+    },
+    {
+      "source": "Starting torque",
+      "relation": "overcomes",
+      "target": "Sticking"
+    },
+    {
+      "source": "Failure analysis",
+      "relation": "investigates",
+      "target": "Shaft seal failure"
+    }
+  ]
+}

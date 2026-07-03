@@ -1,0 +1,290 @@
+{
+  "entities": [
+    {
+      "name": "Tosco Avon Refinery",
+      "type": "Location"
+    },
+    {
+      "name": "Crude fractionation tower",
+      "type": "Equipment"
+    },
+    {
+      "name": "Desalter vessel",
+      "type": "Equipment"
+    },
+    {
+      "name": "Overhead accumulator",
+      "type": "Equipment"
+    },
+    {
+      "name": "Naphtha draw tray",
+      "type": "Component"
+    },
+    {
+      "name": "Naphtha piping",
+      "type": "Component"
+    },
+    {
+      "name": "Flange",
+      "type": "Component"
+    },
+    {
+      "name": "Energy-isolating device",
+      "type": "Component"
+    },
+    {
+      "name": "Blind",
+      "type": "Component"
+    },
+    {
+      "name": "Plastic sheeting",
+      "type": "Material"
+    },
+    {
+      "name": "Plastic pan",
+      "type": "Material"
+    },
+    {
+      "name": "Naphtha",
+      "type": "Chemical"
+    },
+    {
+      "name": "Feedstock",
+      "type": "Material"
+    },
+    {
+      "name": "Hot work",
+      "type": "Procedure"
+    },
+    {
+      "name": "Lockout/Tagout",
+      "type": "Procedure"
+    },
+    {
+      "name": "Management of change",
+      "type": "Procedure"
+    },
+    {
+      "name": "Hazard evaluation",
+      "type": "Procedure"
+    },
+    {
+      "name": "Corrosion control program",
+      "type": "Procedure"
+    },
+    {
+      "name": "Line breaking",
+      "type": "Procedure"
+    },
+    {
+      "name": "Pinhole leak",
+      "type": "Failure"
+    },
+    {
+      "name": "Corrosion",
+      "type": "Failure"
+    },
+    {
+      "name": "Plugging",
+      "type": "Failure"
+    },
+    {
+      "name": "Fouling",
+      "type": "Failure"
+    },
+    {
+      "name": "Naphtha release",
+      "type": "Failure"
+    },
+    {
+      "name": "Incomplete isolation",
+      "type": "Failure"
+    },
+    {
+      "name": "Nonroutine maintenance",
+      "type": "Hazard"
+    },
+    {
+      "name": "Hot fractionator tower",
+      "type": "Hazard"
+    },
+    {
+      "name": "Ignition source",
+      "type": "Hazard"
+    },
+    {
+      "name": "Multiple fatality refinery fire",
+      "type": "Incident"
+    },
+    {
+      "name": "Operating pressure",
+      "type": "Parameter"
+    },
+    {
+      "name": "Elevation",
+      "type": "Parameter"
+    }
+  ],
+  "relations": [
+    {
+      "source": "Tosco Avon Refinery",
+      "relation": "contains",
+      "target": "Crude fractionation tower"
+    },
+    {
+      "source": "Tosco Avon Refinery",
+      "relation": "contains",
+      "target": "Desalter vessel"
+    },
+    {
+      "source": "Crude fractionation tower",
+      "relation": "contains",
+      "target": "Naphtha draw tray"
+    },
+    {
+      "source": "Crude fractionation tower",
+      "relation": "contains",
+      "target": "Naphtha piping"
+    },
+    {
+      "source": "Naphtha piping",
+      "relation": "contains",
+      "target": "Flange"
+    },
+    {
+      "source": "Naphtha piping",
+      "relation": "interacts_with",
+      "target": "Overhead accumulator"
+    },
+    {
+      "source": "Desalter vessel",
+      "relation": "processes",
+      "target": "Feedstock"
+    },
+    {
+      "source": "Naphtha piping",
+      "relation": "contains",
+      "target": "Naphtha"
+    },
+    {
+      "source": "Corrosion",
+      "relation": "causes",
+      "target": "Pinhole leak"
+    },
+    {
+      "source": "Pinhole leak",
+      "relation": "located_on",
+      "target": "Naphtha piping"
+    },
+    {
+      "source": "Desalter vessel",
+      "relation": "prevents",
+      "target": "Corrosion"
+    },
+    {
+      "source": "Desalter vessel",
+      "relation": "prevents",
+      "target": "Plugging"
+    },
+    {
+      "source": "Desalter vessel",
+      "relation": "prevents",
+      "target": "Fouling"
+    },
+    {
+      "source": "Line breaking",
+      "relation": "governed_by",
+      "target": "Nonroutine maintenance"
+    },
+    {
+      "source": "Hot work",
+      "relation": "governed_by",
+      "target": "Nonroutine maintenance"
+    },
+    {
+      "source": "Line breaking",
+      "relation": "requires_procedure",
+      "target": "Lockout/Tagout"
+    },
+    {
+      "source": "Lockout/Tagout",
+      "relation": "uses",
+      "target": "Energy-isolating device"
+    },
+    {
+      "source": "Lockout/Tagout",
+      "relation": "uses",
+      "target": "Blind"
+    },
+    {
+      "source": "Line breaking",
+      "relation": "requires_procedure",
+      "target": "Management of change"
+    },
+    {
+      "source": "Management of change",
+      "relation": "contains",
+      "target": "Hazard evaluation"
+    },
+    {
+      "source": "Corrosion control program",
+      "relation": "monitors",
+      "target": "Corrosion"
+    },
+    {
+      "source": "Incomplete isolation",
+      "relation": "causes",
+      "target": "Naphtha release"
+    },
+    {
+      "source": "Line breaking",
+      "relation": "suffers_from",
+      "target": "Incomplete isolation"
+    },
+    {
+      "source": "Naphtha release",
+      "relation": "interacts_with",
+      "target": "Hot fractionator tower"
+    },
+    {
+      "source": "Hot fractionator tower",
+      "relation": "acts_as",
+      "target": "Ignition source"
+    },
+    {
+      "source": "Naphtha release",
+      "relation": "triggers",
+      "target": "Multiple fatality refinery fire"
+    },
+    {
+      "source": "Ignition source",
+      "relation": "triggers",
+      "target": "Multiple fatality refinery fire"
+    },
+    {
+      "source": "Multiple fatality refinery fire",
+      "relation": "located_in",
+      "target": "Tosco Avon Refinery"
+    },
+    {
+      "source": "Crude fractionation tower",
+      "relation": "governed_by",
+      "target": "Operating pressure"
+    },
+    {
+      "source": "Naphtha piping",
+      "relation": "governed_by",
+      "target": "Elevation"
+    },
+    {
+      "source": "Plastic sheeting",
+      "relation": "used_during",
+      "target": "Nonroutine maintenance"
+    },
+    {
+      "source": "Plastic pan",
+      "relation": "used_during",
+      "target": "Nonroutine maintenance"
+    }
+  ]
+}

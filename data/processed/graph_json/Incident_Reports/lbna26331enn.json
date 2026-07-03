@@ -1,0 +1,434 @@
+{
+  "entities": [
+    {
+      "name": "Petroleum refinery",
+      "type": "Location"
+    },
+    {
+      "name": "Crude distillation unit",
+      "type": "Equipment"
+    },
+    {
+      "name": "Hydrocracker unit",
+      "type": "Equipment"
+    },
+    {
+      "name": "Fluid catalytic cracking unit",
+      "type": "Equipment"
+    },
+    {
+      "name": "Amine treating unit",
+      "type": "Equipment"
+    },
+    {
+      "name": "Heat exchanger",
+      "type": "Equipment"
+    },
+    {
+      "name": "Storage tank",
+      "type": "Equipment"
+    },
+    {
+      "name": "Process piping",
+      "type": "Component"
+    },
+    {
+      "name": "Pressure vessel",
+      "type": "Equipment"
+    },
+    {
+      "name": "Distillation column",
+      "type": "Equipment"
+    },
+    {
+      "name": "Boiler",
+      "type": "Equipment"
+    },
+    {
+      "name": "Overhead condenser",
+      "type": "Component"
+    },
+    {
+      "name": "Elbow and bend",
+      "type": "Component"
+    },
+    {
+      "name": "Welded joint",
+      "type": "Component"
+    },
+    {
+      "name": "Structural support",
+      "type": "Component"
+    },
+    {
+      "name": "Crude oil",
+      "type": "Material"
+    },
+    {
+      "name": "Carbon steel",
+      "type": "Material"
+    },
+    {
+      "name": "Stainless steel",
+      "type": "Material"
+    },
+    {
+      "name": "Hydrogen",
+      "type": "Chemical"
+    },
+    {
+      "name": "Hydrogen sulfide",
+      "type": "Chemical"
+    },
+    {
+      "name": "Hydrochloric acid",
+      "type": "Chemical"
+    },
+    {
+      "name": "Ammonium chloride",
+      "type": "Chemical"
+    },
+    {
+      "name": "Sulfuric acid",
+      "type": "Chemical"
+    },
+    {
+      "name": "Naphthenic acid",
+      "type": "Chemical"
+    },
+    {
+      "name": "Water wash injection",
+      "type": "Procedure"
+    },
+    {
+      "name": "Non-destructive testing",
+      "type": "Procedure"
+    },
+    {
+      "name": "Ultrasonic thickness measurement",
+      "type": "Procedure"
+    },
+    {
+      "name": "Corrosion monitoring",
+      "type": "Procedure"
+    },
+    {
+      "name": "Risk-based inspection",
+      "type": "Procedure"
+    },
+    {
+      "name": "Chemical dosing",
+      "type": "Procedure"
+    },
+    {
+      "name": "Toxic gas cloud",
+      "type": "Hazard"
+    },
+    {
+      "name": "Explosive atmosphere",
+      "type": "Hazard"
+    },
+    {
+      "name": "High operating temperature",
+      "type": "Hazard"
+    },
+    {
+      "name": "High operating pressure",
+      "type": "Hazard"
+    },
+    {
+      "name": "Corrosion under insulation",
+      "type": "Failure"
+    },
+    {
+      "name": "Sulfidation",
+      "type": "Failure"
+    },
+    {
+      "name": "Naphthenic acid corrosion",
+      "type": "Failure"
+    },
+    {
+      "name": "Ammonium salt deposition",
+      "type": "Failure"
+    },
+    {
+      "name": "Erosion-corrosion",
+      "type": "Failure"
+    },
+    {
+      "name": "Stress corrosion cracking",
+      "type": "Failure"
+    },
+    {
+      "name": "Wall thinning",
+      "type": "Failure"
+    },
+    {
+      "name": "Hydrogen blistering",
+      "type": "Failure"
+    },
+    {
+      "name": "Loss of containment",
+      "type": "Failure"
+    },
+    {
+      "name": "Piping rupture",
+      "type": "Failure"
+    },
+    {
+      "name": "Major refinery fire and explosion",
+      "type": "Incident"
+    },
+    {
+      "name": "Seveso III Directive",
+      "type": "Regulation"
+    },
+    {
+      "name": "pH level",
+      "type": "Parameter"
+    },
+    {
+      "name": "Fluid velocity",
+      "type": "Parameter"
+    },
+    {
+      "name": "Sulfur content",
+      "type": "Parameter"
+    },
+    {
+      "name": "Total acid number",
+      "type": "Parameter"
+    },
+    {
+      "name": "Wall thickness",
+      "type": "Parameter"
+    },
+    {
+      "name": "Moisture content",
+      "type": "Parameter"
+    }
+  ],
+  "relations": [
+    {
+      "source": "Petroleum refinery",
+      "relation": "contains",
+      "target": "Crude distillation unit"
+    },
+    {
+      "source": "Petroleum refinery",
+      "relation": "contains",
+      "target": "Hydrocracker unit"
+    },
+    {
+      "source": "Petroleum refinery",
+      "relation": "contains",
+      "target": "Fluid catalytic cracking unit"
+    },
+    {
+      "source": "Petroleum refinery",
+      "relation": "contains",
+      "target": "Amine treating unit"
+    },
+    {
+      "source": "Crude distillation unit",
+      "relation": "contains",
+      "target": "Distillation column"
+    },
+    {
+      "source": "Crude distillation unit",
+      "relation": "contains",
+      "target": "Overhead condenser"
+    },
+    {
+      "source": "Crude distillation unit",
+      "relation": "contains",
+      "target": "Process piping"
+    },
+    {
+      "source": "Hydrocracker unit",
+      "relation": "contains",
+      "target": "Pressure vessel"
+    },
+    {
+      "source": "Hydrocracker unit",
+      "relation": "contains",
+      "target": "Heat exchanger"
+    },
+    {
+      "source": "Process piping",
+      "relation": "contains",
+      "target": "Elbow and bend"
+    },
+    {
+      "source": "Process piping",
+      "relation": "contains",
+      "target": "Welded joint"
+    },
+    {
+      "source": "Crude oil",
+      "relation": "contains",
+      "target": "Hydrogen sulfide"
+    },
+    {
+      "source": "Crude oil",
+      "relation": "contains",
+      "target": "Naphthenic acid"
+    },
+    {
+      "source": "Hydrogen sulfide",
+      "relation": "causes",
+      "target": "Sulfidation"
+    },
+    {
+      "source": "High operating temperature",
+      "relation": "accelerates",
+      "target": "Sulfidation"
+    },
+    {
+      "source": "High operating temperature",
+      "relation": "accelerates",
+      "target": "Naphthenic acid corrosion"
+    },
+    {
+      "source": "Carbon steel",
+      "relation": "suffers_from",
+      "target": "Sulfidation"
+    },
+    {
+      "source": "Naphthenic acid",
+      "relation": "causes",
+      "target": "Naphthenic acid corrosion"
+    },
+    {
+      "source": "Hydrochloric acid",
+      "relation": "causes",
+      "target": "Wall thinning"
+    },
+    {
+      "source": "Ammonium chloride",
+      "relation": "causes",
+      "target": "Ammonium salt deposition"
+    },
+    {
+      "source": "Ammonium salt deposition",
+      "relation": "underneath_causes",
+      "target": "Stress corrosion cracking"
+    },
+    {
+      "source": "Fluid velocity",
+      "relation": "accelerates",
+      "target": "Erosion-corrosion"
+    },
+    {
+      "source": "Elbow and bend",
+      "relation": "suffers_from",
+      "target": "Erosion-corrosion"
+    },
+    {
+      "source": "Moisture content",
+      "relation": "trapped_under_insulation_causes",
+      "target": "Corrosion under insulation"
+    },
+    {
+      "source": "Structural support",
+      "relation": "suffers_from",
+      "target": "Corrosion under insulation"
+    },
+    {
+      "source": "Hydrogen",
+      "relation": "diffuses_into_steel_causes",
+      "target": "Hydrogen blistering"
+    },
+    {
+      "source": "Sulfidation",
+      "relation": "causes",
+      "target": "Wall thinning"
+    },
+    {
+      "source": "Naphthenic acid corrosion",
+      "relation": "causes",
+      "target": "Wall thinning"
+    },
+    {
+      "source": "Wall thinning",
+      "relation": "reduces",
+      "target": "Wall thickness"
+    },
+    {
+      "source": "Wall thinning",
+      "relation": "leads_to",
+      "target": "Piping rupture"
+    },
+    {
+      "source": "Piping rupture",
+      "relation": "causes",
+      "target": "Loss of containment"
+    },
+    {
+      "source": "High operating pressure",
+      "relation": "drives",
+      "target": "Loss of containment"
+    },
+    {
+      "source": "Loss of containment",
+      "relation": "creates",
+      "target": "Explosive atmosphere"
+    },
+    {
+      "source": "Loss of containment",
+      "relation": "creates",
+      "target": "Toxic gas cloud"
+    },
+    {
+      "source": "Explosive atmosphere",
+      "relation": "triggers",
+      "target": "Major refinery fire and explosion"
+    },
+    {
+      "source": "Water wash injection",
+      "relation": "dissolves",
+      "target": "Ammonium salt deposition"
+    },
+    {
+      "source": "Chemical dosing",
+      "relation": "neutralizes",
+      "target": "pH level"
+    },
+    {
+      "source": "Ultrasonic thickness measurement",
+      "relation": "measures",
+      "target": "Wall thickness"
+    },
+    {
+      "source": "Non-destructive testing",
+      "relation": "contains",
+      "target": "Ultrasonic thickness measurement"
+    },
+    {
+      "source": "Corrosion monitoring",
+      "relation": "prevents",
+      "target": "Piping rupture"
+    },
+    {
+      "source": "Risk-based inspection",
+      "relation": "schedules",
+      "target": "Corrosion monitoring"
+    },
+    {
+      "source": "Petroleum refinery",
+      "relation": "governed_by",
+      "target": "Seveso III Directive"
+    },
+    {
+      "source": "Sulfur content",
+      "relation": "monitored_in",
+      "target": "Crude oil"
+    },
+    {
+      "source": "Total acid number",
+      "relation": "quantifies",
+      "target": "Naphthenic acid"
+    }
+  ]
+}

@@ -1,0 +1,383 @@
+{
+  "entities": [
+    {
+      "name": "Pump",
+      "type": "Equipment"
+    },
+    {
+      "name": "Mechanical shaft seal",
+      "type": "Equipment"
+    },
+    {
+      "name": "Stuffing box",
+      "type": "Equipment"
+    },
+    {
+      "name": "Lip seal",
+      "type": "Equipment"
+    },
+    {
+      "name": "Dosing pump",
+      "type": "Equipment"
+    },
+    {
+      "name": "Pressure intensifier",
+      "type": "Equipment"
+    },
+    {
+      "name": "Impeller",
+      "type": "Component"
+    },
+    {
+      "name": "Volute casing",
+      "type": "Component"
+    },
+    {
+      "name": "Rotating seal ring",
+      "type": "Component"
+    },
+    {
+      "name": "Stationary seat",
+      "type": "Component"
+    },
+    {
+      "name": "Secondary seal",
+      "type": "Component"
+    },
+    {
+      "name": "O-ring",
+      "type": "Component"
+    },
+    {
+      "name": "Rubber bellows",
+      "type": "Component"
+    },
+    {
+      "name": "Spring",
+      "type": "Component"
+    },
+    {
+      "name": "Torque transmission element",
+      "type": "Component"
+    },
+    {
+      "name": "Seal gap",
+      "type": "Component"
+    },
+    {
+      "name": "Seal chamber",
+      "type": "Location"
+    },
+    {
+      "name": "Pump housing",
+      "type": "Location"
+    },
+    {
+      "name": "Atmosphere",
+      "type": "Location"
+    },
+    {
+      "name": "Circulation",
+      "type": "Procedure"
+    },
+    {
+      "name": "Back-to-back arrangement",
+      "type": "Procedure"
+    },
+    {
+      "name": "Surface texturing",
+      "type": "Procedure"
+    },
+    {
+      "name": "Dry running",
+      "type": "Hazard"
+    },
+    {
+      "name": "Frictional heat",
+      "type": "Hazard"
+    },
+    {
+      "name": "Contamination",
+      "type": "Hazard"
+    },
+    {
+      "name": "Misalignment",
+      "type": "Hazard"
+    },
+    {
+      "name": "Seal failure",
+      "type": "Failure"
+    },
+    {
+      "name": "Leakage",
+      "type": "Failure"
+    },
+    {
+      "name": "Wear on the shaft",
+      "type": "Failure"
+    },
+    {
+      "name": "Seal hang-up",
+      "type": "Failure"
+    },
+    {
+      "name": "Thermal cracks",
+      "type": "Failure"
+    },
+    {
+      "name": "Abrasive wear",
+      "type": "Failure"
+    },
+    {
+      "name": "Erosion",
+      "type": "Failure"
+    },
+    {
+      "name": "Swelling of rubber",
+      "type": "Failure"
+    },
+    {
+      "name": "Selective corrosion",
+      "type": "Failure"
+    },
+    {
+      "name": "Abnormal wear",
+      "type": "Failure"
+    },
+    {
+      "name": "Pump downtime",
+      "type": "Incident"
+    },
+    {
+      "name": "Water",
+      "type": "Chemical"
+    },
+    {
+      "name": "Glycerine",
+      "type": "Chemical"
+    },
+    {
+      "name": "Anti-freeze liquids",
+      "type": "Chemical"
+    },
+    {
+      "name": "Balancing ratio",
+      "type": "Parameter"
+    },
+    {
+      "name": "Contact pressure",
+      "type": "Parameter"
+    },
+    {
+      "name": "Differential pressure",
+      "type": "Parameter"
+    },
+    {
+      "name": "Hydrostatic pressure",
+      "type": "Parameter"
+    },
+    {
+      "name": "Hydrodynamic pressure",
+      "type": "Parameter"
+    },
+    {
+      "name": "Operating speed",
+      "type": "Parameter"
+    },
+    {
+      "name": "Viscosity",
+      "type": "Parameter"
+    },
+    {
+      "name": "Thickness of lubricating film",
+      "type": "Parameter"
+    }
+  ],
+  "relations": [
+    {
+      "source": "Pump",
+      "relation": "contains",
+      "target": "Impeller"
+    },
+    {
+      "source": "Pump",
+      "relation": "contains",
+      "target": "Volute casing"
+    },
+    {
+      "source": "Pump",
+      "relation": "contains",
+      "target": "Mechanical shaft seal"
+    },
+    {
+      "source": "Mechanical shaft seal",
+      "relation": "contains",
+      "target": "Rotating seal ring"
+    },
+    {
+      "source": "Mechanical shaft seal",
+      "relation": "contains",
+      "target": "Stationary seat"
+    },
+    {
+      "source": "Mechanical shaft seal",
+      "relation": "contains",
+      "target": "Secondary seal"
+    },
+    {
+      "source": "Mechanical shaft seal",
+      "relation": "contains",
+      "target": "Spring"
+    },
+    {
+      "source": "Mechanical shaft seal",
+      "relation": "contains",
+      "target": "Torque transmission element"
+    },
+    {
+      "source": "Rotating seal ring",
+      "relation": "interacts_with",
+      "target": "Stationary seat"
+    },
+    {
+      "source": "Rotating seal ring",
+      "relation": "forms",
+      "target": "Seal gap"
+    },
+    {
+      "source": "Stationary seat",
+      "relation": "forms",
+      "target": "Seal gap"
+    },
+    {
+      "source": "Secondary seal",
+      "relation": "contains",
+      "target": "O-ring"
+    },
+    {
+      "source": "Secondary seal",
+      "relation": "contains",
+      "target": "Rubber bellows"
+    },
+    {
+      "source": "Misalignment",
+      "relation": "causes",
+      "target": "Leakage"
+    },
+    {
+      "source": "Dry running",
+      "relation": "causes",
+      "target": "Frictional heat"
+    },
+    {
+      "source": "Frictional heat",
+      "relation": "causes",
+      "target": "Thermal cracks"
+    },
+    {
+      "source": "Contamination",
+      "relation": "causes",
+      "target": "Abrasive wear"
+    },
+    {
+      "source": "Abrasive wear",
+      "relation": "leads_to",
+      "target": "Seal failure"
+    },
+    {
+      "source": "Seal failure",
+      "relation": "causes",
+      "target": "Leakage"
+    },
+    {
+      "source": "Leakage",
+      "relation": "causes",
+      "target": "Pump downtime"
+    },
+    {
+      "source": "Back-to-back arrangement",
+      "relation": "uses",
+      "target": "Dosing pump"
+    },
+    {
+      "source": "Back-to-back arrangement",
+      "relation": "uses",
+      "target": "Pressure intensifier"
+    },
+    {
+      "source": "Circulation",
+      "relation": "cools",
+      "target": "Rotating seal ring"
+    },
+    {
+      "source": "Circulation",
+      "relation": "cools",
+      "target": "Stationary seat"
+    },
+    {
+      "source": "Surface texturing",
+      "relation": "increases",
+      "target": "Thickness of lubricating film"
+    },
+    {
+      "source": "Balancing ratio",
+      "relation": "determines",
+      "target": "Contact pressure"
+    },
+    {
+      "source": "Differential pressure",
+      "relation": "affects",
+      "target": "Contact pressure"
+    },
+    {
+      "source": "Viscosity",
+      "relation": "affects",
+      "target": "Thickness of lubricating film"
+    },
+    {
+      "source": "O-ring",
+      "relation": "suffers_from",
+      "target": "Wear on the shaft"
+    },
+    {
+      "source": "O-ring",
+      "relation": "suffers_from",
+      "target": "Seal hang-up"
+    },
+    {
+      "source": "Mechanical shaft seal",
+      "relation": "located_in",
+      "target": "Seal chamber"
+    },
+    {
+      "source": "Seal chamber",
+      "relation": "located_in",
+      "target": "Pump housing"
+    },
+    {
+      "source": "Secondary seal",
+      "relation": "seals",
+      "target": "Atmosphere"
+    },
+    {
+      "source": "Dosing pump",
+      "relation": "maintains",
+      "target": "Differential pressure"
+    },
+    {
+      "source": "Anti-freeze liquids",
+      "relation": "exhibit",
+      "target": "Viscosity"
+    },
+    {
+      "source": "Glycerine",
+      "relation": "used_in",
+      "target": "Back-to-back arrangement"
+    },
+    {
+      "source": "Water",
+      "relation": "used_in",
+      "target": "Back-to-back arrangement"
+    }
+  ]
+}

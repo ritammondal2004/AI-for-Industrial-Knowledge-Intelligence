@@ -1,0 +1,317 @@
+{
+  "entities": [
+    {
+      "name": "Mathura Refinery",
+      "type": "Location"
+    },
+    {
+      "name": "Effluent Treatment Plant",
+      "type": "Location"
+    },
+    {
+      "name": "Influent Sump",
+      "type": "Location"
+    },
+    {
+      "name": "Pump Room",
+      "type": "Location"
+    },
+    {
+      "name": "Centrifugal Pump",
+      "type": "Equipment"
+    },
+    {
+      "name": "Hydrocarbon Vapor Detector",
+      "type": "Instrument"
+    },
+    {
+      "name": "Flameproof Lighting",
+      "type": "Equipment"
+    },
+    {
+      "name": "Oily Sludge",
+      "type": "Material"
+    },
+    {
+      "name": "Naphtha",
+      "type": "Chemical"
+    },
+    {
+      "name": "Hydrocarbon Vapor",
+      "type": "Chemical"
+    },
+    {
+      "name": "Mechanical Shaft Seal",
+      "type": "Component"
+    },
+    {
+      "name": "Impeller",
+      "type": "Component"
+    },
+    {
+      "name": "Sump Cover Plate",
+      "type": "Component"
+    },
+    {
+      "name": "Suction Valve",
+      "type": "Component"
+    },
+    {
+      "name": "Discharge Valve",
+      "type": "Component"
+    },
+    {
+      "name": "Hot Work",
+      "type": "Procedure"
+    },
+    {
+      "name": "Gas Testing",
+      "type": "Procedure"
+    },
+    {
+      "name": "Purging",
+      "type": "Procedure"
+    },
+    {
+      "name": "Work Permit Authorization",
+      "type": "Procedure"
+    },
+    {
+      "name": "Vapor Accumulation",
+      "type": "Hazard"
+    },
+    {
+      "name": "Flammable Atmosphere",
+      "type": "Hazard"
+    },
+    {
+      "name": "Ignition Source",
+      "type": "Hazard"
+    },
+    {
+      "name": "Toxic Gas Exposure",
+      "type": "Hazard"
+    },
+    {
+      "name": "Seal Degradation",
+      "type": "Failure"
+    },
+    {
+      "name": "Hydrocarbon Leakage",
+      "type": "Failure"
+    },
+    {
+      "name": "Ventilation Failure",
+      "type": "Failure"
+    },
+    {
+      "name": "Instrument Calibration Drift",
+      "type": "Failure"
+    },
+    {
+      "name": "Major Flash Fire",
+      "type": "Incident"
+    },
+    {
+      "name": "OISD-STD-105",
+      "type": "Regulation"
+    },
+    {
+      "name": "OISD-GDN-145",
+      "type": "Regulation"
+    },
+    {
+      "name": "Lower Explosive Limit",
+      "type": "Parameter"
+    },
+    {
+      "name": "Flash Point",
+      "type": "Parameter"
+    },
+    {
+      "name": "Vapor Pressure",
+      "type": "Parameter"
+    },
+    {
+      "name": "Sump Liquid Level",
+      "type": "Parameter"
+    }
+  ],
+  "relations": [
+    {
+      "source": "Mathura Refinery",
+      "relation": "contains",
+      "target": "Effluent Treatment Plant"
+    },
+    {
+      "source": "Effluent Treatment Plant",
+      "relation": "contains",
+      "target": "Influent Sump"
+    },
+    {
+      "source": "Effluent Treatment Plant",
+      "relation": "contains",
+      "target": "Pump Room"
+    },
+    {
+      "source": "Pump Room",
+      "relation": "contains",
+      "target": "Centrifugal Pump"
+    },
+    {
+      "source": "Influent Sump",
+      "relation": "contains",
+      "target": "Sump Cover Plate"
+    },
+    {
+      "source": "Centrifugal Pump",
+      "relation": "contains",
+      "target": "Mechanical Shaft Seal"
+    },
+    {
+      "source": "Centrifugal Pump",
+      "relation": "contains",
+      "target": "Impeller"
+    },
+    {
+      "source": "Centrifugal Pump",
+      "relation": "contains",
+      "target": "Suction Valve"
+    },
+    {
+      "source": "Centrifugal Pump",
+      "relation": "contains",
+      "target": "Discharge Valve"
+    },
+    {
+      "source": "Pump Room",
+      "relation": "contains",
+      "target": "Flameproof Lighting"
+    },
+    {
+      "source": "Influent Sump",
+      "relation": "contains",
+      "target": "Oily Sludge"
+    },
+    {
+      "source": "Oily Sludge",
+      "relation": "contains",
+      "target": "Naphtha"
+    },
+    {
+      "source": "Naphtha",
+      "relation": "generates",
+      "target": "Hydrocarbon Vapor"
+    },
+    {
+      "source": "Mechanical Shaft Seal",
+      "relation": "suffers_from",
+      "target": "Seal Degradation"
+    },
+    {
+      "source": "Seal Degradation",
+      "relation": "causes",
+      "target": "Hydrocarbon Leakage"
+    },
+    {
+      "source": "Hydrocarbon Leakage",
+      "relation": "leads_to",
+      "target": "Vapor Accumulation"
+    },
+    {
+      "source": "Vapor Accumulation",
+      "relation": "creates",
+      "target": "Flammable Atmosphere"
+    },
+    {
+      "source": "Ventilation Failure",
+      "relation": "exacerbates",
+      "target": "Vapor Accumulation"
+    },
+    {
+      "source": "Hot Work",
+      "relation": "creates",
+      "target": "Ignition Source"
+    },
+    {
+      "source": "Flammable Atmosphere",
+      "relation": "interacts_with",
+      "target": "Ignition Source"
+    },
+    {
+      "source": "Flammable Atmosphere",
+      "relation": "triggers",
+      "target": "Major Flash Fire"
+    },
+    {
+      "source": "Ignition Source",
+      "relation": "triggers",
+      "target": "Major Flash Fire"
+    },
+    {
+      "source": "Major Flash Fire",
+      "relation": "located_in",
+      "target": "Influent Sump"
+    },
+    {
+      "source": "Hot Work",
+      "relation": "requires_procedure",
+      "target": "Gas Testing"
+    },
+    {
+      "source": "Hot Work",
+      "relation": "requires_procedure",
+      "target": "Purging"
+    },
+    {
+      "source": "Hot Work",
+      "relation": "requires_procedure",
+      "target": "Work Permit Authorization"
+    },
+    {
+      "source": "Hydrocarbon Vapor Detector",
+      "relation": "monitors",
+      "target": "Lower Explosive Limit"
+    },
+    {
+      "source": "Hydrocarbon Vapor Detector",
+      "relation": "suffers_from",
+      "target": "Instrument Calibration Drift"
+    },
+    {
+      "source": "Instrument Calibration Drift",
+      "relation": "misses",
+      "target": "Flammable Atmosphere"
+    },
+    {
+      "source": "Hot Work",
+      "relation": "governed_by",
+      "target": "OISD-STD-105"
+    },
+    {
+      "source": "Effluent Treatment Plant",
+      "relation": "governed_by",
+      "target": "OISD-GDN-145"
+    },
+    {
+      "source": "Naphtha",
+      "relation": "governed_by",
+      "target": "Flash Point"
+    },
+    {
+      "source": "Naphtha",
+      "relation": "governed_by",
+      "target": "Vapor Pressure"
+    },
+    {
+      "source": "Influent Sump",
+      "relation": "governed_by",
+      "target": "Sump Liquid Level"
+    },
+    {
+      "source": "Flammable Atmosphere",
+      "relation": "creates",
+      "target": "Toxic Gas Exposure"
+    }
+  ]
+}
