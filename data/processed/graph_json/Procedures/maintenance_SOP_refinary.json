@@ -1,422 +1,141 @@
 {
+  "source_pdf": "maintenance_SOP_refinary.pdf",
+
   "entities": [
     {
-      "name": "Horizontal return fire-tube boiler",
+      "name": "Rotating Machinery",
       "type": "Equipment"
     },
     {
-      "name": "Fire-tubes",
-      "type": "Component"
-    },
-    {
-      "name": "Water vessel / Drum",
-      "type": "Component"
-    },
-    {
-      "name": "Combustion chamber",
-      "type": "Component"
-    },
-    {
-      "name": "Tube-side fouling",
-      "type": "Failure"
-    },
-    {
-      "name": "Scaling on the water side",
-      "type": "Failure"
-    },
-    {
-      "name": "Tube failure",
-      "type": "Failure"
-    },
-    {
-      "name": "Longitudinal-drum water-tube boiler",
+      "name": "Horizontal Return Fire-Tube Boiler",
       "type": "Equipment"
     },
     {
-      "name": "Water-filled tubes",
-      "type": "Component"
-    },
-    {
-      "name": "Longitudinal drum",
-      "type": "Component"
-    },
-    {
-      "name": "Combustion gas area",
-      "type": "Component"
-    },
-    {
-      "name": "Soot buildup",
-      "type": "Failure"
-    },
-    {
-      "name": "Corrosion",
-      "type": "Failure"
-    },
-    {
-      "name": "Inverted bucket steam trap",
+      "name": "Longitudinal-Drum Water-Tube Boiler",
       "type": "Equipment"
     },
     {
-      "name": "Inverted bucket",
-      "type": "Component"
-    },
-    {
-      "name": "Valve seat and mechanism",
-      "type": "Component"
-    },
-    {
-      "name": "Small vent hole",
-      "type": "Component"
-    },
-    {
-      "name": "Air-binding",
-      "type": "Failure"
-    },
-    {
-      "name": "Trap blockage",
-      "type": "Failure"
-    },
-    {
-      "name": "Steam loss",
-      "type": "Failure"
-    },
-    {
-      "name": "Chiller",
+      "name": "Electric Resistance Boiler Unit",
       "type": "Equipment"
     },
     {
-      "name": "Evaporator",
-      "type": "Component"
-    },
-    {
-      "name": "Compressor",
-      "type": "Component"
-    },
-    {
-      "name": "Condenser",
-      "type": "Component"
-    },
-    {
-      "name": "Expansion valve",
-      "type": "Component"
-    },
-    {
-      "name": "Unexpected pressure drops",
+      "name": "Unbalanced Rotor",
       "type": "Failure"
     },
     {
-      "name": "HVAC inefficiencies",
+      "name": "Shaft Misalignment",
       "type": "Failure"
     },
     {
-      "name": "Centrifugal pump",
-      "type": "Equipment"
-    },
-    {
-      "name": "Impeller",
-      "type": "Component"
-    },
-    {
-      "name": "Volute casing",
-      "type": "Component"
-    },
-    {
-      "name": "Cut-water",
-      "type": "Component"
-    },
-    {
-      "name": "Excessive mechanical vibration",
+      "name": "Gear Tooth Wear",
       "type": "Failure"
     },
     {
-      "name": "Loss of pump curve efficiency",
+      "name": "Loose Sleeve Bearings",
       "type": "Failure"
     },
     {
-      "name": "AC motor",
-      "type": "Equipment"
-    },
-    {
-      "name": "Stator",
-      "type": "Component"
-    },
-    {
-      "name": "Rotor",
-      "type": "Component"
-    },
-    {
-      "name": "Drive shaft",
-      "type": "Component"
-    },
-    {
-      "name": "Bearings and end bells",
-      "type": "Component"
-    },
-    {
-      "name": "Thermal anomaly",
+      "name": "Electrical Rotor Bugs",
       "type": "Failure"
     },
     {
-      "name": "Vibration signature",
+      "name": "Tube Failure",
       "type": "Failure"
     },
     {
-      "name": "Vibration analysis",
+      "name": "Dry-Firing",
+      "type": "Failure"
+    },
+    {
+      "name": "Terminal Heating Element Meltdown",
+      "type": "Failure"
+    },
+    {
+      "name": "Scale Deposit Accumulation",
+      "type": "Failure"
+    },
+    {
+      "name": "Stress Failure",
+      "type": "Failure"
+    },
+    {
+      "name": "Structural Rupture",
+      "type": "Failure"
+    },
+    {
+      "name": "Efficiency Loss",
+      "type": "Failure"
+    },
+    {
+      "name": "Vibration Severity Chart Evaluation",
       "type": "Procedure"
     },
     {
-      "name": "IR thermography",
+      "name": "FFT Spectral Analysis",
       "type": "Procedure"
     },
     {
-      "name": "Checking external tube surfaces",
+      "name": "Bottom Mud-Blow Down",
       "type": "Procedure"
     },
     {
-      "name": "Inspecting for tube-side fouling",
+      "name": "Structural Integrity Inspection",
       "type": "Procedure"
     },
     {
-      "name": "Ensuring proper impeller clearances",
+      "name": "Leak Check",
       "type": "Procedure"
     },
     {
-      "name": "Fluid flow paths",
-      "type": "Parameter"
+      "name": "Ultrasonic Thickness Testing",
+      "type": "Procedure"
     },
     {
-      "name": "Safe operational limits",
-      "type": "Parameter"
+      "name": "Soot Blower Injection",
+      "type": "Procedure"
     },
     {
-      "name": "Thermodynamic phase changes",
-      "type": "Parameter"
+      "name": "Waterside and Fireside Descaling",
+      "type": "Procedure"
     },
     {
-      "name": "Rotational direction",
-      "type": "Parameter"
+      "name": "Electrical Troubleshooting",
+      "type": "Procedure"
+    },
+    {
+      "name": "Safety System Validation",
+      "type": "Procedure"
+    },
+    {
+      "name": "Trip-Test",
+      "type": "Procedure"
     }
   ],
   "relations": [
     {
-      "source": "Horizontal return fire-tube boiler",
-      "relation": "contains",
-      "target": "Fire-tubes"
+      "source": "Vibration Severity Chart Evaluation",
+      "relation": "applied_to",
+      "target": "Rotating Machinery"
     },
     {
-      "source": "Horizontal return fire-tube boiler",
-      "relation": "contains",
-      "target": "Water vessel / Drum"
+      "source": "FFT Spectral Analysis",
+      "relation": "diagnoses",
+      "target": "Unbalanced Rotor"
     },
     {
-      "source": "Horizontal return fire-tube boiler",
-      "relation": "contains",
-      "target": "Combustion chamber"
+      "source": "FFT Spectral Analysis",
+      "relation": "diagnoses",
+      "target": "Shaft Misalignment"
     },
     {
-      "source": "Fire-tubes",
-      "relation": "suffers_from",
-      "target": "Tube-side fouling"
+      "source": "Water Chemistry Controls",
+      "relation": "prevents",
+      "target": "Scale Deposit Accumulation"
     },
     {
-      "source": "Water vessel / Drum",
-      "relation": "suffers_from",
-      "target": "Scaling on the water side"
-    },
-    {
-      "source": "Tube-side fouling",
+      "source": "Scale Deposit Accumulation",
       "relation": "causes",
-      "target": "Tube failure"
-    },
-    {
-      "source": "Scaling on the water side",
-      "relation": "causes",
-      "target": "Tube failure"
-    },
-    {
-      "source": "Horizontal return fire-tube boiler",
-      "relation": "requires_procedure",
-      "target": "Inspecting for tube-side fouling"
-    },
-    {
-      "source": "Horizontal return fire-tube boiler",
-      "relation": "governed_by",
-      "target": "Fluid flow paths"
-    },
-    {
-      "source": "Longitudinal-drum water-tube boiler",
-      "relation": "contains",
-      "target": "Water-filled tubes"
-    },
-    {
-      "source": "Longitudinal-drum water-tube boiler",
-      "relation": "contains",
-      "target": "Longitudinal drum"
-    },
-    {
-      "source": "Longitudinal-drum water-tube boiler",
-      "relation": "contains",
-      "target": "Combustion gas area"
-    },
-    {
-      "source": "Water-filled tubes",
-      "relation": "suffers_from",
-      "target": "Soot buildup"
-    },
-    {
-      "source": "Water-filled tubes",
-      "relation": "suffers_from",
-      "target": "Corrosion"
-    },
-    {
-      "source": "Longitudinal-drum water-tube boiler",
-      "relation": "requires_procedure",
-      "target": "Checking external tube surfaces"
-    },
-    {
-      "source": "Longitudinal-drum water-tube boiler",
-      "relation": "governed_by",
-      "target": "Safe operational limits"
-    },
-    {
-      "source": "Inverted bucket steam trap",
-      "relation": "contains",
-      "target": "Inverted bucket"
-    },
-    {
-      "source": "Inverted bucket steam trap",
-      "relation": "contains",
-      "target": "Valve seat and mechanism"
-    },
-    {
-      "source": "Inverted bucket steam trap",
-      "relation": "contains",
-      "target": "Small vent hole"
-    },
-    {
-      "source": "Small vent hole",
-      "relation": "suffers_from",
-      "target": "Air-binding"
-    },
-    {
-      "source": "Inverted bucket steam trap",
-      "relation": "suffers_from",
-      "target": "Trap blockage"
-    },
-    {
-      "source": "Inverted bucket steam trap",
-      "relation": "suffers_from",
-      "target": "Steam loss"
-    },
-    {
-      "source": "Chiller",
-      "relation": "contains",
-      "target": "Evaporator"
-    },
-    {
-      "source": "Chiller",
-      "relation": "contains",
-      "target": "Compressor"
-    },
-    {
-      "source": "Chiller",
-      "relation": "contains",
-      "target": "Condenser"
-    },
-    {
-      "source": "Chiller",
-      "relation": "contains",
-      "target": "Expansion valve"
-    },
-    {
-      "source": "Chiller",
-      "relation": "suffers_from",
-      "target": "Unexpected pressure drops"
-    },
-    {
-      "source": "Chiller",
-      "relation": "suffers_from",
-      "target": "HVAC inefficiencies"
-    },
-    {
-      "source": "Chiller",
-      "relation": "governed_by",
-      "target": "Thermodynamic phase changes"
-    },
-    {
-      "source": "Centrifugal pump",
-      "relation": "contains",
-      "target": "Impeller"
-    },
-    {
-      "source": "Centrifugal pump",
-      "relation": "contains",
-      "target": "Volute casing"
-    },
-    {
-      "source": "Centrifugal pump",
-      "relation": "contains",
-      "target": "Cut-water"
-    },
-    {
-      "source": "Centrifugal pump",
-      "relation": "suffers_from",
-      "target": "Excessive mechanical vibration"
-    },
-    {
-      "source": "Centrifugal pump",
-      "relation": "suffers_from",
-      "target": "Loss of pump curve efficiency"
-    },
-    {
-      "source": "Centrifugal pump",
-      "relation": "requires_procedure",
-      "target": "Ensuring proper impeller clearances"
-    },
-    {
-      "source": "Centrifugal pump",
-      "relation": "governed_by",
-      "target": "Rotational direction"
-    },
-    {
-      "source": "AC motor",
-      "relation": "contains",
-      "target": "Stator"
-    },
-    {
-      "source": "AC motor",
-      "relation": "contains",
-      "target": "Rotor"
-    },
-    {
-      "source": "AC motor",
-      "relation": "contains",
-      "target": "Drive shaft"
-    },
-    {
-      "source": "AC motor",
-      "relation": "contains",
-      "target": "Bearings and end bells"
-    },
-    {
-      "source": "AC motor",
-      "relation": "suffers_from",
-      "target": "Thermal anomaly"
-    },
-    {
-      "source": "AC motor",
-      "relation": "suffers_from",
-      "target": "Vibration signature"
-    },
-    {
-      "source": "AC motor",
-      "relation": "requires_procedure",
-      "target": "Vibration analysis"
-    },
-    {
-      "source": "AC motor",
-      "relation": "requires_procedure",
-      "target": "IR thermography"
+      "target": "Stress Failure"
     }
   ]
 }

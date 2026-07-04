@@ -17,9 +17,9 @@ data/processed/
 *.pkl
 
 # Cache
-caption_cache.json
-ingestion_progress.json
-kg_progress.json
+# caption_cache.json
+# ingestion_progress.json
+# kg_progress.json
 
 # Python
 __pycache__/

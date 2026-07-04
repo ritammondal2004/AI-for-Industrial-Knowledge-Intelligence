@@ -1,6 +1,8 @@
 {
-  "entities": [
-    {
+  "source_pdf": "xvi_paper_54.pdf",
+                        
+  "entities": [        
+    {          
       "name": "Tosco Avon Refinery",
       "type": "Location"
     },
@@ -11,8 +13,8 @@
     {
       "name": "Desalter vessel",
       "type": "Equipment"
-    },
-    {
+    },           
+    {          
       "name": "Overhead accumulator",
       "type": "Equipment"
     },
