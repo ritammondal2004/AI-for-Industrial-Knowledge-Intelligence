@@ -13,10 +13,6 @@ data/processed/chroma_db/
 # Cached page extraction
 # *.pkl
 
-# # Cache / Progress
-# caption_cache.json
-# ingestion_progress.json
-# kg_progress.json
 
 # Python
 __pycache__/
