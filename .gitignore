@@ -5,15 +5,15 @@ data/processed/chroma_db/
 *.bin
 
 
-*.gpickle
-
+*.gpickle              
+                      
 # ── Environment & secrets 
 .env
 .env.*
-
+                         
 .venv/ 
 __pycache__/
-*.pyc
+*.pyc      
 *.pyo
 *.pyd
 .Python
