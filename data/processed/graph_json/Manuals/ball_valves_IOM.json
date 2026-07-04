@@ -1,0 +1,170 @@
+{
+    "source_pdf": "ball_valves_IOM.pdf",
+    "entities": [
+        {
+            "name": "Industrial Ball Valve",
+            "type": "Equipment"
+        },
+        {
+            "name": "Body",
+            "type": "Component"
+        },
+        {
+            "name": "Cap",
+            "type": "Component"
+        },
+        {
+            "name": "Ball",
+            "type": "Component"
+        },
+        {
+            "name": "Stem",
+            "type": "Component"
+        },
+        {
+            "name": "Seat",
+            "type": "Component"
+        },
+        {
+            "name": "Stem Packing",
+            "type": "Component"
+        },
+        {
+            "name": "Packing Gland",
+            "type": "Component"
+        },
+        {
+            "name": "Handle",
+            "type": "Component"
+        },
+        {
+            "name": "Body Seal",
+            "type": "Component"
+        },
+        {
+            "name": "Pipeline Media",
+            "type": "Hazard"
+        },
+        {
+            "name": "Pipeline Pressure",
+            "type": "Hazard"
+        },
+        {
+            "name": "Leakage at Connection",
+            "type": "Failure"
+        },
+        {
+            "name": "Leakage at Stem",
+            "type": "Failure"
+        },
+        {
+            "name": "Leakage past Valve Seat",
+            "type": "Failure"
+        },
+        {
+            "name": "Valve Obstruction",
+            "type": "Failure"
+        },
+        {
+            "name": "Packing Maintenance",
+            "type": "Procedure"
+        },
+        {
+            "name": "Seat Replacement",
+            "type": "Procedure"
+        },
+        {
+            "name": "Routine Cycling",
+            "type": "Procedure"
+        },
+        {
+            "name": "Visual Inspection",
+            "type": "Procedure"
+        },
+        {
+            "name": "Operating Temperature",
+            "type": "Parameter"
+        },
+        {
+            "name": "Bolting Torque",
+            "type": "Parameter"
+        }
+    ],
+    "relations": [
+        {
+            "source": "Industrial Ball Valve",
+            "relation": "contains",
+            "target": "Body"
+        },
+        {
+            "source": "Industrial Ball Valve",
+            "relation": "contains",
+            "target": "Cap"
+        },
+        {
+            "source": "Industrial Ball Valve",
+            "relation": "contains",
+            "target": "Ball"
+        },
+        {
+            "source": "Industrial Ball Valve",
+            "relation": "contains",
+            "target": "Stem"
+        },
+        {
+            "source": "Industrial Ball Valve",
+            "relation": "contains",
+            "target": "Seat"
+        },
+        {
+            "source": "Industrial Ball Valve",
+            "relation": "contains",
+            "target": "Stem Packing"
+        },
+        {
+            "source": "Industrial Ball Valve",
+            "relation": "contains",
+            "target": "Handle"
+        },
+        {
+            "source": "Stem Packing",
+            "relation": "prevents",
+            "target": "Leakage at Stem"
+        },
+        {
+            "source": "Seat",
+            "relation": "prevents",
+            "target": "Leakage past Valve Seat"
+        },
+        {
+            "source": "Packing Maintenance",
+            "relation": "resolves",
+            "target": "Leakage at Stem"
+        },
+        {
+            "source": "Seat Replacement",
+            "relation": "resolves",
+            "target": "Leakage past Valve Seat"
+        },
+        {
+            "source": "Routine Cycling",
+            "relation": "prevents",
+            "target": "Valve Obstruction"
+        },
+        {
+            "source": "Pipeline Media",
+            "relation": "exposes",
+            "target": "Industrial Ball Valve"
+        },
+        {
+            "source": "Bolting Torque",
+            "relation": "affects",
+            "target": "Industrial Ball Valve"
+        },
+        {
+            "source": "Operating Temperature",
+            "relation": "affects",
+            "target": "Seat"
+        }
+    ]
+}

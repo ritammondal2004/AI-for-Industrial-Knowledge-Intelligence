@@ -1,0 +1,132 @@
+{
+  "source_pdf": "Valve_Handbook_Philip.pdf",
+  "entities": [
+    {
+      "name": "Control Valve",
+      "type": "Equipment"
+    },
+    {
+      "name": "Check Valve",
+      "type": "Equipment"
+    },
+    {
+      "name": "Pressure Relief Valve",
+      "type": "Equipment"
+    },
+    {
+      "name": "Manual Valve",
+      "type": "Equipment"
+    },
+    {
+      "name": "Actuator",
+      "type": "Instrument"
+    },
+    {
+      "name": "Valve Body",
+      "type": "Component"
+    },
+    {
+      "name": "Stem",
+      "type": "Component"
+    },
+    {
+      "name": "Seat",
+      "type": "Component"
+    },
+    {
+      "name": "Packing",
+      "type": "Component"
+    },
+    {
+      "name": "Plug",
+      "type": "Component"
+    },
+    {
+      "name": "Water Hammer",
+      "type": "Failure"
+    },
+    {
+      "name": "Cavitation",
+      "type": "Failure"
+    },
+    {
+      "name": "Erosion",
+      "type": "Failure"
+    },
+    {
+      "name": "Leakage",
+      "type": "Failure"
+    },
+    {
+      "name": "High Pressure Fluid",
+      "type": "Hazard"
+    },
+    {
+      "name": "Valve Sizing",
+      "type": "Procedure"
+    },
+    {
+      "name": "Preventive Maintenance",
+      "type": "Procedure"
+    },
+    {
+      "name": "Walsh Healy Public Contracts Act",
+      "type": "Regulation"
+    },
+    {
+      "name": "Flow Velocity",
+      "type": "Parameter"
+    },
+    {
+      "name": "Operating Pressure",
+      "type": "Parameter"
+    }
+  ],
+  "relations": [
+    {
+      "source": "Control Valve",
+      "relation": "contains",
+      "target": "Valve Body"
+    },
+    {
+      "source": "Control Valve",
+      "relation": "contains",
+      "target": "Stem"
+    },
+    {
+      "source": "Control Valve",
+      "relation": "contains",
+      "target": "Seat"
+    },
+    {
+      "source": "Control Valve",
+      "relation": "contains",
+      "target": "Packing"
+    },
+    {
+      "source": "Actuator",
+      "relation": "operates",
+      "target": "Control Valve"
+    },
+    {
+      "source": "Cavitation",
+      "relation": "damages",
+      "target": "Seat"
+    },
+    {
+      "source": "Water Hammer",
+      "relation": "threatens",
+      "target": "Control Valve"
+    },
+    {
+      "source": "Valve Sizing",
+      "relation": "optimizes",
+      "target": "Control Valve"
+    },
+    {
+      "source": "Preventive Maintenance",
+      "relation": "prevents",
+      "target": "Leakage"
+    }
+  ]
+}

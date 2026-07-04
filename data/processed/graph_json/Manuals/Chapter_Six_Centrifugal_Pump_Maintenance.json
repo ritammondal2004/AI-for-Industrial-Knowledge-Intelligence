@@ -1,0 +1,191 @@
+{
+  "source_pdf": "Chapter_Six_Centrifugal_Pump_Maintenance.pdf",
+  "entities": [
+    {
+      "name": "Centrifugal Pump",
+      "type": "Equipment"
+    },
+    {
+      "name": "Overhung Pump",
+      "type": "Equipment"
+    },
+    {
+      "name": "Vertical Turbine Pump",
+      "type": "Equipment"
+    },
+    {
+      "name": "Impeller",
+      "type": "Component"
+    },
+    {
+      "name": "Pump Shaft",
+      "type": "Component"
+    },
+    {
+      "name": "Bearing",
+      "type": "Component"
+    },
+    {
+      "name": "Mechanical Seal",
+      "type": "Component"
+    },
+    {
+      "name": "Seal Housing",
+      "type": "Component"
+    },
+    {
+      "name": "Bearing Housing",
+      "type": "Component"
+    },
+    {
+      "name": "Wearing Ring",
+      "type": "Component"
+    },
+    {
+      "name": "Gasket",
+      "type": "Component"
+    },
+    {
+      "name": "O-ring",
+      "type": "Component"
+    },
+    {
+      "name": "Suction Strainer",
+      "type": "Component"
+    },
+    {
+      "name": "API 610",
+      "type": "Regulation"
+    },
+    {
+      "name": "Performance Monitoring",
+      "type": "Procedure"
+    },
+    {
+      "name": "Vibration Monitoring",
+      "type": "Procedure"
+    },
+    {
+      "name": "Oil and Particle Analysis",
+      "type": "Procedure"
+    },
+    {
+      "name": "System Analysis",
+      "type": "Procedure"
+    },
+    {
+      "name": "Hydrostatic Test",
+      "type": "Procedure"
+    },
+    {
+      "name": "Infrared Thermography",
+      "type": "Procedure"
+    },
+    {
+      "name": "Cavitation",
+      "type": "Failure"
+    },
+    {
+      "name": "Unbalance",
+      "type": "Failure"
+    },
+    {
+      "name": "Misalignment",
+      "type": "Failure"
+    },
+    {
+      "name": "Bearing Defect",
+      "type": "Failure"
+    },
+    {
+      "name": "Seal Leakage",
+      "type": "Failure"
+    },
+    {
+      "name": "Shaft Runout",
+      "type": "Parameter"
+    },
+    {
+      "name": "NPSH",
+      "type": "Parameter"
+    },
+    {
+      "name": "Best Efficiency Point",
+      "type": "Parameter"
+    },
+    {
+      "name": "Suction Pressure",
+      "type": "Parameter"
+    },
+    {
+      "name": "Discharge Pressure",
+      "type": "Parameter"
+    },
+    {
+      "name": "Flow Rate",
+      "type": "Parameter"
+    }
+  ],
+  "relations": [
+    {
+      "source": "Centrifugal Pump",
+      "relation": "contains",
+      "target": "Impeller"
+    },
+    {
+      "source": "Centrifugal Pump",
+      "relation": "contains",
+      "target": "Pump Shaft"
+    },
+    {
+      "source": "Centrifugal Pump",
+      "relation": "contains",
+      "target": "Bearing"
+    },
+    {
+      "source": "Centrifugal Pump",
+      "relation": "contains",
+      "target": "Mechanical Seal"
+    },
+    {
+      "source": "Centrifugal Pump",
+      "relation": "governed_by",
+      "target": "API 610"
+    },
+    {
+      "source": "Performance Monitoring",
+      "relation": "monitors",
+      "target": "Centrifugal Pump"
+    },
+    {
+      "source": "Vibration Monitoring",
+      "relation": "detects",
+      "target": "Unbalance"
+    },
+    {
+      "source": "Vibration Monitoring",
+      "relation": "detects",
+      "target": "Misalignment"
+    },
+    {
+      "source": "Vibration Monitoring",
+      "relation": "detects",
+      "target": "Bearing Defect"
+    },
+    {
+      "source": "Cavitation",
+      "relation": "affects",
+      "target": "Impeller"
+    },
+    {
+      "source": "System Analysis",
+      "relation": "evaluates",
+      "target": "NPSH"
+    },
+    {
+      "source": "Oil and Particle Analysis",
+      "relation": "indicates",
+      "target": "Bearing Defect"
+    }
+  ]
+}

@@ -1,0 +1,216 @@
+{
+    "source_pdf": "apv_pumps_centrifugal_us.pdf",
+    "entities": [
+        {
+            "name": "W+ Pump",
+            "type": "Equipment"
+        },
+        {
+            "name": "Electric Motor",
+            "type": "Equipment"
+        },
+        {
+            "name": "Pump Housing",
+            "type": "Component"
+        },
+        {
+            "name": "Impeller",
+            "type": "Component"
+        },
+        {
+            "name": "Shaft",
+            "type": "Component"
+        },
+        {
+            "name": "Back Plate",
+            "type": "Component"
+        },
+        {
+            "name": "Shaft Seal",
+            "type": "Component"
+        },
+        {
+            "name": "Seal Housing",
+            "type": "Component"
+        },
+        {
+            "name": "Motor Adapter",
+            "type": "Component"
+        },
+        {
+            "name": "Clamp Ring",
+            "type": "Component"
+        },
+        {
+            "name": "O-ring",
+            "type": "Component"
+        },
+        {
+            "name": "Cap Nut",
+            "type": "Component"
+        },
+        {
+            "name": "Electrical Shock",
+            "type": "Hazard"
+        },
+        {
+            "name": "Rotating Parts",
+            "type": "Hazard"
+        },
+        {
+            "name": "High Temperature",
+            "type": "Hazard"
+        },
+        {
+            "name": "High Pressure",
+            "type": "Hazard"
+        },
+        {
+            "name": "Explosion",
+            "type": "Hazard"
+        },
+        {
+            "name": "Leaking Fluid",
+            "type": "Hazard"
+        },
+        {
+            "name": "Cavitation",
+            "type": "Failure"
+        },
+        {
+            "name": "Corrosion Pitting",
+            "type": "Failure"
+        },
+        {
+            "name": "Motor Overload",
+            "type": "Failure"
+        },
+        {
+            "name": "Pump Disassembly",
+            "type": "Procedure"
+        },
+        {
+            "name": "Shaft Seal Replacement",
+            "type": "Procedure"
+        },
+        {
+            "name": "Impeller Shaft Location",
+            "type": "Procedure"
+        },
+        {
+            "name": "Lock Out/Tag Out",
+            "type": "Procedure"
+        },
+        {
+            "name": "Cleaning",
+            "type": "Procedure"
+        },
+        {
+            "name": "OSHA",
+            "type": "Regulation"
+        },
+        {
+            "name": "3A Sanitary Standards",
+            "type": "Regulation"
+        },
+        {
+            "name": "FDA",
+            "type": "Regulation"
+        },
+        {
+            "name": "NPSH",
+            "type": "Parameter"
+        },
+        {
+            "name": "Outlet Pressure",
+            "type": "Parameter"
+        }
+    ],
+    "relations": [
+        {
+            "source": "W+ Pump",
+            "relation": "contains",
+            "target": "Pump Housing"
+        },
+        {
+            "source": "W+ Pump",
+            "relation": "contains",
+            "target": "Impeller"
+        },
+        {
+            "source": "W+ Pump",
+            "relation": "contains",
+            "target": "Shaft"
+        },
+        {
+            "source": "W+ Pump",
+            "relation": "contains",
+            "target": "Back Plate"
+        },
+        {
+            "source": "W+ Pump",
+            "relation": "contains",
+            "target": "Shaft Seal"
+        },
+        {
+            "source": "W+ Pump",
+            "relation": "powered_by",
+            "target": "Electric Motor"
+        },
+        {
+            "source": "Impeller",
+            "relation": "located_in",
+            "target": "Pump Housing"
+        },
+        {
+            "source": "Shaft Seal",
+            "relation": "prevents",
+            "target": "Leaking Fluid"
+        },
+        {
+            "source": "Lock Out/Tag Out",
+            "relation": "mitigates",
+            "target": "Electrical Shock"
+        },
+        {
+            "source": "Lock Out/Tag Out",
+            "relation": "mitigates",
+            "target": "Rotating Parts"
+        },
+        {
+            "source": "Pump Disassembly",
+            "relation": "requires",
+            "target": "Lock Out/Tag Out"
+        },
+        {
+            "source": "Cavitation",
+            "relation": "causes",
+            "target": "Failure"
+        },
+        {
+            "source": "Cavitation",
+            "relation": "related_to",
+            "target": "NPSH"
+        },
+        {
+            "source": "Corrosion Pitting",
+            "relation": "caused_by",
+            "target": "Cleaning"
+        },
+        {
+            "source": "OSHA",
+            "relation": "regulates",
+            "target": "Electric Motor"
+        },
+        {
+            "source": "OSHA",
+            "relation": "regulates",
+            "target": "Pump Disassembly"
+        },
+        {
+            "source": "Impeller Shaft Location",
+            "relation": "improves",
+            "target": "Operating Efficiency"
+        }
+    ]
+}

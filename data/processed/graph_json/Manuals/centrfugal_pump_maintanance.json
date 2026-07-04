@@ -1,0 +1,160 @@
+{
+  "source_pdf": "centrfugal_pump_maintanance.pdf",
+  "entities": [
+    {
+      "name": "Centrifugal Pump",
+      "type": "Equipment"
+    },
+    {
+      "name": "Overhung Pump",
+      "type": "Equipment"
+    },
+    {
+      "name": "Between-bearings Pump",
+      "type": "Equipment"
+    },
+    {
+      "name": "Vertically Suspended Pump",
+      "type": "Equipment"
+    },
+    {
+      "name": "Hydraulic Power Recovery Turbine (HPRT)",
+      "type": "Equipment"
+    },
+    {
+      "name": "Impeller",
+      "type": "Component"
+    },
+    {
+      "name": "Shaft",
+      "type": "Component"
+    },
+    {
+      "name": "Seal Chamber",
+      "type": "Component"
+    },
+    {
+      "name": "Bearing",
+      "type": "Component"
+    },
+    {
+      "name": "Bearing Housing",
+      "type": "Component"
+    },
+    {
+      "name": "Wear Rings",
+      "type": "Component"
+    },
+    {
+      "name": "Mechanical Shaft Seal",
+      "type": "Component"
+    },
+    {
+      "name": "Baseplate",
+      "type": "Component"
+    },
+    {
+      "name": "Vibration",
+      "type": "Failure"
+    },
+    {
+      "name": "Cavitation",
+      "type": "Failure"
+    },
+    {
+      "name": "Seal Leakage",
+      "type": "Failure"
+    },
+    {
+      "name": "Alignment Check",
+      "type": "Procedure"
+    },
+    {
+      "name": "Balancing",
+      "type": "Procedure"
+    },
+    {
+      "name": "Hydrostatic Test",
+      "type": "Procedure"
+    },
+    {
+      "name": "Performance Test",
+      "type": "Procedure"
+    },
+    {
+      "name": "Inspection",
+      "type": "Procedure"
+    },
+    {
+      "name": "API 610",
+      "type": "Regulation"
+    },
+    {
+      "name": "API 682",
+      "type": "Regulation"
+    },
+    {
+      "name": "NPSH3",
+      "type": "Parameter"
+    },
+    {
+      "name": "Best Efficiency Point (BEP)",
+      "type": "Parameter"
+    },
+    {
+      "name": "Maximum Continuous Speed",
+      "type": "Parameter"
+    },
+    {
+      "name": "Maximum Allowable Working Pressure (MAWP)",
+      "type": "Parameter"
+    }
+  ],
+  "relations": [
+    {
+      "source": "Centrifugal Pump",
+      "relation": "contains",
+      "target": "Impeller"
+    },
+    {
+      "source": "Centrifugal Pump",
+      "relation": "contains",
+      "target": "Shaft"
+    },
+    {
+      "source": "Centrifugal Pump",
+      "relation": "contains",
+      "target": "Bearing"
+    },
+    {
+      "source": "Centrifugal Pump",
+      "relation": "contains",
+      "target": "Mechanical Shaft Seal"
+    },
+    {
+      "source": "Centrifugal Pump",
+      "relation": "governed_by",
+      "target": "API 610"
+    },
+    {
+      "source": "Mechanical Shaft Seal",
+      "relation": "governed_by",
+      "target": "API 682"
+    },
+    {
+      "source": "Cavitation",
+      "relation": "relates_to",
+      "target": "NPSH3"
+    },
+    {
+      "source": "Balancing",
+      "relation": "prevents",
+      "target": "Vibration"
+    },
+    {
+      "source": "Alignment Check",
+      "relation": "prevents",
+      "target": "Vibration"
+    }
+  ]
+}

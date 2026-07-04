@@ -1,0 +1,152 @@
+{
+    "source_pdf": "combined_industrial_manuals_synthesis",
+    "entities": [
+        {
+            "name": "Centrifugal Pump",
+            "type": "Equipment"
+        },
+        {
+            "name": "Industrial Ball Valve",
+            "type": "Equipment"
+        },
+        {
+            "name": "Electric Motor",
+            "type": "Equipment"
+        },
+        {
+            "name": "Compressor",
+            "type": "Equipment"
+        },
+        {
+            "name": "Shell and Tube Exchanger",
+            "type": "Equipment"
+        },
+        {
+            "name": "Impeller",
+            "type": "Component"
+        },
+        {
+            "name": "Mechanical Seal",
+            "type": "Component"
+        },
+        {
+            "name": "Bearing",
+            "type": "Component"
+        },
+        {
+            "name": "Ball",
+            "type": "Component"
+        },
+        {
+            "name": "Seat",
+            "type": "Component"
+        },
+        {
+            "name": "Tube Bundle",
+            "type": "Component"
+        },
+        {
+            "name": "Cavitation",
+            "type": "Failure"
+        },
+        {
+            "name": "Vibration",
+            "type": "Failure"
+        },
+        {
+            "name": "Seal Leakage",
+            "type": "Failure"
+        },
+        {
+            "name": "Corrosion",
+            "type": "Failure"
+        },
+        {
+            "name": "Electrical Shock",
+            "type": "Hazard"
+        },
+        {
+            "name": "High Pressure",
+            "type": "Hazard"
+        },
+        {
+            "name": "Lock Out/Tag Out",
+            "type": "Procedure"
+        },
+        {
+            "name": "Preventive Maintenance",
+            "type": "Procedure"
+        },
+        {
+            "name": "Alignment Procedure",
+            "type": "Procedure"
+        },
+        {
+            "name": "API 610",
+            "type": "Regulation"
+        },
+        {
+            "name": "ISO Standards",
+            "type": "Regulation"
+        },
+        {
+            "name": "Operating Temperature",
+            "type": "Parameter"
+        },
+        {
+            "name": "Working Pressure",
+            "type": "Parameter"
+        },
+        {
+            "name": "Efficiency",
+            "type": "Parameter"
+        }
+    ],
+    "relations": [
+        {
+            "source": "Centrifugal Pump",
+            "relation": "contains",
+            "target": "Impeller"
+        },
+        {
+            "source": "Centrifugal Pump",
+            "relation": "contains",
+            "target": "Mechanical Seal"
+        },
+        {
+            "source": "Centrifugal Pump",
+            "relation": "powered_by",
+            "target": "Electric Motor"
+        },
+        {
+            "source": "Industrial Ball Valve",
+            "relation": "contains",
+            "target": "Ball"
+        },
+        {
+            "source": "Shell and Tube Exchanger",
+            "relation": "contains",
+            "target": "Tube Bundle"
+        },
+        {
+            "source": "Cavitation",
+            "relation": "affects",
+            "target": "Centrifugal Pump"
+        },
+        {
+            "source": "Lock Out/Tag Out",
+            "relation": "mitigates",
+            "target": "Electrical Shock"
+        },
+        {
+            "source": "Preventive Maintenance",
+            "relation": "improves",
+            "target": "Efficiency"
+        },
+        {
+            "source": "API 610",
+            "relation": "regulates",
+            "target": "Centrifugal Pump"
+        }
+    ]
+}

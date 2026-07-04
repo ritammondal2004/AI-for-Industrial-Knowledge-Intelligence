@@ -1,0 +1,204 @@
+{
+    "source_pdf": "BEST_PRACTICE_MANUAL_ELECTRIC_MOTORS.pdf",
+    "entities": [
+        {
+            "name": "Electric Motor",
+            "type": "Equipment"
+        },
+        {
+            "name": "Squirrel Cage Induction Motor",
+            "type": "Equipment"
+        },
+        {
+            "name": "Wound-rotor Motor",
+            "type": "Equipment"
+        },
+        {
+            "name": "Synchronous Motor",
+            "type": "Equipment"
+        },
+        {
+            "name": "DC Motor",
+            "type": "Equipment"
+        },
+        {
+            "name": "Variable Frequency Drive",
+            "type": "Instrument"
+        },
+        {
+            "name": "Soft Starter",
+            "type": "Instrument"
+        },
+        {
+            "name": "Stator",
+            "type": "Component"
+        },
+        {
+            "name": "Rotor",
+            "type": "Component"
+        },
+        {
+            "name": "Bearing",
+            "type": "Component"
+        },
+        {
+            "name": "Shaft",
+            "type": "Component"
+        },
+        {
+            "name": "Winding Insulation",
+            "type": "Material"
+        },
+        {
+            "name": "Lubricant",
+            "type": "Material"
+        },
+        {
+            "name": "Shaft Grounding Brush",
+            "type": "Component"
+        },
+        {
+            "name": "Belt Drive",
+            "type": "Equipment"
+        },
+        {
+            "name": "Gear Drive",
+            "type": "Equipment"
+        },
+        {
+            "name": "Proper Lubrication",
+            "type": "Procedure"
+        },
+        {
+            "name": "Rewinding",
+            "type": "Procedure"
+        },
+        {
+            "name": "Star-Delta Connection",
+            "type": "Procedure"
+        },
+        {
+            "name": "Bearing Maintenance",
+            "type": "Procedure"
+        },
+        {
+            "name": "Belt Tensioning",
+            "type": "Procedure"
+        },
+        {
+            "name": "Voltage Unbalance",
+            "type": "Failure"
+        },
+        {
+            "name": "Bearing Pitting",
+            "type": "Failure"
+        },
+        {
+            "name": "Motor Overload",
+            "type": "Failure"
+        },
+        {
+            "name": "Bearing Damage",
+            "type": "Failure"
+        },
+        {
+            "name": "Shock Load",
+            "type": "Hazard"
+        },
+        {
+            "name": "Operating Temperature",
+            "type": "Parameter"
+        },
+        {
+            "name": "Power Factor",
+            "type": "Parameter"
+        },
+        {
+            "name": "Slip",
+            "type": "Parameter"
+        },
+        {
+            "name": "Torque",
+            "type": "Parameter"
+        },
+        {
+            "name": "Efficiency",
+            "type": "Parameter"
+        },
+        {
+            "name": "IS: 12615-2004",
+            "type": "Regulation"
+        },
+        {
+            "name": "IS: 325",
+            "type": "Regulation"
+        }
+    ],
+    "relations": [
+        {
+            "source": "Electric Motor",
+            "relation": "contains",
+            "target": "Stator"
+        },
+        {
+            "source": "Electric Motor",
+            "relation": "contains",
+            "target": "Rotor"
+        },
+        {
+            "source": "Electric Motor",
+            "relation": "contains",
+            "target": "Bearing"
+        },
+        {
+            "source": "Electric Motor",
+            "relation": "contains",
+            "target": "Shaft"
+        },
+        {
+            "source": "Proper Lubrication",
+            "relation": "maintains",
+            "target": "Bearing"
+        },
+        {
+            "source": "Bearing Maintenance",
+            "relation": "prevents",
+            "target": "Bearing Pitting"
+        },
+        {
+            "source": "Shaft Grounding Brush",
+            "relation": "prevents",
+            "target": "Bearing Pitting"
+        },
+        {
+            "source": "Voltage Unbalance",
+            "relation": "causes",
+            "target": "Motor Overload"
+        },
+        {
+            "source": "Shock Load",
+            "relation": "causes",
+            "target": "Bearing Damage"
+        },
+        {
+            "source": "Star-Delta Connection",
+            "relation": "improves",
+            "target": "Efficiency"
+        },
+        {
+            "source": "Variable Frequency Drive",
+            "relation": "controls",
+            "target": "Torque"
+        },
+        {
+            "source": "IS: 325",
+            "relation": "regulates",
+            "target": "Electric Motor"
+        },
+        {
+            "source": "IS: 12615-2004",
+            "relation": "regulates",
+            "target": "Electric Motor"
+        }
+    ]
+}
