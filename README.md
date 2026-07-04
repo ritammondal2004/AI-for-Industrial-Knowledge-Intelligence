@@ -60,6 +60,19 @@ industrial-knowledge-intelligence/
 │   └── app.py                      # Streamlit
 │
 ├── data/
+│   ├──raw/ 
+│   │   ├── Incident_reports/
+│   │   ├── Manusals/
+│   │   ├── Procesdures
+│   │   └── Regulations
+│   │   
+│   ├──processed/
+│   │   ├── graph_json/
+│   │   ├── extracted_pages
+│   │   ├── ingestion_progress.json
+│   │   ├── caption_cache.json
+│   │   └── kg_progress.json
+|   │   
 │   └── cache/                      # local disk cache — S3 downloads land here
 │       ├── chroma_db/              # downloaded once at startup, reused
 │       └── knowledge_graph.gpickle # downloaded once at startup, reused
