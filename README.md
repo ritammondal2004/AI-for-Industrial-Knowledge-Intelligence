@@ -77,8 +77,9 @@ industrial-knowledge-intelligence/
 │       ├── chroma_db/              # downloaded once at startup, reused
 │       └── knowledge_graph.gpickle # downloaded once at startup, reused
 │
-├── notebooks/                      # reference only for experimental
-│   ├── GraphRAG_building_from_json_files_generated_from_pdf.ipynb 
+├── notebooks/                      # notebooks for experimental work
+│   ├── GraphRAG_building_from_json_files.ipynb 
+│   ├── chroma_db_data_ingestion_experimental.ipynb
 │   └── Retrieval_Context_and_response_experiment.ipynb
 │
 ├── eval/
@@ -127,5 +128,5 @@ uvicorn backend.main:app --reload
 ### Start Streamlit Frontend
 
 ```bash
-streamlit run frontend/app.py
+streamlit run frontend/streamlit_app.py
 ```
