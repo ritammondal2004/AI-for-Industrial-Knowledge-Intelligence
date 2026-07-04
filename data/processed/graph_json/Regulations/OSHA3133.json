@@ -1,0 +1,462 @@
+{
+  "source_pdf": "OSHA3133.pdf",
+  "entities": [
+    {
+      "name": "Reactor",
+      "type": "Equipment"
+    },
+    {
+      "name": "Solvent stripper",
+      "type": "Equipment"
+    },
+    {
+      "name": "Wash vessel",
+      "type": "Equipment"
+    },
+    {
+      "name": "Pumps",
+      "type": "Equipment"
+    },
+    {
+      "name": "Storage tanks",
+      "type": "Equipment"
+    },
+    {
+      "name": "Piping systems",
+      "type": "Equipment"
+    },
+    {
+      "name": "Solvent reclamation system",
+      "type": "Equipment"
+    },
+    {
+      "name": "Wastewater treatment system",
+      "type": "Equipment"
+    },
+    {
+      "name": "Pressure relief valves",
+      "type": "Component"
+    },
+    {
+      "name": "Rupture disks",
+      "type": "Component"
+    },
+    {
+      "name": "Emergency vent systems",
+      "type": "Component"
+    },
+    {
+      "name": "Flanges",
+      "type": "Component"
+    },
+    {
+      "name": "Gaskets",
+      "type": "Component"
+    },
+    {
+      "name": "Control interlocks",
+      "type": "Instrument"
+    },
+    {
+      "name": "Alarms",
+      "type": "Instrument"
+    },
+    {
+      "name": "Detection systems",
+      "type": "Instrument"
+    },
+    {
+      "name": "Sensors",
+      "type": "Instrument"
+    },
+    {
+      "name": "Highly hazardous chemicals",
+      "type": "Chemical"
+    },
+    {
+      "name": "Flammable liquids",
+      "type": "Chemical"
+    },
+    {
+      "name": "Toxic chemicals",
+      "type": "Chemical"
+    },
+    {
+      "name": "Incompatible materials",
+      "type": "Chemical"
+    },
+    {
+      "name": "Catastrophic release",
+      "type": "Hazard"
+    },
+    {
+      "name": "Fire",
+      "type": "Hazard"
+    },
+    {
+      "name": "Explosion",
+      "type": "Hazard"
+    },
+    {
+      "name": "Runaway reaction",
+      "type": "Hazard"
+    },
+    {
+      "name": "Equipment failure",
+      "type": "Failure"
+    },
+    {
+      "name": "Human error",
+      "type": "Failure"
+    },
+    {
+      "name": "Overpressurization",
+      "type": "Failure"
+    },
+    {
+      "name": "Control system failure",
+      "type": "Failure"
+    },
+    {
+      "name": "Incident",
+      "type": "Incident"
+    },
+    {
+      "name": "Near miss",
+      "type": "Incident"
+    },
+    {
+      "name": "Initial startup",
+      "type": "Procedure"
+    },
+    {
+      "name": "Normal operations",
+      "type": "Procedure"
+    },
+    {
+      "name": "Emergency shutdown",
+      "type": "Procedure"
+    },
+    {
+      "name": "Normal shutdown",
+      "type": "Procedure"
+    },
+    {
+      "name": "Pre-startup safety review",
+      "type": "Procedure"
+    },
+    {
+      "name": "Mechanical integrity program",
+      "type": "Procedure"
+    },
+    {
+      "name": "Inspection and testing",
+      "type": "Procedure"
+    },
+    {
+      "name": "Process hazard analysis",
+      "type": "Procedure"
+    },
+    {
+      "name": "Management of change",
+      "type": "Procedure"
+    },
+    {
+      "name": "Incident investigation",
+      "type": "Procedure"
+    },
+    {
+      "name": "OSHA Process Safety Management Standard 29 CFR 1910.119",
+      "type": "Regulation"
+    },
+    {
+      "name": "Safe operating limits",
+      "type": "Parameter"
+    },
+    {
+      "name": "Temperature",
+      "type": "Parameter"
+    },
+    {
+      "name": "Pressure",
+      "type": "Parameter"
+    },
+    {
+      "name": "Flow rate",
+      "type": "Parameter"
+    },
+    {
+      "name": "Composition",
+      "type": "Parameter"
+    },
+    {
+      "name": "Threshold quantity",
+      "type": "Parameter"
+    },
+    {
+      "name": "Covered process",
+      "type": "Location"
+    },
+    {
+      "name": "Process area",
+      "type": "Location"
+    }
+  ],
+  "relations": [
+    {
+      "source": "Covered process",
+      "relation": "contains",
+      "target": "Reactor"
+    },
+    {
+      "source": "Covered process",
+      "relation": "contains",
+      "target": "Solvent stripper"
+    },
+    {
+      "source": "Covered process",
+      "relation": "contains",
+      "target": "Wash vessel"
+    },
+    {
+      "source": "Covered process",
+      "relation": "contains",
+      "target": "Pumps"
+    },
+    {
+      "source": "Covered process",
+      "relation": "contains",
+      "target": "Storage tanks"
+    },
+    {
+      "source": "Covered process",
+      "relation": "contains",
+      "target": "Piping systems"
+    },
+    {
+      "source": "Covered process",
+      "relation": "contains",
+      "target": "Solvent reclamation system"
+    },
+    {
+      "source": "Covered process",
+      "relation": "contains",
+      "target": "Wastewater treatment system"
+    },
+    {
+      "source": "Piping systems",
+      "relation": "contains",
+      "target": "Flanges"
+    },
+    {
+      "source": "Piping systems",
+      "relation": "contains",
+      "target": "Gaskets"
+    },
+    {
+      "source": "Reactor",
+      "relation": "contains",
+      "target": "Emergency vent systems"
+    },
+    {
+      "source": "Emergency vent systems",
+      "relation": "contains",
+      "target": "Pressure relief valves"
+    },
+    {
+      "source": "Emergency vent systems",
+      "relation": "contains",
+      "target": "Rupture disks"
+    },
+    {
+      "source": "Covered process",
+      "relation": "contains",
+      "target": "Control interlocks"
+    },
+    {
+      "source": "Covered process",
+      "relation": "contains",
+      "target": "Alarms"
+    },
+    {
+      "source": "Covered process",
+      "relation": "contains",
+      "target": "Detection systems"
+    },
+    {
+      "source": "Covered process",
+      "relation": "contains",
+      "target": "Sensors"
+    },
+    {
+      "source": "Mechanical integrity program",
+      "relation": "appliesTo",
+      "target": "Reactor"
+    },
+    {
+      "source": "Mechanical integrity program",
+      "relation": "appliesTo",
+      "target": "Storage tanks"
+    },
+    {
+      "source": "Mechanical integrity program",
+      "relation": "appliesTo",
+      "target": "Piping systems"
+    },
+    {
+      "source": "Mechanical integrity program",
+      "relation": "appliesTo",
+      "target": "Pressure relief valves"
+    },
+    {
+      "source": "Mechanical integrity program",
+      "relation": "appliesTo",
+      "target": "Control interlocks"
+    },
+    {
+      "source": "Inspection and testing",
+      "relation": "procedureFor",
+      "target": "Mechanical integrity program"
+    },
+    {
+      "source": "Initial startup",
+      "relation": "procedureFor",
+      "target": "Covered process"
+    },
+    {
+      "source": "Normal operations",
+      "relation": "procedureFor",
+      "target": "Covered process"
+    },
+    {
+      "source": "Emergency shutdown",
+      "relation": "procedureFor",
+      "target": "Covered process"
+    },
+    {
+      "source": "Normal shutdown",
+      "relation": "procedureFor",
+      "target": "Covered process"
+    },
+    {
+      "source": "Pre-startup safety review",
+      "relation": "procedureBefore",
+      "target": "Initial startup"
+    },
+    {
+      "source": "Highly hazardous chemicals",
+      "relation": "presentsHazard",
+      "target": "Catastrophic release"
+    },
+    {
+      "source": "Flammable liquids",
+      "relation": "presentsHazard",
+      "target": "Fire"
+    },
+    {
+      "source": "Flammable liquids",
+      "relation": "presentsHazard",
+      "target": "Explosion"
+    },
+    {
+      "source": "Incompatible materials",
+      "relation": "presentsHazard",
+      "target": "Runaway reaction"
+    },
+    {
+      "source": "Equipment failure",
+      "relation": "causes",
+      "target": "Catastrophic release"
+    },
+    {
+      "source": "Human error",
+      "relation": "causes",
+      "target": "Incident"
+    },
+    {
+      "source": "Control system failure",
+      "relation": "causes",
+      "target": "Overpressurization"
+    },
+    {
+      "source": "Overpressurization",
+      "relation": "causes",
+      "target": "Explosion"
+    },
+    {
+      "source": "Runaway reaction",
+      "relation": "causes",
+      "target": "Overpressurization"
+    },
+    {
+      "source": "Incident investigation",
+      "relation": "investigates",
+      "target": "Incident"
+    },
+    {
+      "source": "Incident investigation",
+      "relation": "investigates",
+      "target": "Near miss"
+    },
+    {
+      "source": "Safe operating limits",
+      "relation": "governs",
+      "target": "Temperature"
+    },
+    {
+      "source": "Safe operating limits",
+      "relation": "governs",
+      "target": "Pressure"
+    },
+    {
+      "source": "Safe operating limits",
+      "relation": "governs",
+      "target": "Flow rate"
+    },
+    {
+      "source": "Safe operating limits",
+      "relation": "governs",
+      "target": "Composition"
+    },
+    {
+      "source": "Threshold quantity",
+      "relation": "appliesTo",
+      "target": "Highly hazardous chemicals"
+    },
+    {
+      "source": "OSHA Process Safety Management Standard 29 CFR 1910.119",
+      "relation": "regulates",
+      "target": "Covered process"
+    },
+    {
+      "source": "Process hazard analysis",
+      "relation": "identifies",
+      "target": "Hazard"
+    },
+    {
+      "source": "Management of change",
+      "relation": "evaluatesImpactOn",
+      "target": "Covered process"
+    },
+    {
+      "source": "Pressure relief valves",
+      "relation": "mitigates",
+      "target": "Overpressurization"
+    },
+    {
+      "source": "Rupture disks",
+      "relation": "mitigates",
+      "target": "Overpressurization"
+    },
+    {
+      "source": "Control interlocks",
+      "relation": "mitigates",
+      "target": "Runaway reaction"
+    },
+    {
+      "source": "Covered process",
+      "relation": "locatedWithin",
+      "target": "Process area"
+    }
+  ]
+}

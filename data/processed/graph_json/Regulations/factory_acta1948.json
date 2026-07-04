@@ -1,0 +1,369 @@
+
+{
+  "source_pdf": "factory_acta1948.pdf",
+  "entities": [
+    {
+      "name": "Prime movers",
+      "type": "Equipment"
+    },
+    {
+      "name": "Transmission machinery",
+      "type": "Equipment"
+    },
+    {
+      "name": "Electric generator",
+      "type": "Equipment"
+    },
+    {
+      "name": "Hoists and lifts",
+      "type": "Equipment"
+    },
+    {
+      "name": "Lifting machines",
+      "type": "Equipment"
+    },
+    {
+      "name": "Pressure plant",
+      "type": "Equipment"
+    },
+    {
+      "name": "Revolving machinery",
+      "type": "Equipment"
+    },
+    {
+      "name": "Ventilation system",
+      "type": "Equipment"
+    },
+    {
+      "name": "Fencing",
+      "type": "Component"
+    },
+    {
+      "name": "Striking gear",
+      "type": "Component"
+    },
+    {
+      "name": "Lifting tackles",
+      "type": "Component"
+    },
+    {
+      "name": "Chains and ropes",
+      "type": "Component"
+    },
+    {
+      "name": "Safety valves",
+      "type": "Component"
+    },
+    {
+      "name": "Spittoons",
+      "type": "Component"
+    },
+    {
+      "name": "Latrines and urinals",
+      "type": "Component"
+    },
+    {
+      "name": "Water gauge",
+      "type": "Instrument"
+    },
+    {
+      "name": "Pressure gauge",
+      "type": "Instrument"
+    },
+    {
+      "name": "Dust and fume",
+      "type": "Chemical"
+    },
+    {
+      "name": "Toxic substances",
+      "type": "Chemical"
+    },
+    {
+      "name": "Inflammable gas",
+      "type": "Chemical"
+    },
+    {
+      "name": "Wastes and effluents",
+      "type": "Material"
+    },
+    {
+      "name": "Machinery in motion",
+      "type": "Hazard"
+    },
+    {
+      "name": "Excessive weights",
+      "type": "Hazard"
+    },
+    {
+      "name": "Explosive dust or gas",
+      "type": "Hazard"
+    },
+    {
+      "name": "Defective lifting tackle",
+      "type": "Failure"
+    },
+    {
+      "name": "Safe working load failure",
+      "type": "Failure"
+    },
+    {
+      "name": "Overpressure",
+      "type": "Failure"
+    },
+    {
+      "name": "Industrial accident",
+      "type": "Incident"
+    },
+    {
+      "name": "Dangerous occurrence",
+      "type": "Incident"
+    },
+    {
+      "name": "Examination and testing",
+      "type": "Procedure"
+    },
+    {
+      "name": "Disposal of wastes",
+      "type": "Procedure"
+    },
+    {
+      "name": "Artificial humidification",
+      "type": "Procedure"
+    },
+    {
+      "name": "Cleaning or lubricating",
+      "type": "Procedure"
+    },
+    {
+      "name": "The Factories Act 1948",
+      "type": "Regulation"
+    },
+    {
+      "name": "Permissible limits of exposure",
+      "type": "Parameter"
+    },
+    {
+      "name": "Safe working peripheral speed",
+      "type": "Parameter"
+    },
+    {
+      "name": "Maximum safe working pressure",
+      "type": "Parameter"
+    },
+    {
+      "name": "Factory premises",
+      "type": "Location"
+    },
+    {
+      "name": "Confined space",
+      "type": "Location"
+    }
+  ],
+  "relations": [
+    {
+      "source": "Transmission machinery",
+      "relation": "contains",
+      "target": "Striking gear"
+    },
+    {
+      "source": "Prime movers",
+      "relation": "contains",
+      "target": "Fencing"
+    },
+    {
+      "source": "Lifting machines",
+      "relation": "contains",
+      "target": "Lifting tackles"
+    },
+    {
+      "source": "Lifting machines",
+      "relation": "contains",
+      "target": "Chains and ropes"
+    },
+    {
+      "source": "Pressure plant",
+      "relation": "contains",
+      "target": "Safety valves"
+    },
+    {
+      "source": "Pressure plant",
+      "relation": "contains",
+      "target": "Pressure gauge"
+    },
+    {
+      "source": "Pressure plant",
+      "relation": "contains",
+      "target": "Water gauge"
+    },
+    {
+      "source": "Factory premises",
+      "relation": "contains",
+      "target": "Prime movers"
+    },
+    {
+      "source": "Factory premises",
+      "relation": "contains",
+      "target": "Transmission machinery"
+    },
+    {
+      "source": "Factory premises",
+      "relation": "contains",
+      "target": "Electric generator"
+    },
+    {
+      "source": "Factory premises",
+      "relation": "contains",
+      "target": "Hoists and lifts"
+    },
+    {
+      "source": "Factory premises",
+      "relation": "contains",
+      "target": "Pressure plant"
+    },
+    {
+      "source": "Factory premises",
+      "relation": "contains",
+      "target": "Ventilation system"
+    },
+    {
+      "source": "Factory premises",
+      "relation": "contains",
+      "target": "Latrines and urinals"
+    },
+    {
+      "source": "Factory premises",
+      "relation": "contains",
+      "target": "Spittoons"
+    },
+    {
+      "source": "Machinery in motion",
+      "relation": "presentsHazard",
+      "target": "Industrial accident"
+    },
+    {
+      "source": "Explosive dust or gas",
+      "relation": "presentsHazard",
+      "target": "Dangerous occurrence"
+    },
+    {
+      "source": "Excessive weights",
+      "relation": "presentsHazard",
+      "target": "Industrial accident"
+    },
+    {
+      "source": "Defective lifting tackle",
+      "relation": "causes",
+      "target": "Safe working load failure"
+    },
+    {
+      "source": "Safe working load failure",
+      "relation": "causes",
+      "target": "Industrial accident"
+    },
+    {
+      "source": "Overpressure",
+      "relation": "causes",
+      "target": "Dangerous occurrence"
+    },
+    {
+      "source": "Examination and testing",
+      "relation": "procedureFor",
+      "target": "Hoists and lifts"
+    },
+    {
+      "source": "Examination and testing",
+      "relation": "procedureFor",
+      "target": "Lifting machines"
+    },
+    {
+      "source": "Examination and testing",
+      "relation": "procedureFor",
+      "target": "Pressure plant"
+    },
+    {
+      "source": "Cleaning or lubricating",
+      "relation": "procedureFor",
+      "target": "Machinery in motion"
+    },
+    {
+      "source": "Disposal of wastes",
+      "relation": "procedureFor",
+      "target": "Wastes and effluents"
+    },
+    {
+      "source": "Artificial humidification",
+      "relation": "procedureFor",
+      "target": "Ventilation system"
+    },
+    {
+      "source": "Fencing",
+      "relation": "mitigates",
+      "target": "Machinery in motion"
+    },
+    {
+      "source": "Striking gear",
+      "relation": "mitigates",
+      "target": "Machinery in motion"
+    },
+    {
+      "source": "Ventilation system",
+      "relation": "mitigates",
+      "target": "Dust and fume"
+    },
+    {
+      "source": "Ventilation system",
+      "relation": "mitigates",
+      "target": "Inflammable gas"
+    },
+    {
+      "source": "The Factories Act 1948",
+      "relation": "regulates",
+      "target": "Factory premises"
+    },
+    {
+      "source": "The Factories Act 1948",
+      "relation": "governs",
+      "target": "Permissible limits of exposure"
+    },
+    {
+      "source": "The Factories Act 1948",
+      "relation": "governs",
+      "target": "Maximum safe working pressure"
+    },
+    {
+      "source": "The Factories Act 1948",
+      "relation": "governs",
+      "target": "Safe working peripheral speed"
+    },
+    {
+      "source": "Permissible limits of exposure",
+      "relation": "governs",
+      "target": "Toxic substances"
+    },
+    {
+      "source": "Permissible limits of exposure",
+      "relation": "governs",
+      "target": "Dust and fume"
+    },
+    {
+      "source": "Maximum safe working pressure",
+      "relation": "governs",
+      "target": "Pressure plant"
+    },
+    {
+      "source": "Safe working peripheral speed",
+      "relation": "governs",
+      "target": "Revolving machinery"
+    },
+    {
+      "source": "Confined space",
+      "relation": "locatedWithin",
+      "target": "Factory premises"
+    },
+    {
+      "source": "Inflammable gas",
+      "relation": "accumulatesIn",
+      "target": "Confined space"
+    }
+  ]
+}

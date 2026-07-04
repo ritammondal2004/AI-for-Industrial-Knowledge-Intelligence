@@ -1,0 +1,324 @@
+{
+  "source_pdf": "SOP_pump.pdf",
+
+  "entities": [
+    {
+      "name": "Centrifugal Pump",
+      "type": "Equipment"
+    },
+    {
+      "name": "Gear Pump",
+      "type": "Equipment"
+    },
+    {
+      "name": "Amatrol Pump Station Platform",
+      "type": "Equipment"
+    },
+    {
+      "name": "Motor",
+      "type": "Equipment"
+    },
+    {
+      "name": "Flow Meter",
+      "type": "Equipment"
+    },
+    {
+      "name": "Mounting Bolt",
+      "type": "Component"
+    },
+    {
+      "name": "Pump Base Flange",
+      "type": "Component"
+    },
+    {
+      "name": "Mount Structure",
+      "type": "Component"
+    },
+    {
+      "name": "Flat Washer",
+      "type": "Component"
+    },
+    {
+      "name": "Lock Washer",
+      "type": "Component"
+    },
+    {
+      "name": "Hex Nut",
+      "type": "Component"
+    },
+    {
+      "name": "Motor Coupling Half",
+      "type": "Component"
+    },
+    {
+      "name": "Pump Coupling Half",
+      "type": "Component"
+    },
+    {
+      "name": "Rubber Spider Insert",
+      "type": "Component"
+    },
+    {
+      "name": "Vacuum Gauge Valve",
+      "type": "Component"
+    },
+    {
+      "name": "Air Ingestion Valve",
+      "type": "Component"
+    },
+    {
+      "name": "Main Inlet Shutoff Valve",
+      "type": "Component"
+    },
+    {
+      "name": "Single Pump Discharge Valve",
+      "type": "Component"
+    },
+    {
+      "name": "Series Operation Discharge Shutoff Valve",
+      "type": "Component"
+    },
+    {
+      "name": "Relief Valve Drain Line",
+      "type": "Component"
+    },
+    {
+      "name": "Piping Framework",
+      "type": "Component"
+    },
+    {
+      "name": "Equipment Vibration",
+      "type": "Failure"
+    },
+    {
+      "name": "Hardware Loosening",
+      "type": "Failure"
+    },
+    {
+      "name": "Misalignment",
+      "type": "Failure"
+    },
+    {
+      "name": "Catastrophic Mechanical Failure",
+      "type": "Failure"
+    },
+    {
+      "name": "Excessive Wear",
+      "type": "Failure"
+    },
+    {
+      "name": "Metal Teeth Grinding",
+      "type": "Failure"
+    },
+    {
+      "name": "Motor Shaft Bending",
+      "type": "Failure"
+    },
+    {
+      "name": "Pump Cavitation",
+      "type": "Failure"
+    },
+    {
+      "name": "Overpressurization",
+      "type": "Hazard"
+    },
+    {
+      "name": "Bypassing Secondary Pump",
+      "type": "Failure"
+    },
+    {
+      "name": "Pump Sizing and Placement",
+      "type": "Procedure"
+    },
+    {
+      "name": "Fastening Hardware Stacking Sequence",
+      "type": "Procedure"
+    },
+    {
+      "name": "Motor-Pump Coupling Alignment Check",
+      "type": "Procedure"
+    },
+    {
+      "name": "Inlet Valve Manifold Configuration",
+      "type": "Procedure"
+    },
+    {
+      "name": "Series Operation Configuration",
+      "type": "Procedure"
+    },
+    {
+      "name": "Relief Valve Drain Line Routing Verification",
+      "type": "Procedure"
+    },
+    {
+      "name": "High-RPM Operation",
+      "type": "Parameter"
+    },
+    {
+      "name": "Coupling Gap",
+      "type": "Parameter"
+    }
+  ],
+  "relations": [
+    {
+      "source": "Amatrol Pump Station Platform",
+      "relation": "contains",
+      "target": "Centrifugal Pump"
+    },
+    {
+      "source": "Amatrol Pump Station Platform",
+      "relation": "contains",
+      "target": "Piping Framework"
+    },
+    {
+      "source": "Pump Sizing and Placement",
+      "relation": "applied_to",
+      "target": "Centrifugal Pump"
+    },
+    {
+      "source": "Fastening Hardware Stacking Sequence",
+      "relation": "uses",
+      "target": "Mounting Bolt"
+    },
+    {
+      "source": "Fastening Hardware Stacking Sequence",
+      "relation": "uses",
+      "target": "Pump Base Flange"
+    },
+    {
+      "source": "Fastening Hardware Stacking Sequence",
+      "relation": "uses",
+      "target": "Flat Washer"
+    },
+    {
+      "source": "Fastening Hardware Stacking Sequence",
+      "relation": "uses",
+      "target": "Lock Washer"
+    },
+    {
+      "source": "Fastening Hardware Stacking Sequence",
+      "relation": "uses",
+      "target": "Hex Nut"
+    },
+    {
+      "source": "Fastening Hardware Stacking Sequence",
+      "relation": "prevents",
+      "target": "Equipment Vibration"
+    },
+    {
+      "source": "Fastening Hardware Stacking Sequence",
+      "relation": "prevents",
+      "target": "Hardware Loosening"
+    },
+    {
+      "source": "Motor-Pump Coupling Alignment Check",
+      "relation": "monitors",
+      "target": "Motor Coupling Half"
+    },
+    {
+      "source": "Motor-Pump Coupling Alignment Check",
+      "relation": "monitors",
+      "target": "Pump Coupling Half"
+    },
+    {
+      "source": "Motor-Pump Coupling Alignment Check",
+      "relation": "monitors",
+      "target": "Rubber Spider Insert"
+    },
+    {
+      "source": "Motor-Pump Coupling Alignment Check",
+      "relation": "monitors",
+      "target": "Coupling Gap"
+    },
+    {
+      "source": "Misalignment",
+      "relation": "causes",
+      "target": "Catastrophic Mechanical Failure"
+    },
+    {
+      "source": "Misalignment",
+      "relation": "causes",
+      "target": "Excessive Wear"
+    },
+    {
+      "source": "High-RPM Operation",
+      "relation": "aggravates",
+      "target": "Metal Teeth Grinding"
+    },
+    {
+      "source": "High-RPM Operation",
+      "relation": "aggravates",
+      "target": "Motor Shaft Bending"
+    },
+    {
+      "source": "Inlet Valve Manifold Configuration",
+      "relation": "monitors",
+      "target": "Vacuum Gauge Valve"
+    },
+    {
+      "source": "Inlet Valve Manifold Configuration",
+      "relation": "monitors",
+      "target": "Air Ingestion Valve"
+    },
+    {
+      "source": "Inlet Valve Manifold Configuration",
+      "relation": "monitors",
+      "target": "Main Inlet Shutoff Valve"
+    },
+    {
+      "source": "Inlet Valve Manifold Configuration",
+      "relation": "prevents",
+      "target": "Pump Cavitation"
+    },
+    {
+      "source": "Series Operation Configuration",
+      "relation": "monitors",
+      "target": "Single Pump Discharge Valve"
+    },
+    {
+      "source": "Series Operation Configuration",
+      "relation": "monitors",
+      "target": "Series Operation Discharge Shutoff Valve"
+    },
+    {
+      "source": "Series Operation Configuration",
+      "relation": "prevents",
+      "target": "Bypassing Secondary Pump"
+    },
+    {
+      "source": "Relief Valve Drain Line Routing Verification",
+      "relation": "applied_to",
+      "target": "Gear Pump"
+    },
+    {
+      "source": "Relief Valve Drain Line Routing Verification",
+      "relation": "monitors",
+      "target": "Relief Valve Drain Line"
+    },
+    {
+      "source": "Relief Valve Drain Line Routing Verification",
+      "relation": "prevents",
+      "target": "Overpressurization"
+    },
+    {
+      "source": "Gear Pump",
+      "relation": "contains",
+      "target": "Relief Valve Drain Line"
+    },
+    {
+      "source": "Amatrol Pump Station Platform",
+      "relation": "contains",
+      "target": "Gear Pump"
+    },
+    {
+      "source": "Amatrol Pump Station Platform",
+      "relation": "contains",
+      "target": "Flow Meter"
+    },
+    {
+      "source": "Amatrol Pump Station Platform",
+      "relation": "contains",
+      "target": "Motor"
+    }
+  ]
+}

@@ -1,0 +1,165 @@
+{
+ "source_pdf": "Lockout_Tagout_SOP.pdf",
+
+  "entities": [
+    {
+      "name": "Lockout Station",
+      "type": "Equipment"
+    },
+    {
+      "name": "Truck Bed Lockout",
+      "type": "Equipment"
+    },
+    {
+      "name": "Punch Press Blocks",
+      "type": "Equipment"
+    },
+    {
+      "name": "Safety Block",
+      "type": "Component"
+    },
+    {
+      "name": "Wedge",
+      "type": "Component"
+    },
+    {
+      "name": "DANGER DO NOT OPERATE Tag",
+      "type": "Component"
+    },
+    {
+      "name": "Physical Lock Device",
+      "type": "Component"
+    },
+    {
+      "name": "Mandatory Signage",
+      "type": "Component"
+    },
+    {
+      "name": "Tamper-Resistant Locking Hardware",
+      "type": "Component"
+    },
+    {
+      "name": "Crush Injury",
+      "type": "Hazard"
+    },
+    {
+      "name": "Accidental Movement of Equipment",
+      "type": "Hazard"
+    },
+    {
+      "name": "Hazardous Machinery Parts Movement",
+      "type": "Hazard"
+    },
+    {
+      "name": "Energy Isolation Failure",
+      "type": "Failure"
+    },
+    {
+      "name": "Improvised Isolation Attempt",
+      "type": "Failure"
+    },
+    {
+      "name": "Inadequate Isolation Attempt",
+      "type": "Failure"
+    },
+    {
+      "name": "LOTO Procedure",
+      "type": "Procedure"
+    },
+    {
+      "name": "Maintenance",
+      "type": "Procedure"
+    },
+    {
+      "name": "Secondary Positive Restraint Application",
+      "type": "Procedure"
+    }
+  ],
+  "relations": [
+    {
+      "source": "Secondary Positive Restraint Application",
+      "relation": "uses",
+      "target": "Safety Block"
+    },
+    {
+      "source": "Secondary Positive Restraint Application",
+      "relation": "uses",
+      "target": "Wedge"
+    },
+    {
+      "source": "LOTO Procedure",
+      "relation": "requires",
+      "target": "Secondary Positive Restraint Application"
+    },
+    {
+      "source": "Safety Block",
+      "relation": "prevents",
+      "target": "Accidental Movement of Equipment"
+    },
+    {
+      "source": "Wedge",
+      "relation": "prevents",
+      "target": "Accidental Movement of Equipment"
+    },
+    {
+      "source": "Energy Isolation Failure",
+      "relation": "leads_to",
+      "target": "Hazardous Machinery Parts Movement"
+    },
+    {
+      "source": "Secondary Positive Restraint Application",
+      "relation": "mitigates",
+      "target": "Energy Isolation Failure"
+    },
+    {
+      "source": "Secondary Positive Restraint Application",
+      "relation": "prevents",
+      "target": "Crush Injury"
+    },
+    {
+      "source": "Maintenance",
+      "relation": "requires",
+      "target": "LOTO Procedure"
+    },
+    {
+      "source": "Lockout Station",
+      "relation": "contains",
+      "target": "DANGER DO NOT OPERATE Tag"
+    },
+    {
+      "source": "Lockout Station",
+      "relation": "contains",
+      "target": "Physical Lock Device"
+    },
+    {
+      "source": "Lockout Station",
+      "relation": "contains",
+      "target": "Mandatory Signage"
+    },
+    {
+      "source": "Lockout Station",
+      "relation": "contains",
+      "target": "Tamper-Resistant Locking Hardware"
+    },
+    {
+      "source": "Lockout Station",
+      "relation": "prevents",
+      "target": "Improvised Isolation Attempt"
+    },
+    {
+      "source": "Lockout Station",
+      "relation": "prevents",
+      "target": "Inadequate Isolation Attempt"
+    },
+    {
+      "source": "Truck Bed Lockout",
+      "relation": "utilizes",
+      "target": "Wedge"
+    },
+    {
+      "source": "Punch Press Blocks",
+      "relation": "utilizes",
+      "target": "Safety Block"
+    }
+  ]
+}

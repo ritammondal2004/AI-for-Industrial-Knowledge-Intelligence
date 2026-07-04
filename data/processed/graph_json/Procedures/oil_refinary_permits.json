@@ -1,0 +1,200 @@
+{
+  "source_pdf": "oil_refinary_permits.pdf",
+
+  "entities": [
+    {
+      "name": "Atmospheric Distillation Column",
+      "type": "Equipment"
+    },
+    {
+      "name": "Vacuum Distillation Column",
+      "type": "Equipment"
+    },
+    {
+      "name": "Catalytic Cracking Unit",
+      "type": "Equipment"
+    },
+    {
+      "name": "Catalytic Reforming Unit",
+      "type": "Equipment"
+    },
+    {
+      "name": "Hydrotreating Unit",
+      "type": "Equipment"
+    },
+    {
+      "name": "Alkylation Unit",
+      "type": "Equipment"
+    },
+    {
+      "name": "Delayed Coker",
+      "type": "Equipment"
+    },
+    {
+      "name": "Solvent Extraction Unit",
+      "type": "Equipment"
+    },
+    {
+      "name": "Amine Unit",
+      "type": "Equipment"
+    },
+    {
+      "name": "Sulfur Recovery Unit",
+      "type": "Equipment"
+    },
+    {
+      "name": "Storage Tank",
+      "type": "Equipment"
+    },
+    {
+      "name": "Blowdown/Flare System",
+      "type": "Equipment"
+    },
+    {
+      "name": "Waste Water Treatment Plant",
+      "type": "Equipment"
+    },
+    {
+      "name": "Crude Desalter",
+      "type": "Equipment"
+    },
+    {
+      "name": "Air Release Point",
+      "type": "Location"
+    },
+    {
+      "name": "Water Release Point",
+      "type": "Location"
+    },
+    {
+      "name": "Hazardous Waste Release Point",
+      "type": "Location"
+    },
+    {
+      "name": "Clean Air Act",
+      "type": "Regulation"
+    },
+    {
+      "name": "Clean Water Act",
+      "type": "Regulation"
+    },
+    {
+      "name": "Resource Conservation and Recovery Act",
+      "type": "Regulation"
+    },
+    {
+      "name": "Environmental Permitting",
+      "type": "Procedure"
+    },
+    {
+      "name": "Environmental Compliance Audit",
+      "type": "Procedure"
+    },
+    {
+      "name": "Crude Oil Flow",
+      "type": "Parameter"
+    }
+  ],
+  "relations": [
+    {
+      "source": "Crude Desalter",
+      "relation": "processes",
+      "target": "Crude Oil Flow"
+    },
+    {
+      "source": "Atmospheric Distillation Column",
+      "relation": "processes",
+      "target": "Crude Oil Flow"
+    },
+    {
+      "source": "Vacuum Distillation Column",
+      "relation": "processes",
+      "target": "Crude Oil Flow"
+    },
+    {
+      "source": "Atmospheric Distillation Column",
+      "relation": "contains",
+      "target": "Air Release Point"
+    },
+    {
+      "source": "Vacuum Distillation Column",
+      "relation": "contains",
+      "target": "Air Release Point"
+    },
+    {
+      "source": "Catalytic Cracking Unit",
+      "relation": "contains",
+      "target": "Air Release Point"
+    },
+    {
+      "source": "Catalytic Reforming Unit",
+      "relation": "contains",
+      "target": "Air Release Point"
+    },
+    {
+      "source": "Delayed Coker",
+      "relation": "contains",
+      "target": "Hazardous Waste Release Point"
+    },
+    {
+      "source": "Waste Water Treatment Plant",
+      "relation": "contains",
+      "target": "Water Release Point"
+    },
+    {
+      "source": "Air Release Point",
+      "relation": "governed_by",
+      "target": "Clean Air Act"
+    },
+    {
+      "source": "Water Release Point",
+      "relation": "governed_by",
+      "target": "Clean Water Act"
+    },
+    {
+      "source": "Hazardous Waste Release Point",
+      "relation": "governed_by",
+      "target": "Resource Conservation and Recovery Act"
+    },
+    {
+      "source": "Environmental Compliance Audit",
+      "relation": "evaluates",
+      "target": "Clean Air Act"
+    },
+    {
+      "source": "Environmental Compliance Audit",
+      "relation": "evaluates",
+      "target": "Clean Water Act"
+    },
+    {
+      "source": "Environmental Compliance Audit",
+      "relation": "evaluates",
+      "target": "Resource Conservation and Recovery Act"
+    },
+    {
+      "source": "Environmental Permitting",
+      "relation": "required_for",
+      "target": "Air Release Point"
+    },
+    {
+      "source": "Environmental Permitting",
+      "relation": "required_for",
+      "target": "Water Release Point"
+    },
+    {
+      "source": "Environmental Permitting",
+      "relation": "required_for",
+      "target": "Hazardous Waste Release Point"
+    },
+    {
+      "source": "Blowdown/Flare System",
+      "relation": "mitigates",
+      "target": "Air Release Point"
+    },
+    {
+      "source": "Storage Tank",
+      "relation": "stores",
+      "target": "Crude Oil Flow"
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "source_pdf": "startup_shutdown.pdf",
+
+  "entities": [
+    {
+      "name": "Steam Reformer",
+      "type": "Equipment"
+    },
+    {
+      "name": "Reformer Furnace",
+      "type": "Equipment"
+    },
+    {
+      "name": "Catalyst Tube",
+      "type": "Component"
+    },
+    {
+      "name": "Pre-startup Preparation",
+      "type": "Procedure"
+    },
+    {
+      "name": "Nitrogen Flow Verification",
+      "type": "Procedure"
+    },
+    {
+      "name": "Reformer Ignition",
+      "type": "Procedure"
+    },
+    {
+      "name": "Steam Introduction",
+      "type": "Procedure"
+    },
+    {
+      "name": "Safe Shutdown Practice",
+      "type": "Procedure"
+    },
+    {
+      "name": "On-line Furnace Inspection",
+      "type": "Procedure"
+    },
+    {
+      "name": "Overheating",
+      "type": "Failure"
+    },
+    {
+      "name": "Thermal Stress",
+      "type": "Hazard"
+    },
+    {
+      "name": "Catalyst Deactivation",
+      "type": "Failure"
+    }
+  ],
+  "relations": [
+    {
+      "source": "Reformer Ignition",
+      "relation": "applied_to",
+      "target": "Reformer Furnace"
+    },
+    {
+      "source": "Steam Introduction",
+      "relation": "prevents",
+      "target": "Catalyst Deactivation"
+    },
+    {
+      "source": "On-line Furnace Inspection",
+      "relation": "detects",
+      "target": "Overheating"
+    }
+  ]
+}

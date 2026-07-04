@@ -1,0 +1,71 @@
+{
+  "source_pdf": "Pump_Operation.pdf",
+
+  "entities": [
+    {
+      "name": "Peristaltic Pump",
+      "type": "Equipment"
+    },
+    {
+      "name": "Electric Submersible Pump",
+      "type": "Equipment"
+    },
+    {
+      "name": "Portable Bladder Pump",
+      "type": "Equipment"
+    },
+    {
+      "name": "Mechanical Bladder Pump",
+      "type": "Equipment"
+    },
+    {
+      "name": "Monitoring Well",
+      "type": "Location"
+    },
+    {
+      "name": "Pump Tubing",
+      "type": "Component"
+    },
+    {
+      "name": "Bladder Membrane",
+      "type": "Component"
+    },
+    {
+      "name": "Well Purging",
+      "type": "Procedure"
+    },
+    {
+      "name": "Groundwater Sampling",
+      "type": "Procedure"
+    },
+    {
+      "name": "Pre-Loadout Checkout",
+      "type": "Procedure"
+    },
+    {
+      "name": "Cross-Contamination",
+      "type": "Hazard"
+    },
+    {
+      "name": "Electrical Shock",
+      "type": "Hazard"
+    }
+  ],
+  "relations": [
+    {
+      "source": "Well Purging",
+      "relation": "applied_to",
+      "target": "Monitoring Well"
+    },
+    {
+      "source": "Groundwater Sampling",
+      "relation": "uses",
+      "target": "Peristaltic Pump"
+    },
+    {
+      "source": "Groundwater Sampling",
+      "relation": "uses",
+      "target": "Electric Submersible Pump"
+    }
+  ]
+}

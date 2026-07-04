@@ -1,22 +1,19 @@
-# Generated data
-data/processed/
 
-# Chroma
-**/chroma_db/
+data/processed/chroma_db/
 
 # Knowledge graph
 *.gpickle
 
 # SQLite
-*.sqlite3 
+*.sqlite3
 
-# Binary indexes
+# Binary index files
 *.bin
 
-# Pickle
-*.pkl
+# Cached page extraction
+# *.pkl
 
-# Cache
+# # Cache / Progress
 # caption_cache.json
 # ingestion_progress.json
 # kg_progress.json

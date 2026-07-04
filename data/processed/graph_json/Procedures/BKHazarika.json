@@ -1,0 +1,292 @@
+{
+  "source_pdf": "BKHazarika.pdf",
+
+  "entities": [
+    {
+      "name": "Refinery Unit",
+      "type": "Equipment"
+    },
+    {
+      "name": "ESD Valve",
+      "type": "Component"
+    },
+    {
+      "name": "Relief Device",
+      "type": "Component"
+    },
+    {
+      "name": "Interlock",
+      "type": "Component"
+    },
+    {
+      "name": "Bund Wall",
+      "type": "Component"
+    },
+    {
+      "name": "Safety Critical Element",
+      "type": "Component"
+    },
+    {
+      "name": "Loss of Containment",
+      "type": "Failure"
+    },
+    {
+      "name": "Loss of Baseline System Stability",
+      "type": "Failure"
+    },
+    {
+      "name": "Dynamic System Anomaly",
+      "type": "Failure"
+    },
+    {
+      "name": "Engineering Safeguard Failure",
+      "type": "Failure"
+    },
+    {
+      "name": "Intolerable Region Risk",
+      "type": "Hazard"
+    },
+    {
+      "name": "ALARP Region Risk",
+      "type": "Hazard"
+    },
+    {
+      "name": "Broadly Acceptable Region Risk",
+      "type": "Hazard"
+    },
+    {
+      "name": "Low Risk",
+      "type": "Hazard"
+    },
+    {
+      "name": "Medium Risk",
+      "type": "Hazard"
+    },
+    {
+      "name": "High Risk",
+      "type": "Hazard"
+    },
+    {
+      "name": "Critical Risk",
+      "type": "Hazard"
+    },
+    {
+      "name": "Environmental Damage",
+      "type": "Hazard"
+    },
+    {
+      "name": "Asset Damage",
+      "type": "Hazard"
+    },
+    {
+      "name": "People Impact",
+      "type": "Hazard"
+    },
+    {
+      "name": "Reputation Impact",
+      "type": "Hazard"
+    },
+    {
+      "name": "Accident Progression Sequence",
+      "type": "Incident"
+    },
+    {
+      "name": "HAZOP Study",
+      "type": "Procedure"
+    },
+    {
+      "name": "Process Hazards Analysis",
+      "type": "Procedure"
+    },
+    {
+      "name": "Modifications-Engineering",
+      "type": "Procedure"
+    },
+    {
+      "name": "Immediate Isolation",
+      "type": "Procedure"
+    },
+    {
+      "name": "Risk Reduction Economic Verification",
+      "type": "Procedure"
+    },
+    {
+      "name": "Plant Safety Verification",
+      "type": "Procedure"
+    },
+    {
+      "name": "Maintenance Scheduling",
+      "type": "Procedure"
+    },
+    {
+      "name": "Management of Change",
+      "type": "Procedure"
+    },
+    {
+      "name": "Asset Integrity Management",
+      "type": "Procedure"
+    },
+    {
+      "name": "Accident Investigation",
+      "type": "Procedure"
+    },
+    {
+      "name": "Safety Critical Element Integrity Testing",
+      "type": "Procedure"
+    },
+    {
+      "name": "Tolerability Criteria",
+      "type": "Regulation"
+    },
+    {
+      "name": "Likelihood/Probability",
+      "type": "Parameter"
+    },
+    {
+      "name": "Consequence Severity",
+      "type": "Parameter"
+    }
+  ],
+  "relations": [
+    {
+      "source": "HAZOP Study",
+      "relation": "applied_to",
+      "target": "Refinery Unit"
+    },
+    {
+      "source": "Process Hazards Analysis",
+      "relation": "applied_to",
+      "target": "Refinery Unit"
+    },
+    {
+      "source": "Intolerable Region Risk",
+      "relation": "triggers",
+      "target": "Immediate Isolation"
+    },
+    {
+      "source": "Intolerable Region Risk",
+      "relation": "triggers",
+      "target": "Modifications-Engineering"
+    },
+    {
+      "source": "ALARP Region Risk",
+      "relation": "requires",
+      "target": "Risk Reduction Economic Verification"
+    },
+    {
+      "source": "Plant Safety Verification",
+      "relation": "uses",
+      "target": "Likelihood/Probability"
+    },
+    {
+      "source": "Plant Safety Verification",
+      "relation": "uses",
+      "target": "Consequence Severity"
+    },
+    {
+      "source": "Consequence Severity",
+      "relation": "measures",
+      "target": "Environmental Damage"
+    },
+    {
+      "source": "Consequence Severity",
+      "relation": "measures",
+      "target": "Asset Damage"
+    },
+    {
+      "source": "Consequence Severity",
+      "relation": "measures",
+      "target": "People Impact"
+    },
+    {
+      "source": "Consequence Severity",
+      "relation": "measures",
+      "target": "Reputation Impact"
+    },
+    {
+      "source": "Dynamic System Anomaly",
+      "relation": "categorized_by",
+      "target": "Low Risk"
+    },
+    {
+      "source": "Dynamic System Anomaly",
+      "relation": "categorized_by",
+      "target": "Medium Risk"
+    },
+    {
+      "source": "Dynamic System Anomaly",
+      "relation": "categorized_by",
+      "target": "High Risk"
+    },
+    {
+      "source": "Dynamic System Anomaly",
+      "relation": "categorized_by",
+      "target": "Critical Risk"
+    },
+    {
+      "source": "Management of Change",
+      "relation": "authorized_via",
+      "target": "Plant Safety Verification"
+    },
+    {
+      "source": "Maintenance Scheduling",
+      "relation": "prioritized_by",
+      "target": "Plant Safety Verification"
+    },
+    {
+      "source": "Accident Investigation",
+      "relation": "identifies",
+      "target": "Engineering Safeguard Failure"
+    },
+    {
+      "source": "Engineering Safeguard Failure",
+      "relation": "involves",
+      "target": "ESD Valve"
+    },
+    {
+      "source": "Engineering Safeguard Failure",
+      "relation": "involves",
+      "target": "Relief Device"
+    },
+    {
+      "source": "Engineering Safeguard Failure",
+      "relation": "involves",
+      "target": "Interlock"
+    },
+    {
+      "source": "Engineering Safeguard Failure",
+      "relation": "involves",
+      "target": "Bund Wall"
+    },
+    {
+      "source": "Engineering Safeguard Failure",
+      "relation": "causes",
+      "target": "Loss of Containment"
+    },
+    {
+      "source": "Engineering Safeguard Failure",
+      "relation": "causes",
+      "target": "Loss of Baseline System Stability"
+    },
+    {
+      "source": "Engineering Safeguard Failure",
+      "relation": "leads_to",
+      "target": "Accident Progression Sequence"
+    },
+    {
+      "source": "Asset Integrity Management",
+      "relation": "requires",
+      "target": "Safety Critical Element Integrity Testing"
+    },
+    {
+      "source": "Safety Critical Element Integrity Testing",
+      "relation": "targets",
+      "target": "Safety Critical Element"
+    },
+    {
+      "source": "HAZOP Study",
+      "relation": "evaluates",
+      "target": "Tolerability Criteria"
+    }
+  ]
+}

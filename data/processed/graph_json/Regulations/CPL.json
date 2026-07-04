@@ -1,0 +1,368 @@
+
+{
+  "source_pdf": "CPL.pdf",
+  "entities": [
+    {
+      "name": "Process safety management standard",
+      "type": "Regulation"
+    },
+    {
+      "name": "29 CFR 1910.119",
+      "type": "Regulation"
+    },
+    {
+      "name": "Highly hazardous chemicals",
+      "type": "Chemical"
+    },
+    {
+      "name": "Atmospheric tank",
+      "type": "Equipment"
+    },
+    {
+      "name": "Process",
+      "type": "Location"
+    },
+    {
+      "name": "Compliance audit",
+      "type": "Procedure"
+    },
+    {
+      "name": "Process hazard analysis",
+      "type": "Procedure"
+    },
+    {
+      "name": "Pre-startup safety review",
+      "type": "Procedure"
+    },
+    {
+      "name": "Hot work permit",
+      "type": "Procedure"
+    },
+    {
+      "name": "Management of change",
+      "type": "Procedure"
+    },
+    {
+      "name": "Incident investigation",
+      "type": "Procedure"
+    },
+    {
+      "name": "Operating procedures",
+      "type": "Procedure"
+    },
+    {
+      "name": "Mechanical integrity program",
+      "type": "Procedure"
+    },
+    {
+      "name": "Emergency planning and response",
+      "type": "Procedure"
+    },
+    {
+      "name": "Contractor safety management",
+      "type": "Procedure"
+    },
+    {
+      "name": "Employee participation",
+      "type": "Procedure"
+    },
+    {
+      "name": "Flammable gas",
+      "type": "Chemical"
+    },
+    {
+      "name": "Flammable liquid",
+      "type": "Chemical"
+    },
+    {
+      "name": "Toxic substance",
+      "type": "Chemical"
+    },
+    {
+      "name": "Reactive chemical",
+      "type": "Chemical"
+    },
+    {
+      "name": "Pressure vessel",
+      "type": "Equipment"
+    },
+    {
+      "name": "Storage tank",
+      "type": "Equipment"
+    },
+    {
+      "name": "Piping system",
+      "type": "Component"
+    },
+    {
+      "name": "Relief device",
+      "type": "Component"
+    },
+    {
+      "name": "Ventilation system",
+      "type": "Component"
+    },
+    {
+      "name": "Emergency shutdown system",
+      "type": "Component"
+    },
+    {
+      "name": "Interlock",
+      "type": "Component"
+    },
+    {
+      "name": "Control room",
+      "type": "Location"
+    },
+    {
+      "name": "Catastrophic release",
+      "type": "Hazard"
+    },
+    {
+      "name": "Runaway reaction",
+      "type": "Hazard"
+    },
+    {
+      "name": "Fire and explosion",
+      "type": "Hazard"
+    },
+    {
+      "name": "Toxic exposure",
+      "type": "Hazard"
+    },
+    {
+      "name": "Equipment failure",
+      "type": "Failure"
+    },
+    {
+      "name": "Loss of containment",
+      "type": "Failure"
+    },
+    {
+      "name": "Human error",
+      "type": "Failure"
+    },
+    {
+      "name": "Process deviation",
+      "type": "Failure"
+    },
+    {
+      "name": "Threshold quantity",
+      "type": "Parameter"
+    },
+    {
+      "name": "Operating limit",
+      "type": "Parameter"
+    },
+    {
+      "name": "Design pressure",
+      "type": "Parameter"
+    },
+    {
+      "name": "Design temperature",
+      "type": "Parameter"
+    }
+  ],
+  "relations": [
+    {
+      "source": "Process safety management standard",
+      "relation": "governed_by",
+      "target": "29 CFR 1910.119"
+    },
+    {
+      "source": "Process safety management standard",
+      "relation": "regulates",
+      "target": "Process"
+    },
+    {
+      "source": "Process",
+      "relation": "contains",
+      "target": "Highly hazardous chemicals"
+    },
+    {
+      "source": "Process",
+      "relation": "contains",
+      "target": "Atmospheric tank"
+    },
+    {
+      "source": "Process",
+      "relation": "contains",
+      "target": "Pressure vessel"
+    },
+    {
+      "source": "Process",
+      "relation": "contains",
+      "target": "Storage tank"
+    },
+    {
+      "source": "Process",
+      "relation": "contains",
+      "target": "Piping system"
+    },
+    {
+      "source": "Piping system",
+      "relation": "contains",
+      "target": "Relief device"
+    },
+    {
+      "source": "Process",
+      "relation": "contains",
+      "target": "Ventilation system"
+    },
+    {
+      "source": "Process",
+      "relation": "contains",
+      "target": "Emergency shutdown system"
+    },
+    {
+      "source": "Emergency shutdown system",
+      "relation": "contains",
+      "target": "Interlock"
+    },
+    {
+      "source": "Process",
+      "relation": "contains",
+      "target": "Control room"
+    },
+    {
+      "source": "Highly hazardous chemicals",
+      "relation": "contains",
+      "target": "Flammable gas"
+    },
+    {
+      "source": "Highly hazardous chemicals",
+      "relation": "contains",
+      "target": "Flammable liquid"
+    },
+    {
+      "source": "Highly hazardous chemicals",
+      "relation": "contains",
+      "target": "Toxic substance"
+    },
+    {
+      "source": "Highly hazardous chemicals",
+      "relation": "contains",
+      "target": "Reactive chemical"
+    },
+    {
+      "source": "Highly hazardous chemicals",
+      "relation": "governed_by",
+      "target": "Threshold quantity"
+    },
+    {
+      "source": "Process safety management standard",
+      "relation": "mandates",
+      "target": "Process hazard analysis"
+    },
+    {
+      "source": "Process safety management standard",
+      "relation": "mandates",
+      "target": "Operating procedures"
+    },
+    {
+      "source": "Process safety management standard",
+      "relation": "mandates",
+      "target": "Mechanical integrity program"
+    },
+    {
+      "source": "Process safety management standard",
+      "relation": "mandates",
+      "target": "Management of change"
+    },
+    {
+      "source": "Process safety management standard",
+      "relation": "mandates",
+      "target": "Pre-startup safety review"
+    },
+    {
+      "source": "Process safety management standard",
+      "relation": "mandates",
+      "target": "Hot work permit"
+    },
+    {
+      "source": "Process safety management standard",
+      "relation": "mandates",
+      "target": "Incident investigation"
+    },
+    {
+      "source": "Process safety management standard",
+      "relation": "mandates",
+      "target": "Compliance audit"
+    },
+    {
+      "source": "Process safety management standard",
+      "relation": "mandates",
+      "target": "Emergency planning and response"
+    },
+    {
+      "source": "Process safety management standard",
+      "relation": "mandates",
+      "target": "Contractor safety management"
+    },
+    {
+      "source": "Process safety management standard",
+      "relation": "mandates",
+      "target": "Employee participation"
+    },
+    {
+      "source": "Process hazard analysis",
+      "relation": "identifies",
+      "target": "Catastrophic release"
+    },
+    {
+      "source": "Process hazard analysis",
+      "relation": "identifies",
+      "target": "Runaway reaction"
+    },
+    {
+      "source": "Process hazard analysis",
+      "relation": "identifies",
+      "target": "Fire and explosion"
+    },
+    {
+      "source": "Process hazard analysis",
+      "relation": "identifies",
+      "target": "Toxic exposure"
+    },
+    {
+      "source": "Operating procedures",
+      "relation": "defines",
+      "target": "Operating limit"
+    },
+    {
+      "source": "Process deviation",
+      "relation": "violates",
+      "target": "Operating limit"
+    },
+    {
+      "source": "Mechanical integrity program",
+      "relation": "prevents",
+      "target": "Equipment failure"
+    },
+    {
+      "source": "Equipment failure",
+      "relation": "causes",
+      "target": "Loss of containment"
+    },
+    {
+      "source": "Human error",
+      "relation": "causes",
+      "target": "Process deviation"
+    },
+    {
+      "source": "Loss of containment",
+      "relation": "triggers",
+      "target": "Catastrophic release"
+    },
+    {
+      "source": "Process safety management standard",
+      "relation": "governed_by",
+      "target": "Design pressure"
+    },
+    {
+      "source": "Process safety management standard",
+      "relation": "governed_by",
+      "target": "Design temperature"
+    }
+  ]
+}

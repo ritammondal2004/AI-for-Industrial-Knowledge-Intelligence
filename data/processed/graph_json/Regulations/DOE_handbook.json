@@ -1,0 +1,668 @@
+{
+  "source_pdf": "DOE_handbook.pdf",
+  "entities": [
+    {
+      "name": "Pressure vessels",
+      "type": "Equipment"
+    },
+    {
+      "name": "Storage tanks",
+      "type": "Equipment"
+    },
+    {
+      "name": "Piping systems",
+      "type": "Equipment"
+    },
+    {
+      "name": "Pumps",
+      "type": "Equipment"
+    },
+    {
+      "name": "Atmospheric Tank",
+      "type": "Equipment"
+    },
+    {
+      "name": "Ventilation systems",
+      "type": "Equipment"
+    },
+    {
+      "name": "Scrubbers",
+      "type": "Equipment"
+    },
+    {
+      "name": "Flares",
+      "type": "Equipment"
+    },
+    {
+      "name": "Valves",
+      "type": "Component"
+    },
+    {
+      "name": "Piping components",
+      "type": "Component"
+    },
+    {
+      "name": "Fittings",
+      "type": "Component"
+    },
+    {
+      "name": "Flanges",
+      "type": "Component"
+    },
+    {
+      "name": "Relief and vent systems",
+      "type": "Component"
+    },
+    {
+      "name": "Pressure relief valves",
+      "type": "Component"
+    },
+    {
+      "name": "Interlocks",
+      "type": "Instrument"
+    },
+    {
+      "name": "Monitoring devices",
+      "type": "Instrument"
+    },
+    {
+      "name": "Sensors",
+      "type": "Instrument"
+    },
+    {
+      "name": "Alarms",
+      "type": "Instrument"
+    },
+    {
+      "name": "Chemical detection systems",
+      "type": "Instrument"
+    },
+    {
+      "name": "Fire detection and suppression systems",
+      "type": "Instrument"
+    },
+    {
+      "name": "Highly Hazardous Chemicals",
+      "type": "Chemical"
+    },
+    {
+      "name": "Flammable Gas",
+      "type": "Chemical"
+    },
+    {
+      "name": "Flammable Liquid",
+      "type": "Chemical"
+    },
+    {
+      "name": "Explosives",
+      "type": "Chemical"
+    },
+    {
+      "name": "Incompatible materials",
+      "type": "Chemical"
+    },
+    {
+      "name": "Catastrophic Release",
+      "type": "Hazard"
+    },
+    {
+      "name": "Fires",
+      "type": "Hazard"
+    },
+    {
+      "name": "Explosions",
+      "type": "Hazard"
+    },
+    {
+      "name": "Toxic exposures",
+      "type": "Hazard"
+    },
+    {
+      "name": "Process chemical deviation",
+      "type": "Hazard"
+    },
+    {
+      "name": "Inadvertent mixing",
+      "type": "Hazard"
+    },
+    {
+      "name": "Process equipment failures",
+      "type": "Failure"
+    },
+    {
+      "name": "Human errors",
+      "type": "Failure"
+    },
+    {
+      "name": "Protection system out of service",
+      "type": "Failure"
+    },
+    {
+      "name": "Accident initiator",
+      "type": "Failure"
+    },
+    {
+      "name": "System upset",
+      "type": "Failure"
+    },
+    {
+      "name": "Incident",
+      "type": "Incident"
+    },
+    {
+      "name": "Near Miss",
+      "type": "Incident"
+    },
+    {
+      "name": "Small releases",
+      "type": "Incident"
+    },
+    {
+      "name": "Initial startup",
+      "type": "Procedure"
+    },
+    {
+      "name": "Normal operations",
+      "type": "Procedure"
+    },
+    {
+      "name": "Temporary operations",
+      "type": "Procedure"
+    },
+    {
+      "name": "Emergency shutdown",
+      "type": "Procedure"
+    },
+    {
+      "name": "Normal shutdown",
+      "type": "Procedure"
+    },
+    {
+      "name": "Startup following a turnaround",
+      "type": "Procedure"
+    },
+    {
+      "name": "Hot Work",
+      "type": "Procedure"
+    },
+    {
+      "name": "Mechanical Integrity program",
+      "type": "Procedure"
+    },
+    {
+      "name": "Inspection and testing",
+      "type": "Procedure"
+    },
+    {
+      "name": "Preventive maintenance",
+      "type": "Procedure"
+    },
+    {
+      "name": "Process Hazard Analysis",
+      "type": "Procedure"
+    },
+    {
+      "name": "Management of Change",
+      "type": "Procedure"
+    },
+    {
+      "name": "Incident Investigation",
+      "type": "Procedure"
+    },
+    {
+      "name": "Emergency planning and response",
+      "type": "Procedure"
+    },
+    {
+      "name": "Compliance Audits",
+      "type": "Procedure"
+    },
+    {
+      "name": "Pre-Startup Safety Review",
+      "type": "Procedure"
+    },
+    {
+      "name": "Temperature",
+      "type": "Parameter"
+    },
+    {
+      "name": "Pressure",
+      "type": "Parameter"
+    },
+    {
+      "name": "Flow rate",
+      "type": "Parameter"
+    },
+    {
+      "name": "Composition",
+      "type": "Parameter"
+    },
+    {
+      "name": "Threshold Quantity",
+      "type": "Parameter"
+    },
+    {
+      "name": "Safe operating ranges",
+      "type": "Parameter"
+    },
+    {
+      "name": "Boiling Point",
+      "type": "Parameter"
+    },
+    {
+      "name": "Flash point",
+      "type": "Parameter"
+    },
+    {
+      "name": "Toxicity information",
+      "type": "Parameter"
+    },
+    {
+      "name": "Permissible exposure limits",
+      "type": "Parameter"
+    },
+    {
+      "name": "OSHA Process Safety Management Rule 29 CFR 1910.119",
+      "type": "Regulation"
+    },
+    {
+      "name": "EPA Risk Management Program regulation",
+      "type": "Regulation"
+    },
+    {
+      "name": "DOE 0 420.1 Facility Safety",
+      "type": "Regulation"
+    },
+    {
+      "name": "DOE 0 430.1 Life-Cycle Asset Management",
+      "type": "Regulation"
+    },
+    {
+      "name": "Covered process",
+      "type": "Location"
+    },
+    {
+      "name": "Battery Limits",
+      "type": "Location"
+    },
+    {
+      "name": "Process control rooms",
+      "type": "Location"
+    },
+    {
+      "name": "Facility",
+      "type": "Location"
+    },
+    {
+      "name": "Safe haven",
+      "type": "Location"
+    }
+  ],
+  "relations": [
+    {
+      "source": "Piping systems",
+      "relation": "contains",
+      "target": "Valves"
+    },
+    {
+      "source": "Piping systems",
+      "relation": "contains",
+      "target": "Piping components"
+    },
+    {
+      "source": "Piping systems",
+      "relation": "contains",
+      "target": "Fittings"
+    },
+    {
+      "source": "Piping systems",
+      "relation": "contains",
+      "target": "Flanges"
+    },
+    {
+      "source": "Pressure vessels",
+      "relation": "contains",
+      "target": "Relief and vent systems"
+    },
+    {
+      "source": "Covered process",
+      "relation": "contains",
+      "target": "Pressure vessels"
+    },
+    {
+      "source": "Covered process",
+      "relation": "contains",
+      "target": "Storage tanks"
+    },
+    {
+      "source": "Covered process",
+      "relation": "contains",
+      "target": "Piping systems"
+    },
+    {
+      "source": "Covered process",
+      "relation": "contains",
+      "target": "Pumps"
+    },
+    {
+      "source": "Covered process",
+      "relation": "contains",
+      "target": "Ventilation systems"
+    },
+    {
+      "source": "Safety systems",
+      "relation": "contains",
+      "target": "Interlocks"
+    },
+    {
+      "source": "Safety systems",
+      "relation": "contains",
+      "target": "Scrubbers"
+    },
+    {
+      "source": "Safety systems",
+      "relation": "contains",
+      "target": "Flares"
+    },
+    {
+      "source": "Safety systems",
+      "relation": "contains",
+      "target": "Chemical detection systems"
+    },
+    {
+      "source": "Mechanical Integrity program",
+      "relation": "appliesTo",
+      "target": "Pressure vessels"
+    },
+    {
+      "source": "Mechanical Integrity program",
+      "relation": "appliesTo",
+      "target": "Storage tanks"
+    },
+    {
+      "source": "Mechanical Integrity program",
+      "relation": "appliesTo",
+      "target": "Piping systems"
+    },
+    {
+      "source": "Mechanical Integrity program",
+      "relation": "appliesTo",
+      "target": "Pumps"
+    },
+    {
+      "source": "Mechanical Integrity program",
+      "relation": "appliesTo",
+      "target": "Relief and vent systems"
+    },
+    {
+      "source": "Mechanical Integrity program",
+      "relation": "appliesTo",
+      "target": "Interlocks"
+    },
+    {
+      "source": "Mechanical Integrity program",
+      "relation": "appliesTo",
+      "target": "Alarms"
+    },
+    {
+      "source": "Inspection and testing",
+      "relation": "procedureFor",
+      "target": "Mechanical Integrity program"
+    },
+    {
+      "source": "Preventive maintenance",
+      "relation": "procedureFor",
+      "target": "Mechanical Integrity program"
+    },
+    {
+      "source": "Operating Procedures",
+      "relation": "contains",
+      "target": "Initial startup"
+    },
+    {
+      "source": "Operating Procedures",
+      "relation": "contains",
+      "target": "Normal operations"
+    },
+    {
+      "source": "Operating Procedures",
+      "relation": "contains",
+      "target": "Temporary operations"
+    },
+    {
+      "source": "Operating Procedures",
+      "relation": "contains",
+      "target": "Emergency shutdown"
+    },
+    {
+      "source": "Operating Procedures",
+      "relation": "contains",
+      "target": "Normal shutdown"
+    },
+    {
+      "source": "Operating Procedures",
+      "relation": "contains",
+      "target": "Startup following a turnaround"
+    },
+    {
+      "source": "Highly Hazardous Chemicals",
+      "relation": "presentsHazard",
+      "target": "Catastrophic Release"
+    },
+    {
+      "source": "Catastrophic Release",
+      "relation": "causes",
+      "target": "Fires"
+    },
+    {
+      "source": "Catastrophic Release",
+      "relation": "causes",
+      "target": "Explosions"
+    },
+    {
+      "source": "Catastrophic Release",
+      "relation": "causes",
+      "target": "Toxic exposures"
+    },
+    {
+      "source": "Flammable Gas",
+      "relation": "presentsHazard",
+      "target": "Fires"
+    },
+    {
+      "source": "Flammable Liquid",
+      "relation": "presentsHazard",
+      "target": "Fires"
+    },
+    {
+      "source": "Explosives",
+      "relation": "presentsHazard",
+      "target": "Explosions"
+    },
+    {
+      "source": "Inadvertent mixing",
+      "relation": "involves",
+      "target": "Incompatible materials"
+    },
+    {
+      "source": "Inadvertent mixing",
+      "relation": "causes",
+      "target": "Catastrophic Release"
+    },
+    {
+      "source": "Process chemical deviation",
+      "relation": "triggeredBy",
+      "target": "Process equipment failures"
+    },
+    {
+      "source": "Process chemical deviation",
+      "relation": "triggeredBy",
+      "target": "Human errors"
+    },
+    {
+      "source": "System upset",
+      "relation": "causedBy",
+      "target": "Process equipment failures"
+    },
+    {
+      "source": "System upset",
+      "relation": "causedBy",
+      "target": "Human errors"
+    },
+    {
+      "source": "Near Miss",
+      "relation": "causedBy",
+      "target": "Accident initiator"
+    },
+    {
+      "source": "Near Miss",
+      "relation": "involves",
+      "target": "Protection system out of service"
+    },
+    {
+      "source": "Incident",
+      "relation": "resultsIn",
+      "target": "Catastrophic Release"
+    },
+    {
+      "source": "Incident Investigation",
+      "relation": "investigates",
+      "target": "Incident"
+    },
+    {
+      "source": "Incident Investigation",
+      "relation": "investigates",
+      "target": "Near Miss"
+    },
+    {
+      "source": "Emergency planning and response",
+      "relation": "mitigates",
+      "target": "Catastrophic Release"
+    },
+    {
+      "source": "Emergency planning and response",
+      "relation": "handles",
+      "target": "Small releases"
+    },
+    {
+      "source": "Safe operating ranges",
+      "relation": "governs",
+      "target": "Temperature"
+    },
+    {
+      "source": "Safe operating ranges",
+      "relation": "governs",
+      "target": "Pressure"
+    },
+    {
+      "source": "Safe operating ranges",
+      "relation": "governs",
+      "target": "Flow rate"
+    },
+    {
+      "source": "Safe operating ranges",
+      "relation": "governs",
+      "target": "Composition"
+    },
+    {
+      "source": "Threshold Quantity",
+      "relation": "appliesTo",
+      "target": "Highly Hazardous Chemicals"
+    },
+    {
+      "source": "Boiling Point",
+      "relation": "characterizes",
+      "target": "Flammable Liquid"
+    },
+    {
+      "source": "Flash point",
+      "relation": "characterizes",
+      "target": "Flammable Liquid"
+    },
+    {
+      "source": "Toxicity information",
+      "relation": "characterizes",
+      "target": "Highly Hazardous Chemicals"
+    },
+    {
+      "source": "Permissible exposure limits",
+      "relation": "characterizes",
+      "target": "Highly Hazardous Chemicals"
+    },
+    {
+      "source": "OSHA Process Safety Management Rule 29 CFR 1910.119",
+      "relation": "regulates",
+      "target": "Covered process"
+    },
+    {
+      "source": "EPA Risk Management Program regulation",
+      "relation": "regulates",
+      "target": "Covered process"
+    },
+    {
+      "source": "DOE 0 420.1 Facility Safety",
+      "relation": "governs",
+      "target": "Mechanical Integrity program"
+    },
+    {
+      "source": "DOE 0 430.1 Life-Cycle Asset Management",
+      "relation": "governs",
+      "target": "Mechanical Integrity program"
+    },
+    {
+      "source": "Process Hazard Analysis",
+      "relation": "identifies",
+      "target": "Hazard"
+    },
+    {
+      "source": "Process Hazard Analysis",
+      "relation": "evaluates",
+      "target": "Process equipment failures"
+    },
+    {
+      "source": "Process Hazard Analysis",
+      "relation": "evaluates",
+      "target": "Human errors"
+    },
+    {
+      "source": "Management of Change",
+      "relation": "evaluatesImpactOn",
+      "target": "Covered process"
+    },
+    {
+      "source": "Pre-Startup Safety Review",
+      "relation": "procedureBefore",
+      "target": "Initial startup"
+    },
+    {
+      "source": "Pre-Startup Safety Review",
+      "relation": "procedureBefore",
+      "target": "Startup following a turnaround"
+    },
+    {
+      "source": "Hot Work",
+      "relation": "restrictedIn",
+      "target": "Covered process"
+    },
+    {
+      "source": "Compliance Audits",
+      "relation": "evaluates",
+      "target": "Mechanical Integrity program"
+    },
+    {
+      "source": "Battery Limits",
+      "relation": "definesBoundaryOf",
+      "target": "Covered process"
+    },
+    {
+      "source": "Process control rooms",
+      "relation": "locatedWithin",
+      "target": "Facility"
+    },
+    {
+      "source": "Ventilation systems",
+      "relation": "maintains",
+      "target": "Safe haven"
+    }
+  ]
+}

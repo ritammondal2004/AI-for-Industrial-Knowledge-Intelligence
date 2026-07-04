@@ -1,0 +1,380 @@
+{
+  "source_pdf": "A100_Metal_Pump.pdf",
+
+  "entities": [
+    {
+      "name": "A100 Pump",
+      "type": "Equipment"
+    },
+    {
+      "name": "Upstream Air Compressor",
+      "type": "Equipment"
+    },
+    {
+      "name": "Outer Manifold",
+      "type": "Component"
+    },
+    {
+      "name": "Mounting Base Plate",
+      "type": "Component"
+    },
+    {
+      "name": "Air Inlet Center Port",
+      "type": "Component"
+    },
+    {
+      "name": "Exhaust Port",
+      "type": "Component"
+    },
+    {
+      "name": "Rubber Diaphragm",
+      "type": "Component"
+    },
+    {
+      "name": "TPE Diaphragm",
+      "type": "Component"
+    },
+    {
+      "name": "PTFE Diaphragm",
+      "type": "Component"
+    },
+    {
+      "name": "Filter Regulator Assembly",
+      "type": "Component"
+    },
+    {
+      "name": "Pulsation Damper Unit",
+      "type": "Component"
+    },
+    {
+      "name": "Strainer Filter Housing",
+      "type": "Component"
+    },
+    {
+      "name": "Flex Connector",
+      "type": "Component"
+    },
+    {
+      "name": "Discharge Manifold Casting",
+      "type": "Component"
+    },
+    {
+      "name": "Suction Manifold Casting",
+      "type": "Component"
+    },
+    {
+      "name": "Fluid Check Ball",
+      "type": "Component"
+    },
+    {
+      "name": "Valve Seat",
+      "type": "Component"
+    },
+    {
+      "name": "Diaphragm Membrane",
+      "type": "Component"
+    },
+    {
+      "name": "Center Intermediate Block Housing",
+      "type": "Component"
+    },
+    {
+      "name": "Pilot Sleeve",
+      "type": "Component"
+    },
+    {
+      "name": "Main Air Valve Body Assembly",
+      "type": "Component"
+    },
+    {
+      "name": "Muffler",
+      "type": "Component"
+    },
+    {
+      "name": "Pressure Gauge",
+      "type": "Instrument"
+    },
+    {
+      "name": "Isolation Valve",
+      "type": "Component"
+    },
+    {
+      "name": "Fluid Pulsation",
+      "type": "Failure"
+    },
+    {
+      "name": "Cavitation",
+      "type": "Failure"
+    },
+    {
+      "name": "Piping Vibration",
+      "type": "Failure"
+    },
+    {
+      "name": "Loading Stress",
+      "type": "Failure"
+    },
+    {
+      "name": "System Contamination",
+      "type": "Hazard"
+    },
+    {
+      "name": "Fluid Loop Drainage",
+      "type": "Incident"
+    },
+    {
+      "name": "Incorrect Installation",
+      "type": "Failure"
+    },
+    {
+      "name": "Pre-installation Field Sizing",
+      "type": "Procedure"
+    },
+    {
+      "name": "System Skid Layout Spacing",
+      "type": "Procedure"
+    },
+    {
+      "name": "Structural Containment Designing",
+      "type": "Procedure"
+    },
+    {
+      "name": "Field Commissioning",
+      "type": "Procedure"
+    },
+    {
+      "name": "Compliance Audit",
+      "type": "Procedure"
+    },
+    {
+      "name": "Wet-end Component Rebuild",
+      "type": "Procedure"
+    },
+    {
+      "name": "Component Repair",
+      "type": "Procedure"
+    },
+    {
+      "name": "Input Air Inlet Pressure",
+      "type": "Parameter"
+    },
+    {
+      "name": "Total Head",
+      "type": "Parameter"
+    },
+    {
+      "name": "Discharge Flow Rate",
+      "type": "Parameter"
+    },
+    {
+      "name": "Volumetric Air Consumption",
+      "type": "Parameter"
+    },
+    {
+      "name": "Diaphragm Life Cycle",
+      "type": "Parameter"
+    }
+  ],
+  "relations": [
+    {
+      "source": "A100 Pump",
+      "relation": "contains",
+      "target": "Outer Manifold"
+    },
+    {
+      "source": "A100 Pump",
+      "relation": "contains",
+      "target": "Mounting Base Plate"
+    },
+    {
+      "source": "A100 Pump",
+      "relation": "contains",
+      "target": "Air Inlet Center Port"
+    },
+    {
+      "source": "A100 Pump",
+      "relation": "contains",
+      "target": "Exhaust Port"
+    },
+    {
+      "source": "A100 Pump",
+      "relation": "contains",
+      "target": "Rubber Diaphragm"
+    },
+    {
+      "source": "A100 Pump",
+      "relation": "contains",
+      "target": "TPE Diaphragm"
+    },
+    {
+      "source": "A100 Pump",
+      "relation": "contains",
+      "target": "PTFE Diaphragm"
+    },
+    {
+      "source": "A100 Pump",
+      "relation": "contains",
+      "target": "Discharge Manifold Casting"
+    },
+    {
+      "source": "A100 Pump",
+      "relation": "contains",
+      "target": "Suction Manifold Casting"
+    },
+    {
+      "source": "A100 Pump",
+      "relation": "contains",
+      "target": "Fluid Check Ball"
+    },
+    {
+      "source": "A100 Pump",
+      "relation": "contains",
+      "target": "Valve Seat"
+    },
+    {
+      "source": "A100 Pump",
+      "relation": "contains",
+      "target": "Diaphragm Membrane"
+    },
+    {
+      "source": "A100 Pump",
+      "relation": "contains",
+      "target": "Center Intermediate Block Housing"
+    },
+    {
+      "source": "A100 Pump",
+      "relation": "contains",
+      "target": "Pilot Sleeve"
+    },
+    {
+      "source": "A100 Pump",
+      "relation": "contains",
+      "target": "Main Air Valve Body Assembly"
+    },
+    {
+      "source": "A100 Pump",
+      "relation": "contains",
+      "target": "Muffler"
+    },
+    {
+      "source": "Pre-installation Field Sizing",
+      "relation": "applied_to",
+      "target": "A100 Pump"
+    },
+    {
+      "source": "System Skid Layout Spacing",
+      "relation": "applied_to",
+      "target": "A100 Pump"
+    },
+    {
+      "source": "Structural Containment Designing",
+      "relation": "applied_to",
+      "target": "A100 Pump"
+    },
+    {
+      "source": "Upstream Air Compressor",
+      "relation": "supplies",
+      "target": "A100 Pump"
+    },
+    {
+      "source": "Input Air Inlet Pressure",
+      "relation": "affects",
+      "target": "Total Head"
+    },
+    {
+      "source": "Input Air Inlet Pressure",
+      "relation": "affects",
+      "target": "Discharge Flow Rate"
+    },
+    {
+      "source": "Volumetric Air Consumption",
+      "relation": "affects",
+      "target": "Discharge Flow Rate"
+    },
+    {
+      "source": "Cavitation",
+      "relation": "reduces",
+      "target": "Diaphragm Life Cycle"
+    },
+    {
+      "source": "Fluid Pulsation",
+      "relation": "reduces",
+      "target": "Diaphragm Life Cycle"
+    },
+    {
+      "source": "Filter Regulator Assembly",
+      "relation": "precedes",
+      "target": "A100 Pump"
+    },
+    {
+      "source": "Pulsation Damper Unit",
+      "relation": "follows",
+      "target": "A100 Pump"
+    },
+    {
+      "source": "Strainer Filter Housing",
+      "relation": "precedes",
+      "target": "A100 Pump"
+    },
+    {
+      "source": "Flex Connector",
+      "relation": "buffers",
+      "target": "Piping Vibration"
+    },
+    {
+      "source": "Flex Connector",
+      "relation": "prevents",
+      "target": "Loading Stress"
+    },
+    {
+      "source": "Isolation Valve",
+      "relation": "prevents",
+      "target": "Fluid Loop Drainage"
+    },
+    {
+      "source": "Isolation Valve",
+      "relation": "prevents",
+      "target": "System Contamination"
+    },
+    {
+      "source": "Pulsation Damper Unit",
+      "relation": "mitigates",
+      "target": "Fluid Pulsation"
+    },
+    {
+      "source": "Pressure Gauge",
+      "relation": "monitors",
+      "target": "A100 Pump"
+    },
+    {
+      "source": "Field Commissioning",
+      "relation": "applied_to",
+      "target": "A100 Pump"
+    },
+    {
+      "source": "Compliance Audit",
+      "relation": "applied_to",
+      "target": "A100 Pump"
+    },
+    {
+      "source": "Wet-end Component Rebuild",
+      "relation": "applied_to",
+      "target": "A100 Pump"
+    },
+    {
+      "source": "Component Repair",
+      "relation": "facilitated_by",
+      "target": "Isolation Valve"
+    },
+    {
+      "source": "Incorrect Installation",
+      "relation": "occurs_during",
+      "target": "Wet-end Component Rebuild"
+    },
+    {
+      "source": "Fluid Check Ball",
+      "relation": "aligns_with",
+      "target": "Valve Seat"
+    }
+  ]
+}

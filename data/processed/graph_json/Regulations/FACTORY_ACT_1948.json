@@ -1,0 +1,308 @@
+{
+  "source_pdf": "FACTORY_ACT_1948.pdf",
+  "entities": [
+    {
+      "name": "Machinery",
+      "type": "Equipment"
+    },
+    {
+      "name": "Hoists and lifts",
+      "type": "Equipment"
+    },
+    {
+      "name": "Pressure plants",
+      "type": "Equipment"
+    },
+    {
+      "name": "Fire fighting equipment",
+      "type": "Equipment"
+    },
+    {
+      "name": "Fencing",
+      "type": "Component"
+    },
+    {
+      "name": "First aid boxes",
+      "type": "Component"
+    },
+    {
+      "name": "Safety appliances for eyes",
+      "type": "Component"
+    },
+    {
+      "name": "Ambulance room",
+      "type": "Location"
+    },
+    {
+      "name": "Canteen",
+      "type": "Location"
+    },
+    {
+      "name": "Rest rooms",
+      "type": "Location"
+    },
+    {
+      "name": "Creches",
+      "type": "Location"
+    },
+    {
+      "name": "Factory",
+      "type": "Location"
+    },
+    {
+      "name": "Dust and fumes",
+      "type": "Chemical"
+    },
+    {
+      "name": "Dangerous dusts, gas, and fumes",
+      "type": "Chemical"
+    },
+    {
+      "name": "Hazardous substances",
+      "type": "Chemical"
+    },
+    {
+      "name": "Wastes and effluents",
+      "type": "Material"
+    },
+    {
+      "name": "Dangerous occurrences",
+      "type": "Hazard"
+    },
+    {
+      "name": "Occupational diseases",
+      "type": "Hazard"
+    },
+    {
+      "name": "Machinery in motion",
+      "type": "Hazard"
+    },
+    {
+      "name": "Accidents",
+      "type": "Incident"
+    },
+    {
+      "name": "Contravention",
+      "type": "Failure"
+    },
+    {
+      "name": "Misuse of appliance",
+      "type": "Failure"
+    },
+    {
+      "name": "Wilful neglect",
+      "type": "Failure"
+    },
+    {
+      "name": "Inspection and testing",
+      "type": "Procedure"
+    },
+    {
+      "name": "Cleaning machinery",
+      "type": "Procedure"
+    },
+    {
+      "name": "Disposal of wastes",
+      "type": "Procedure"
+    },
+    {
+      "name": "Artificial humidification",
+      "type": "Procedure"
+    },
+    {
+      "name": "Notice of Accidents",
+      "type": "Procedure"
+    },
+    {
+      "name": "Factories Act 1948",
+      "type": "Regulation"
+    },
+    {
+      "name": "Mines Act 1952",
+      "type": "Regulation"
+    },
+    {
+      "name": "Permissible limits",
+      "type": "Parameter"
+    },
+    {
+      "name": "Reasonable temperature",
+      "type": "Parameter"
+    },
+    {
+      "name": "Working hours",
+      "type": "Parameter"
+    },
+    {
+      "name": "Overtime wages",
+      "type": "Parameter"
+    }
+  ],
+  "relations": [
+    {
+      "source": "Machinery",
+      "relation": "contains",
+      "target": "Fencing"
+    },
+    {
+      "source": "Factory",
+      "relation": "contains",
+      "target": "Machinery"
+    },
+    {
+      "source": "Factory",
+      "relation": "contains",
+      "target": "Hoists and lifts"
+    },
+    {
+      "source": "Factory",
+      "relation": "contains",
+      "target": "Pressure plants"
+    },
+    {
+      "source": "Factory",
+      "relation": "contains",
+      "target": "Fire fighting equipment"
+    },
+    {
+      "source": "Factory",
+      "relation": "contains",
+      "target": "Ambulance room"
+    },
+    {
+      "source": "Factory",
+      "relation": "contains",
+      "target": "Canteen"
+    },
+    {
+      "source": "Factory",
+      "relation": "contains",
+      "target": "Rest rooms"
+    },
+    {
+      "source": "Factory",
+      "relation": "contains",
+      "target": "Creches"
+    },
+    {
+      "source": "Factory",
+      "relation": "contains",
+      "target": "First aid boxes"
+    },
+    {
+      "source": "Machinery in motion",
+      "relation": "presentsHazard",
+      "target": "Accidents"
+    },
+    {
+      "source": "Dust and fumes",
+      "relation": "presentsHazard",
+      "target": "Occupational diseases"
+    },
+    {
+      "source": "Dangerous dusts, gas, and fumes",
+      "relation": "presentsHazard",
+      "target": "Dangerous occurrences"
+    },
+    {
+      "source": "Hazardous substances",
+      "relation": "presentsHazard",
+      "target": "Accidents"
+    },
+    {
+      "source": "Misuse of appliance",
+      "relation": "causes",
+      "target": "Accidents"
+    },
+    {
+      "source": "Wilful neglect",
+      "relation": "causes",
+      "target": "Dangerous occurrences"
+    },
+    {
+      "source": "Contravention",
+      "relation": "resultsIn",
+      "target": "Accidents"
+    },
+    {
+      "source": "Inspection and testing",
+      "relation": "procedureFor",
+      "target": "Hoists and lifts"
+    },
+    {
+      "source": "Inspection and testing",
+      "relation": "procedureFor",
+      "target": "Pressure plants"
+    },
+    {
+      "source": "Cleaning machinery",
+      "relation": "procedureFor",
+      "target": "Machinery"
+    },
+    {
+      "source": "Disposal of wastes",
+      "relation": "procedureFor",
+      "target": "Wastes and effluents"
+    },
+    {
+      "source": "Artificial humidification",
+      "relation": "controls",
+      "target": "Reasonable temperature"
+    },
+    {
+      "source": "Notice of Accidents",
+      "relation": "triggeredBy",
+      "target": "Accidents"
+    },
+    {
+      "source": "Notice of Accidents",
+      "relation": "triggeredBy",
+      "target": "Dangerous occurrences"
+    },
+    {
+      "source": "Notice of Accidents",
+      "relation": "triggeredBy",
+      "target": "Occupational diseases"
+    },
+    {
+      "source": "Safety appliances for eyes",
+      "relation": "mitigates",
+      "target": "Dangerous dusts, gas, and fumes"
+    },
+    {
+      "source": "Fencing",
+      "relation": "mitigates",
+      "target": "Machinery in motion"
+    },
+    {
+      "source": "Fire fighting equipment",
+      "relation": "mitigates",
+      "target": "Dangerous occurrences"
+    },
+    {
+      "source": "Factories Act 1948",
+      "relation": "regulates",
+      "target": "Factory"
+    },
+    {
+      "source": "Factories Act 1948",
+      "relation": "governs",
+      "target": "Working hours"
+    },
+    {
+      "source": "Factories Act 1948",
+      "relation": "governs",
+      "target": "Overtime wages"
+    },
+    {
+      "source": "Factories Act 1948",
+      "relation": "governs",
+      "target": "Permissible limits"
+    },
+    {
+      "source": "Permissible limits",
+      "relation": "governs",
+      "target": "Dust and fumes"
+    }
+  ]
+}

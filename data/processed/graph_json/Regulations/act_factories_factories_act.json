@@ -1,0 +1,188 @@
+
+{
+  "source_pdf": "act_factories_factories_act.pdf",   
+  "entities": [
+    {
+      "name": "Factory",
+      "type": "Location"
+    },
+    {
+      "name": "Chief Inspector of Factories",
+      "type": "Instrument"
+    },
+    {
+      "name": "Directorate of Factories, Govt. of West Bengal",
+      "type": "Location"
+    },
+    {
+      "name": "Factories Act 1948",
+      "type": "Regulation"
+    },
+    {
+      "name": "West Bengal Factories Rules 1958",
+      "type": "Regulation"
+    },
+    {
+      "name": "Trade License",
+      "type": "Regulation"
+    },
+    {
+      "name": "Fire License",
+      "type": "Regulation"
+    },
+    {
+      "name": "NOC of PCB",
+      "type": "Regulation"
+    },
+    {
+      "name": "Factory Registration",
+      "type": "Procedure"
+    },
+    {
+      "name": "Renewal of license",
+      "type": "Procedure"
+    },
+    {
+      "name": "Notice of occupation",
+      "type": "Procedure"
+    },
+    {
+      "name": "Safety training and supervision",
+      "type": "Procedure"
+    },
+    {
+      "name": "Maintenance of places of work",
+      "type": "Procedure"
+    },
+    {
+      "name": "Monitoring of working environment",
+      "type": "Procedure"
+    },
+    {
+      "name": "Electric power",
+      "type": "Parameter"
+    },
+    {
+      "name": "Minimum workmen engaged",
+      "type": "Parameter"
+    },
+    {
+      "name": "Hazardous operations",
+      "type": "Hazard"
+    },
+    {
+      "name": "Risks to health",
+      "type": "Hazard"
+    },
+    {
+      "name": "Wilful interference with appliances",
+      "type": "Failure"
+    },
+    {
+      "name": "Neglect of safety equipment",
+      "type": "Failure"
+    }
+  ],
+  "relations": [
+    {
+      "source": "Factory",
+      "relation": "governed_by",
+      "target": "Factories Act 1948"
+    },
+    {
+      "source": "Factory",
+      "relation": "governed_by",
+      "target": "West Bengal Factories Rules 1958"
+    },
+    {
+      "source": "Factory Registration",
+      "relation": "requires_procedure",
+      "target": "Notice of occupation"
+    },
+    {
+      "source": "Factory Registration",
+      "relation": "requires_procedure",
+      "target": "Renewal of license"
+    },
+    {
+      "source": "Factory Registration",
+      "relation": "uses",
+      "target": "Trade License"
+    },
+    {
+      "source": "Factory Registration",
+      "relation": "uses",
+      "target": "Fire License"
+    },
+    {
+      "source": "Factory Registration",
+      "relation": "uses",
+      "target": "NOC of PCB"
+    },
+    {
+      "source": "Chief Inspector of Factories",
+      "relation": "authorizes",
+      "target": "Factory Registration"
+    },
+    {
+      "source": "Directorate of Factories, Govt. of West Bengal",
+      "relation": "located_in",
+      "target": "Chief Inspector of Factories"
+    },
+    {
+      "source": "Factories Act 1948",
+      "relation": "governed_by",
+      "target": "Electric power"
+    },
+    {
+      "source": "Factories Act 1948",
+      "relation": "governed_by",
+      "target": "Minimum workmen engaged"
+    },
+    {
+      "source": "Factories Act 1948",
+      "relation": "mandates",
+      "target": "Safety training and supervision"
+    },
+    {
+      "source": "Factories Act 1948",
+      "relation": "mandates",
+      "target": "Maintenance of places of work"
+    },
+    {
+      "source": "Factories Act 1948",
+      "relation": "mandates",
+      "target": "Monitoring of working environment"
+    },
+    {
+      "source": "Safety training and supervision",
+      "relation": "prevents",
+      "target": "Risks to health"
+    },
+    {
+      "source": "Maintenance of places of work",
+      "relation": "prevents",
+      "target": "Risks to health"
+    },
+    {
+      "source": "Monitoring of working environment",
+      "relation": "prevents",
+      "target": "Risks to health"
+    },
+    {
+      "source": "Factories Act 1948",
+      "relation": "defines",
+      "target": "Hazardous operations"
+    },
+    {
+      "source": "Wilful interference with appliances",
+      "relation": "causes",
+      "target": "Risks to health"
+    },
+    {
+      "source": "Neglect of safety equipment",
+      "relation": "causes",
+      "target": "Risks to health"
+    }
+  ]
+}

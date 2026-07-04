@@ -1,0 +1,111 @@
+{
+  "source_pdf": "OSHA_safety_management.pdf",
+  
+  "entities": [
+    {
+      "name": "Process Safety Management System",
+      "type": "Equipment"
+    },
+    {
+      "name": "Personal Protective Equipment",
+      "type": "Component"
+    },
+    {
+      "name": "Inherently Safer Options",
+      "type": "Component"
+    },
+    {
+      "name": "Engineering Controls",
+      "type": "Component"
+    },
+    {
+      "name": "Administrative Controls",
+      "type": "Component"
+    },
+    {
+      "name": "Identified Hazard",
+      "type": "Hazard"
+    },
+    {
+      "name": "Reduced Risk",
+      "type": "Parameter"
+    },
+    {
+      "name": "Hazard Assessment",
+      "type": "Procedure"
+    },
+    {
+      "name": "Apply Hierarchy of Controls",
+      "type": "Procedure"
+    },
+    {
+      "name": "Process Hazard Analysis",
+      "type": "Procedure"
+    },
+    {
+      "name": "Continuous Operation",
+      "type": "Procedure"
+    },
+    {
+      "name": "Sustainable Compliance",
+      "type": "Regulation"
+    }
+  ],
+  "relations": [
+    {
+      "source": "Process Hazard Analysis",
+      "relation": "utilizes",
+      "target": "Hazard Assessment"
+    },
+    {
+      "source": "Hazard Assessment",
+      "relation": "identifies",
+      "target": "Identified Hazard"
+    },
+    {
+      "source": "Apply Hierarchy of Controls",
+      "relation": "mitigates",
+      "target": "Identified Hazard"
+    },
+    {
+      "source": "Apply Hierarchy of Controls",
+      "relation": "prioritizes",
+      "target": "Inherently Safer Options"
+    },
+    {
+      "source": "Apply Hierarchy of Controls",
+      "relation": "prioritizes",
+      "target": "Engineering Controls"
+    },
+    {
+      "source": "Apply Hierarchy of Controls",
+      "relation": "includes",
+      "target": "Administrative Controls"
+    },
+    {
+      "source": "Apply Hierarchy of Controls",
+      "relation": "includes",
+      "target": "Personal Protective Equipment"
+    },
+    {
+      "source": "Apply Hierarchy of Controls",
+      "relation": "results_in",
+      "target": "Reduced Risk"
+    },
+    {
+      "source": "Reduced Risk",
+      "relation": "enables",
+      "target": "Continuous Operation"
+    },
+    {
+      "source": "Process Hazard Analysis",
+      "relation": "ensures",
+      "target": "Sustainable Compliance"
+    },
+    {
+      "source": "Continuous Operation",
+      "relation": "applied_to",
+      "target": "Process Safety Management System"
+    }
+  ]
+}

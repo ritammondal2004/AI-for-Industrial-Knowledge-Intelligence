@@ -1,0 +1,24 @@
+{
+  "source_pdf": "oil_refinary_permits2.pdf",
+  "entities": [
+    {
+      "name": "Petroleum Refinery",
+      "type": "Location"
+    },
+    {
+      "name": "Environmental Release Point",
+      "type": "Location"
+    },
+    {
+      "name": "Compliance Monitoring",
+      "type": "Procedure"
+    }
+  ],
+  "relations": [
+    {
+      "source": "Compliance Monitoring",
+      "relation": "applied_to",
+      "target": "Petroleum Refinery"
+    }
+  ]
+}
