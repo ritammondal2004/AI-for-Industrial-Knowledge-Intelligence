@@ -1,19 +1,31 @@
-
+# ── chroma_db — never commit as its large
 data/processed/chroma_db/
-
-# Knowledge graph
-*.gpickle
-
-# SQLite
+                           
 *.sqlite3
-
-# Binary index files
 *.bin
 
-# Cached page extraction
-# *.pkl
 
+*.gpickle
 
-# Python
+# ── Environment & secrets 
+.env
+.env.*
+
 __pycache__/
-.ipynb_checkpoints/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+.eggs/
+
+                  
+.vscode/             
+                  
+.DS_Store
+Thumbs.db
+
+*.log
+logs/
