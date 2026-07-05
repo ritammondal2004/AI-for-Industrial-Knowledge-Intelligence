@@ -1,6 +1,6 @@
 # backend/main.py
 
-# add at very top of backend/main.py
+# backend/main.py
 from dotenv import load_dotenv
 load_dotenv()
 
@@ -30,9 +30,9 @@ async def lifespan(app: FastAPI):
     """
     print("\n=== Industrial Knowledge Copilot — Starting Up ===")
 
-    ensure_data_ready()     # S3 → local disk
-    init_vector_store()     # disk → RAM (ChromaDB + BGE)
-    init_graph()            # disk → RAM (NetworkX graph)  
+    ensure_data_ready()     
+    init_vector_store()     #  (ChromaDB + BGE)
+    init_graph()            #  (NetworkX graph)  
 
     print("=== All systems ready ===\n")
     yield   
