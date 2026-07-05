@@ -4,7 +4,7 @@
 from fastapi import APIRouter, HTTPException, Query
 from backend.models import GraphStatsResponse, GraphSubgraphResponse
 from backend.graph.graph_loader import get_graph, graph_stats
-               
+        
 router = APIRouter(prefix="/graph", tags=["Knowledge Graph"])
               
              

@@ -1,5 +1,9 @@
 # backend/main.py
 
+# add at very top of backend/main.py
+from dotenv import load_dotenv
+load_dotenv()
+
 from contextlib import asynccontextmanager
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
