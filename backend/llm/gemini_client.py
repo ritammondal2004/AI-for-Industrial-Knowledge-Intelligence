@@ -39,14 +39,6 @@ def invoke_with_rotation(prompt_template, chain_input: dict) -> str:
     """
     Invokes a LangChain prompt | model | StrOutputParser chain.
     Automatically rotates API key on 429 / quota errors.
-
-    Rotation logic:
-    - On quota error  → switch key → retry immediately  
-
-    Args:
-        prompt_template : a ChatPromptTemplate instance
-        chain_input : dict matching the prompt's placeholders
-
     Returns:  
         str : the model's text response
     """
@@ -93,7 +85,7 @@ def invoke_expansion_with_rotation(prompt_template, chain_input: dict) -> str:
             if "429" in err or "quota" in err or "exhausted" in err:
                 switch_api_key()
                 attempts += 1
-                continue
+                continue   
             raise e
 
     raise RuntimeError(
