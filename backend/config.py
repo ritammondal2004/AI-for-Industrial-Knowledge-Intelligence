@@ -17,7 +17,7 @@ GRAPH_PATH      = str(CACHE_DIR / "knowledge_graph.gpickle")
 S3_BUCKET        = os.environ.get("S3_BUCKET", "industrial-ai-knowledge-base")
 S3_CHROMA_PREFIX = "data/chroma_db/"
 S3_GRAPH_KEY     = "data/knowledge_graph.gpickle"
-S3_PDF_PREFIX = "data/raw/"
+S3_PDF_PREFIX = "data/raw"
              
 AWS_REGION       = os.environ.get("AWS_REGION", "eu-north-1") 
 
