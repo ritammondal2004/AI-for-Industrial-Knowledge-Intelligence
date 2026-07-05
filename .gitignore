@@ -1,5 +1,11 @@
 # ── chroma_db — never commit as its large
 data/processed/chroma_db/
+
+# ── Local cache 
+data/cache/
+data/cache/chroma_db/
+data/cache/knowledge_graph.gpickle
+data/cache/hf_cache/ 
                            
 *.sqlite3
 *.bin
@@ -12,6 +18,9 @@ data/processed/chroma_db/
 .env.*
                          
 .venv/ 
+venv/
+env/
+
 __pycache__/
 *.pyc      
 *.pyo
