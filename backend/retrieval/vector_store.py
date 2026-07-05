@@ -11,7 +11,7 @@ from backend.config import *
 _embedder:   HuggingFaceEmbeddings | None = None
 _chroma_db:  Chroma | None = None
 
-
+             
 def init_vector_store() -> None:
     """
     Loads BGE-large embedder and ChromaDB collection. 
@@ -26,7 +26,7 @@ def init_vector_store() -> None:
         cache_folder=HF_CACHE_DIR,
     )
     print("✓ Embedder ready")
-
+                   
     print("Loading ChromaDB...")
     _chroma_db = Chroma(
         collection_name=CHROMA_COLLECTION_NAME,

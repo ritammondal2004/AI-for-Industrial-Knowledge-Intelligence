@@ -64,7 +64,7 @@ def ensure_data_ready() -> None:
     # Knowledge Graph 
     if not os.path.exists(GRAPH_PATH):
         print("Downloading knowledge graph from S3...")
-        s3.download_file(bucket, S3_GRAPH_KEY, GRAPH_PATH)
+        s3.download_file(bucket, S3_GRAPH_KEY, GRAPH_PATH)  
         print("✓ Knowledge graph ready")
     else:
         print("✓ Knowledge graph already cached locally")

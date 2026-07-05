@@ -15,7 +15,7 @@ def smart_retrieve(query: str, k_final: int = MMR_K,verbose: bool = False) -> li
     3. MMR search per query variant with folder filter
     4. Deduplicate chunks across all variants
     5. Return top k_final unique chunks
-    """
+    """   
 
     #  query expansion 
     expanded_queries = expand_query(query)
