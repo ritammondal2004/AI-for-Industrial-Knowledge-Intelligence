@@ -28,7 +28,7 @@ HF_CACHE_DIR     = str(CACHE_DIR / "hf_cache")
 CHROMA_COLLECTION_NAME = "industrial_kb"
       
 #  Retrieval 
-MMR_K           = 5      
+MMR_K        = 5      
 MMR_FETCH_K     = 15     
 GRAPH_TOP_K     = 5      
 GRAPH_MAX_NEIGHBORS = 4  
