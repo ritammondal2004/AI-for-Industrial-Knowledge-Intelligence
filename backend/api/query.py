@@ -8,7 +8,7 @@ from backend.utils.citations import format_sources_block
 from backend.storage.s3_operations import get_pdf_url
 
 router = APIRouter(prefix="/query", tags=["Knowledge Assistant"])
-
+    
            
 def _extract_sources(docs) -> list[SourceReference]:
     """
