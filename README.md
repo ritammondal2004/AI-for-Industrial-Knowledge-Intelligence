@@ -161,7 +161,7 @@ industrial-knowledge-intelligence/
 ```bash
 git clone https://github.com/ritammondal2004/AI-for-Industrial-Knowledge-Intelligence.git
 
-cd industrial-knowledge-intelligence
+cd Industrial-Knowledge-Intelligence
 ```
 
 ---
