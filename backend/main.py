@@ -1,7 +1,7 @@
 # backend/main.py
 
 # backend/main.py
-from dotenv import load_dotenv
+from dotenv import load_dotenv 
 load_dotenv()
 
 from contextlib import asynccontextmanager
@@ -17,7 +17,12 @@ from backend.graph.graph_loader import graph_stats
 from backend.api.query import router as query_router
 from backend.api.graph import router as graph_router
 from backend.models import HealthResponse
+import os
+from huggingface_hub import login
 
+token = os.getenv("HF_TOKEN")
+if token:
+    login(token=token) 
 
 # Startup / shutdown
 @asynccontextmanager

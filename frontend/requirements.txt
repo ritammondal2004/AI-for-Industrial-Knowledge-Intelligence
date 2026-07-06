@@ -1,6 +1,0 @@
-streamlit
-requests
-networkx
-pyvis
-pandas
-streamlit-extras  
