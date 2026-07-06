@@ -1,4 +1,72 @@
-## Project Structure
+# Industrial Knowledge Intelligence
+### Hybrid GraphRAG-powered Industrial Knowledge Assistant for Oil & Gas, Refinery and Process Industries
+
+**Developed for:** Engineering Tomorrow (ET) Hackathon 2026
+
+---
+
+## Authors
+
+| Name | Role | LinkedIn | Github |
+|------|------|----------|--------|
+| **Ritam Mondal** | Team Leader | [Linkedin](https://www.linkedin.com/in/ritam-mondal-1b7670270/) | [Github](https://www.linkedin.com/in/ritam-mondal-1b7670270/) |
+| **Ushasee Roy** | Team Member |  [Linkedin](https://www.linkedin.com/in/ritam-mondal-1b7670270/) | [Github](https://www.linkedin.com/in/ritam-mondal-1b7670270/) |
+| **Mayukh Mondal** | Team Member |  [Linkedin](https://www.linkedin.com/in/ritam-mondal-1b7670270/) | [Github](https://www.linkedin.com/in/ritam-mondal-1b7670270/) |
+
+---
+
+# Live Demo
+
+### Frontend [Application](https://YOUR_FRONTEND_URL)
+
+### Backend [API (Hugging Face)](https://ritammondal2004-et-hackathon-backend.hf.space/docs)
+
+
+---
+
+# Project Overview
+
+Industrial plants generate massive amounts of technical knowledge in the form of equipment manuals, Standard Operating Procedures (SOPs), maintenance documents, incident investigation reports, and industrial regulations. Although this information is valuable for operators and engineers, it is usually scattered across hundreds of lengthy PDF documents, making information retrieval slow and inefficient during real-world operations.
+
+This project presents a **Hybrid GraphRAG-based Industrial Knowledge Intelligence System** that transforms unstructured industrial documents into a searchable knowledge base. By combining semantic retrieval using ChromaDB with relationship-aware retrieval using a Knowledge Graph, the system provides accurate, explainable, and context-rich responses while maintaining document-level traceability through source citations.
+
+The system is designed to function as an intelligent engineering assistant capable of understanding natural language queries, retrieving relevant technical information, and generating grounded answers with direct references to the original documents.
+
+---
+
+# Problem Statement
+
+Industrial organizations face several challenges while accessing technical knowledge:
+
+- Engineers spend significant time manually searching through lengthy manuals and SOPs.
+- Traditional keyword search often fails to capture semantic meaning or relationships between industrial entities.
+- Important information is distributed across multiple document categories including manuals, regulations, procedures, and incident reports.
+- Existing retrieval systems usually ignore relationships between equipment, components, hazards, and operational procedures.
+- AI-generated answers without source grounding reduce user trust and may introduce hallucinations in safety-critical environments.
+
+Our objective is to build an intelligent knowledge assistant capable of retrieving trustworthy information from heterogeneous industrial documents while providing transparent citations and relationship-aware reasoning.
+
+---
+
+
+# Tech Stack
+
+| Category | Technologies |
+|----------|--------------|
+| Programming Language | ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white) |
+| Backend | ![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white) |
+| Frontend | ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB) ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white) ![TanStack Router](https://img.shields.io/badge/TanStack_Router-FF4154?style=for-the-badge&logo=reactquery&logoColor=white) ![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white) |
+| LLM | ![Gemini](https://img.shields.io/badge/Google_Gemini-4285F4?style=for-the-badge&logo=google&logoColor=white) |
+| Embeddings | BAAI BGE-Large-v1.5 |
+| Vector Database | ![ChromaDB](https://img.shields.io/badge/ChromaDB-6E44FF?style=for-the-badge) |
+| Knowledge Graph | ![NetworkX](https://img.shields.io/badge/NetworkX-333333?style=for-the-badge) |
+| Cloud Storage | ![AWS S3](https://img.shields.io/badge/AWS_S3-FF9900?style=for-the-badge&logo=amazonaws&logoColor=white) |
+| Deployment | ![HuggingFace](https://img.shields.io/badge/HuggingFace-FCC624?style=for-the-badge&logo=huggingface&logoColor=black) ![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white) |
+| Version Control | ![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white) ![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white) |
+
+---
+
+# Project Structure
 
 ```text
 industrial-knowledge-intelligence/
@@ -10,9 +78,9 @@ industrial-knowledge-intelligence/
 │   │
 │   ├── api/
 │   │   ├── __init__.py
-│   │   ├── query.py                # POST /query  (Knowledge Assistant — current)
-│   │   ├── copilot.py              # POST /copilot (Industrial Copilot — add later)
-│   │   ├── rca.py                  # POST /rca    (RCA Assistant — add later)
+│   │   ├── query.py                # POST /query  (Knowledge Assistant)
+│   │   ├── copilot.py              # POST /copilot (Industrial Copilot )
+│   │   ├── rca.py                  # POST /rca    (RCA Assistant —r)
 │   │   └── graph.py                # GET  /graph  (graph viz data for frontend)
 │   │
 │   ├── retrieval/
@@ -57,25 +125,15 @@ industrial-knowledge-intelligence/
 │   └── models.py                
 │
 ├── frontend/
-│   └── app.py                      # Streamlit
+│   └── made with React.js, typescript , tanstack router    
+│ 
+├── hf_deploy/  
+│   └── whole backend only              
 │
 ├── data/
-│   ├──raw/ 
-│   │   ├── Incident_reports/
-│   │   ├── Manusals/
-│   │   ├── Procesdures
-│   │   └── Regulations
-│   │   
-│   ├──processed/
-│   │   ├── graph_json/
-│   │   ├── extracted_pages
-│   │   ├── ingestion_progress.json
-│   │   ├── caption_cache.json
-│   │   └── kg_progress.json
-|   │   
-│   └── cache/                      # local disk cache — S3 downloads land here
-│       ├── chroma_db/              # downloaded once at startup, reused
-│       └── knowledge_graph.gpickle # downloaded once at startup, reused
+│   ├── raw/
+│   ├── processed/
+│   └── cache/
 │
 ├── notebooks/                      # notebooks for experimental work
 │   ├── GraphRAG_building_from_json_files.ipynb 
@@ -89,9 +147,186 @@ industrial-knowledge-intelligence/
 ├── .env
 ├── .gitignore
 ├── requirements.txt
-├── Dockerfile
-└── README.md
+├── Dockerfile 
+└── README.md 
 ```
+
+---
+
+
+# Installation
+
+## Clone Repository
+
+```bash
+git clone https://github.com/ritammondal2004/AI-for-Industrial-Knowledge-Intelligence.git
+
+cd industrial-knowledge-intelligence
+```
+
+---
+
+## Create Virtual Environment
+
+Windows
+
+```bash
+python -m venv .venv
+
+.venv\Scripts\activate
+```
+
+Linux / Mac
+
+```bash
+python3 -m venv .venv
+
+source .venv/bin/activate
+```
+
+---
+
+## Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+# Environment Variables
+
+Create a `.env` file in the project root.
+
+```env
+AWS_ACCESS_KEY_ID=YOUR_ACCESS_KEY
+
+AWS_SECRET_ACCESS_KEY=YOUR_SECRET_KEY
+
+AWS_REGION=eu-north-1
+
+S3_BUCKET=industrial-ai-knowledge-base
+
+HF_TOKEN=YOUR_HUGGINGFACE_TOKEN
+
+GOOGLE_API_KEY_1=
+
+GOOGLE_API_KEY_2=
+
+GOOGLE_API_KEY_3=
+
+GOOGLE_API_KEY_4=
+
+GOOGLE_API_KEY_5=
+
+GOOGLE_API_KEY_6=
+```
+
+
+# Download Required Data
+
+The repository does **not** contain the ChromaDB database and Knowledge Graph because of their large size.
+
+Download them manually from Google Drive.
+
+### ChromaDB [drive link](https://drive.google.com/drive/folders/18pxV2LFBVwhBZ9FeCWwt0CntFkCbCJb-?usp=sharing)
+
+
+            
+Download the folder
+
+```text
+chroma_db/
+```
+
+Copy it to
+
+```text
+data/cache/chroma_db/
+```
+
+---
+
+### Knowledge Graph [drive link](https://drive.google.com/file/d/1L_L02GHCP4yMME9qHldaAbMxBbn-LQUA/view?usp=sharing)
+
+
+
+Download
+
+```text
+knowledge_graph.gpickle
+```
+
+Place it inside
+
+```text
+data/cache/
+```
+
+Final directory should look like
+
+```text
+data/
+└── cache/
+      ├── chroma_db/
+      └── knowledge_graph.gpickle
+```
+
+---
+
+# Running the Project
+
+## Start Backend 
+
+```bash
+uvicorn backend.main:app --reload
+```
+
+Backend will be available at
+
+```
+http://localhost:8000
+```
+
+Swagger API Documentation
+
+```
+http://localhost:8000/docs
+```
+
+---
+
+## Start Frontend
+
+`soon...`
+
+---
+
+# Notes
+
+- The backend automatically downloads cached resources from AWS S3 when deployed on HuggingFace.
+- During local development, manually place the downloaded ChromaDB and Knowledge Graph inside `data/cache`.
+- API keys are automatically rotated when Gemini rate limits are reached.
+- All generated answers include document citations with page numbers and direct PDF links.
+
+
+----
+
+
+# Architecture Overview
+
+The complete architecture diagrams are available inside the **DESIGN.md** document.
+
+
+1. Data Ingestion Pipeline
+2. Knowledge Graph Construction Pipeline
+3. Hybrid GraphRAG Retrieval Pipeline
+4. Backend System Architecture
+
+These diagrams explain the complete workflow from raw industrial PDFs to the final AI-generated answer.
+
+---
+
 
 ### building flows
 ```
@@ -115,18 +350,4 @@ Step 17 — backend/api/graph.py
 Step 18 — backend/main.py
 Step 19 — Dockerfile                 
 Step 20 — requirements.txt
-```
-
-## Run Locally
-
-### Start FastAPI Backend
-
-```bash
-uvicorn backend.main:app --reload
-```
-
-### Start Streamlit Frontend
-
-```bash
-streamlit run frontend/streamlit_app.py
 ```
