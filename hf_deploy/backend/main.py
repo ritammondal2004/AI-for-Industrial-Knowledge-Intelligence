@@ -16,7 +16,13 @@ from backend.retrieval.vector_store import chunk_count
 from backend.graph.graph_loader import graph_stats
 from backend.api.query import router as query_router
 from backend.api.graph import router as graph_router
-from backend.models import HealthResponse
+from backend.models import HealthResponse 
+import os
+from huggingface_hub import login
+                  
+token = os.getenv("HF_TOKEN")
+if token:
+    login(token=token)
 
 
 # Startup / shutdown
