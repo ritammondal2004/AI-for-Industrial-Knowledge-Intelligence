@@ -1,8 +1,13 @@
-# ── chroma_db — never commit as its large
+# ── chroma_db — never commit as its large  
 data/processed/chroma_db/
 
-# ── Local cache 
-data/cache/
+
+# Ignore everything inside cache
+data/cache/*
+
+# But keep the folder itself
+!data/cache/.gitkeep
+
 data/cache/chroma_db/
 data/cache/knowledge_graph.gpickle
 data/cache/hf_cache/ 
