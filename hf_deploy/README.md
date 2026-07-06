@@ -1,3 +1,18 @@
+---
+title: ET Hackathon Backend
+emoji: 🚀
+colorFrom: blue
+colorTo: green
+sdk: docker
+pinned: false
+---
+
+# Industrial Knowledge Intelligence Backend
+
+FastAPI backend for the Hybrid GraphRAG Industrial Knowledge Intelligence system.
+
+
+
 ## Project Structure
 
 ```text
@@ -91,42 +106,4 @@ industrial-knowledge-intelligence/
 ├── requirements.txt
 ├── Dockerfile
 └── README.md
-```
-
-### building flows
-```
-Step 1 — backend/config.py
-Step 2 — backend/storage/s3_operations.py
-Step 3 — backend/llm/key_manager.py
-Step 4 — backend/llm/gemini_client.py
-Step 5 — backend/memory/conversation.py
-Step 6 — backend/utils/folder_detector.py
-Step 7 — backend/utils/citations.py
-Step 8 — backend/retrieval/vector_store.py
-Step 9 — backend/retrieval/query_expander.py
-Step 10 — backend/retrieval/mmr_retriever.py
-Step 11 — backend/graph/graph_loader.py
-Step 12 — backend/graph/graph_retriever.py
-Step 13 — backend/prompts/knowledge_assistant.py
-Step 14 — backend/services/rag_chain.py
-Step 15 — backend/models.py
-Step 16 — backend/api/query.py
-Step 17 — backend/api/graph.py
-Step 18 — backend/main.py
-Step 19 — Dockerfile                 
-Step 20 — requirements.txt
-```
-
-## Run Locally
-
-### Start FastAPI Backend
-
-```bash
-uvicorn backend.main:app --reload
-```
-
-### Start Streamlit Frontend
-
-```bash
-streamlit run frontend/streamlit_app.py
 ```

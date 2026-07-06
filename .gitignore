@@ -12,8 +12,10 @@ data/cache/chroma_db/
 data/cache/knowledge_graph.gpickle
 data/cache/hf_cache/ 
                            
-*.sqlite3
-*.bin
+*.sqlite3  
+*.bin  
+
+hf_deploy/data/cache/
 
 
 *.gpickle              
