@@ -17,12 +17,12 @@ def _extract_sources(docs) -> list[SourceReference]:
     """
     sources: dict[str, dict] = {}
 
-    for doc in docs:
+    for doc in docs:                              
         fname  = doc.metadata.get("source", "unknown")
-        page   = str(doc.metadata.get("page", "?"))
+        page   = str(doc.metadata.get("page", "?"))   
         folder = doc.metadata.get("folder", "unknown")
-
-        if fname not in sources:
+                                       
+        if fname not in sources:       
             sources[fname] = {
                 "pages" : set(),
                 "folder": folder,
@@ -41,7 +41,7 @@ def _extract_sources(docs) -> list[SourceReference]:
             pdf_url=info["pdf_url"],
         )
         for fname, info in sorted(sources.items())
-    ]
+    ]             
 
 
 @router.post("", response_model=QueryResponse)

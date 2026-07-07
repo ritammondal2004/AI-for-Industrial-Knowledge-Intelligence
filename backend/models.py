@@ -11,15 +11,14 @@ class QueryRequest(BaseModel):
     """Request body for POST /query"""
     question: str = Field(
         ...,
-        min_length=1,
-        max_length=2000,
+        min_length=1, max_length=2000,
         description="User's question to the knowledge assistant"
-    )
+    )              
     chat_history: list[tuple[str, str]] = Field(
         default=[],
         description="Conversation history as list of (question, answer) tuples"
     )           
-    verbose: bool = Field(
+    verbose: bool = Field(  
         default=False,
         description="If True returns debug info — never True in production"
     )
@@ -32,18 +31,18 @@ class SourceReference(BaseModel):
     filename: str
     pages: list[str]
     folder: str
-    pdf_url: str
-
+    pdf_url: str         
+            
 
 class QueryResponse(BaseModel):
-    """Response body for POST /query"""  
+                            
     answer: str = Field(
         description="Full response including answer + sources block"
     )
     chat_history: list[tuple[str, str]] = Field(
         description="Updated conversation history after this turn"
     ) 
-              
+                      
     context_window: int = Field(
         description="Number of turns currently in memory window"
     )
@@ -52,9 +51,49 @@ class QueryResponse(BaseModel):
         description="Structured source references for frontend use"
     )
 
+#  Industrial Copilot 
+
+class CopilotRequest(BaseModel):
+    question: str = Field(..., min_length=1, max_length=2000)
+    chat_history: list[tuple[str, str]] = Field(default=[])
+    verbose: bool = Field(default=False)
+
+
+class CopilotResponse(BaseModel):
+    answer: str = Field(
+        description="Full structured response with all sections"
+    )
+    chat_history: list[tuple[str, str]]
+    context_window: int
+    sources: list[SourceReference] = Field(default=[])  
+
+
+#  RCA Assistant                       
+
+class RCARequest(BaseModel):
+    symptom: str = Field(
+        ...,
+        min_length=1,               
+        max_length=2000,                   
+        description="Reported symptom, failure description, or incident summary"
+    )
+    chat_history: list[tuple[str, str]] = Field(default=[])
+    verbose: bool = Field(default=False)
+
+
+class RCAResponse(BaseModel):
+    analysis: str = Field(
+        description="Full RCA report with all sections"
+    )                                           
+    chat_history: list[tuple[str, str]]             
+    context_window: int                           
+    sources: list[SourceReference] = Field(default=[])            
+
+               
+
 
 class GraphStatsResponse(BaseModel):
-    """Response body for GET /graph/stats"""
+    
     nodes: int
     edges: int
     top_entities: list[dict]
