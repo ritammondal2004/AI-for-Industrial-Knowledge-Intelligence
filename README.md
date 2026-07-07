@@ -141,8 +141,12 @@ industrial-knowledge-intelligence/
 │   └── Retrieval_Context_and_response_experiment.ipynb
 │
 ├── eval/
-│   ├── qa_test_set.jsonl
-│   └── run_eval.py  
+│     ├── qa_test_set.jsonl          (100 benchmark questions)
+│     ├── run_eval.py                (main evaluator)
+│     ├── metrics.py                 (all scoring functions)
+│     ├── results.csv
+│     ├── report.md
+│     └── plots.py                   (optional graphs)
 │
 ├── .env
 ├── .gitignore
