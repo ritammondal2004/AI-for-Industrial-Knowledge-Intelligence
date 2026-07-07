@@ -1,0 +1,25 @@
+# some sample questions you can try ----
+
+1. Guide me through the safe startup procedure of a centrifugal pump before commissioning.
+
+2. Provide a step-by-step checklist for shutting down a refinery process pump for maintenance.
+
+3. A pump has been idle for three months. What inspections should be completed before restarting it?
+
+4. What maintenance tasks should be performed during a scheduled turnaround for centrifugal pumps?
+
+5. Create an inspection checklist for pressure relief valves before plant startup.
+
+6. What safety precautions should technicians follow before entering a confined space?
+
+7. How should operators safely isolate a process line before valve replacement?
+
+8. Guide me through troubleshooting excessive vibration observed in a centrifugal pump.
+
+9. What should be verified after replacing a mechanical seal before restarting the equipment?
+
+10. Provide the recommended maintenance workflow for refinery rotating equipment.
+
+11. What permits, PPE, and safety checks are required before performing hot work inside a refinery?
+
+12. Prepare an operational checklist for safely commissioning a newly installed centrifugal pump.

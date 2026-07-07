@@ -1,0 +1,25 @@
+
+                
+1. What is Risk Based Inspection (RBI) and how is it applied in refinery maintenance?
+                             
+2. Explain the Process Safety Management (PSM) requirements for refinery operations.
+                      
+3. What are the common causes of centrifugal pump cavitation?
+
+4. Summarize the standard operating procedure for centrifugal pump startup.
+         
+5. What personal protective equipment (PPE) is required before entering a process unit?
+
+6. Explain the purpose of Lockout-Tagout (LOTO) in refinery maintenance.
+
+7. What inspection methods are recommended for pressure vessels?
+
+8. Compare preventive maintenance and predictive maintenance in rotating equipment.
+
+9. What are the OSHA requirements for confined space entry?
+
+10. Explain the working principle of a mechanical shaft seal in centrifugal pumps.
+
+11. What safety precautions should be followed while handling hazardous chemicals?
+
+12. Which regulations govern permit-to-work systems in refinery maintenance?

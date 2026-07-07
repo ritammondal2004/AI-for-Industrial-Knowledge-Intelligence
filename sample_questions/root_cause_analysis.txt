@@ -1,0 +1,24 @@
+
+1. A centrifugal pump is producing excessive vibration immediately after startup. Perform a root cause analysis.
+
+2. A mechanical seal has started leaking after pump maintenance. Identify the most likely root causes.
+            
+3. The discharge pressure of a centrifugal pump suddenly dropped during normal operation. Analyze the possible causes.
+          
+4. An electric motor repeatedly trips during pump startup. Determine the possible root causes and corrective actions.
+                 
+5. A pressure relief valve failed to open during an overpressure event. Perform a root cause analysis.
+
+6. An operator reports abnormal bearing temperature during continuous pump operation. Investigate the failure.
+
+7. A refinery pipeline developed an unexpected corrosion leak. Identify likely causes and recommended inspections.
+
+8. A process unit experienced a fire immediately after hot work maintenance. Perform a root cause analysis including safety compliance issues.
+
+9. Cavitation noise is continuously observed even though the pump appears mechanically healthy. Analyze the likely causes.
+
+10. A refinery experienced an unexpected emergency shutdown due to loss of process pressure. Determine the probable root causes.
+
+11. Operators observed repeated seal failures across multiple identical pumps. Identify systemic root causes and recommend preventive actions.
+
+12. Following a maintenance shutdown, the pump failed to achieve its expected flow rate. Analyze possible root causes, supporting evidence, recommended inspections, and corrective actions.
