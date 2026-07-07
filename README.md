@@ -175,8 +175,6 @@ If you have already cloned the repository without submodules, initialize them us
 ```bash
 git submodule update --init --recursive
 ```
-  
-
 
 ---
 
