@@ -1,17 +1,17 @@
-# Industrial Knowledge Intelligence
+# AI for Industrial Knowledge Intelligence (ET hackathon)
 ### Hybrid GraphRAG-powered Industrial Knowledge Assistant for Oil & Gas, Refinery and Process Industries
 
-**Developed for:** Engineering Tomorrow (ET) Hackathon 2026
-
----
+**Developed for:** Economic Times (ET) Hackathon 2026  
+   
+--- 
 
 ## Authors
 
-| Name | Role | LinkedIn | Github |
-|------|------|----------|--------|
-| **Ritam Mondal** | Team Leader | [Linkedin](https://www.linkedin.com/in/ritam-mondal-1b7670270/) | [Github](https://www.linkedin.com/in/ritam-mondal-1b7670270/) |
-| **Ushasee Roy** | Team Member |  [Linkedin](https://www.linkedin.com/in/ritam-mondal-1b7670270/) | [Github](https://www.linkedin.com/in/ritam-mondal-1b7670270/) |
-| **Mayukh Mondal** | Team Member |  [Linkedin](https://www.linkedin.com/in/ritam-mondal-1b7670270/) | [Github](https://www.linkedin.com/in/ritam-mondal-1b7670270/) |
+| Name | Role | LinkedIn | Github | Website |
+|------|------|----------|--------|---------|
+| **Ritam Mondal** | Team Leader | [Linkedin](https://www.linkedin.com/in/ritam-mondal-86a369287/) | [Github](https://github.com/ritammondal2004) | [Website](https://ritammondal.vercel.app/) |
+| **Ushasee Roy** | Team Member |  [Linkedin](https://www.linkedin.com/in/ushasee-roy-5a9a82273/) | [Github](https://github.com/) | |
+| **Mayukh Mondal** | Team Member |  [Linkedin](https://www.linkedin.com/in/mayukh-mondal-23ce300/) | [Github](https://github.com/) | |
 
 ---
 
