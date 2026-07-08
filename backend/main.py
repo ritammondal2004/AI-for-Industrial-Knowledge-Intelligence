@@ -18,6 +18,8 @@ from backend.api.query import router as query_router
 from backend.api.graph import router as graph_router 
 from backend.api.rca import router as rca_router   
 from backend.api.copilot import router as copilot_router   
+from backend.api.eval import router as eval_router
+
 from backend.models import HealthResponse
 import os
 from huggingface_hub import login
@@ -66,7 +68,8 @@ app.add_middleware(
 app.include_router(query_router)        
 app.include_router(graph_router)       
 app.include_router(rca_router)         
-app.include_router(copilot_router)          
+app.include_router(copilot_router)      
+app.include_router(eval_router)    
 
 # Health check 
 @app.get("/health", response_model=HealthResponse, tags=["System"])
