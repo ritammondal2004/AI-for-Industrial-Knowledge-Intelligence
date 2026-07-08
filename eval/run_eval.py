@@ -27,11 +27,31 @@ from eval.metrics import (
 
 # ── Config
 BACKEND_URL    = os.environ.get("BACKEND_URL", "http://localhost:8000")
-TEST_SET_PATH  = Path(__file__).parent / "qa_test_set.jsonl"
+TEST_SET_PATH  = Path(__file__).parent / "qa_test_set.json"
 RESULTS_PATH   = Path(__file__).parent / "results.csv"
 REPORT_PATH    = Path(__file__).parent / "report.md"
 DELAY_SECONDS  = 2.0    # pause between questions to avoid rate limits  
+
+#     # Load test set
+# print(TEST_SET_PATH)
+# print(TEST_SET_PATH.exists()) 
             
+# ── Progress tracking ─
+PROGRESS_PATH = Path(__file__).parent / "eval_progress.json"
+
+def load_eval_progress() -> set:
+    """Returns set of already-evaluated question IDs."""
+    if PROGRESS_PATH.exists():
+        with open(PROGRESS_PATH, "r") as f:
+            data = json.load(f)
+        return set(data.get("completed_ids", []))
+    return set()
+
+def save_eval_progress(completed_ids: set) -> None:
+    """Saves set of completed IDs to disk."""
+    with open(PROGRESS_PATH, "w") as f:
+        json.dump({"completed_ids": list(completed_ids)}, f, indent=2)
+
 
 def load_test_set(path: Path) -> list[dict]:  
     """Loads test set from JSONL or JSON array file."""
@@ -117,18 +137,34 @@ def run_evaluation(
     limit: int | None = None,
 ) -> list[dict]:
     """
-    Runs all test questions against the backend.
-    Returns list of result dicts.
+    Picks next N pending questions when limit is given.
+    Results are APPENDED to existing results.csv (not overwritten).
     """
-    results = []
-    total = min(len(test_set), limit) if limit else len(test_set)
+    # Load which IDs are already done
+    completed_ids = load_eval_progress()
+
+    # Filter to only pending questions
+    pending = [tc for tc in test_set if tc["id"] not in completed_ids]
+
+    if not pending:
+        print("\n✓ All questions already evaluated. Nothing to do.")
+        print(f"  Completed: {len(completed_ids)}/{len(test_set)}")
+        return []
+
+    # Take next N from pending
+    batch = pending[:limit] if limit else pending
+    total = len(batch)
 
     print(f"\n{'='*60}")
-    print(f"Starting evaluation: {total} questions")
-    print(f"Backend: {BACKEND_URL}")
+    print(f"Evaluation batch: {total} questions")
+    print(f"Already done    : {len(completed_ids)}/{len(test_set)}")
+    print(f"Remaining after : {len(pending) - total}")
+    print(f"Backend         : {BACKEND_URL}")
     print(f"{'='*60}\n")
 
-    for i, tc in enumerate(test_set[:total]):
+    results = []
+
+    for i, tc in enumerate(batch):
         qid  = tc["id"]
         diff = tc.get("difficulty", "?")
         cat  = tc.get("category", "?")
@@ -140,51 +176,52 @@ def run_evaluation(
         response = query_backend(q)
 
         if response is None:
-            print(f"  ✗ Skipped — no response")
-            results.append({
-                "id": qid, "difficulty": diff, "category": cat,
-                "question": q, "overall_score": 0.0,
-                "source_score": 0.0, "folder_score": 0.0,
-                "keyword_score": 0.0, "length_score": 0.0,
-                "not_found_score": 0.0, "multi_doc_score": 0.0,
-                "expected_folder": tc.get("expected_folder", ""),
-                "expected_docs": "", "retrieved_docs": "",
-                "answer_preview": "NO RESPONSE",
-                "requires_graph": tc.get("requires_graph", False),
-            })
-        else:
-            result = evaluate_one(tc, response)
-            results.append(result)
-            print(f"  ✓ Overall: {result['overall_score']:.3f} | "
-                  f"Keyword: {result['keyword_score']:.3f} | "
-                  f"Source: {result['source_score']:.3f}")
+            print(f"  ✗ Skipped — no response (will retry next run)")
+            # Do NOT mark as complete — retry next time
+            continue
 
-        # Respect rate limits
+        result = evaluate_one(tc, response)
+        results.append(result)
+
+        # Mark as complete only on success
+        completed_ids.add(qid)
+        save_eval_progress(completed_ids)
+
+        print(f"  ✓ Overall: {result['overall_score']:.3f} | "
+              f"Keyword: {result['keyword_score']:.3f} | "
+              f"Source: {result['source_score']:.3f}")
+
         if i < total - 1:
             time.sleep(DELAY_SECONDS)
 
-    return results
+    print(f"\n✓ Batch complete: {len(results)} evaluated")
+    print(f"  Total done: {len(completed_ids)}/{len(test_set)}")
+
+    return results  
 
 
 def save_results_csv(results: list[dict], path: Path) -> None:
-    """Saves all results to CSV."""
+    """Appends new results to CSV ."""
     if not results:
-        return
-
+        return  
+              
     fieldnames = list(results[0].keys())
-    with open(path, "w", newline="", encoding="utf-8") as f:
+    file_exists = path.exists()
+
+    with open(path, "a", newline="", encoding="utf-8") as f:
         writer = csv.DictWriter(f, fieldnames=fieldnames)
-        writer.writeheader()
+        if not file_exists:
+            writer.writeheader()   # only write header on first run
         writer.writerows(results)
 
-    print(f"\n✓ Results saved to {path}")
+    print(f"✓ {len(results)} results appended to {path}")
 
 
 def compute_summary(results: list[dict]) -> dict:
     """Computes aggregate statistics from results list."""
     if not results:
         return {}
-
+             
     def avg(key):
         vals = [r[key] for r in results if isinstance(r.get(key), (int, float))]
         return sum(vals) / len(vals) if vals else 0.0
@@ -204,7 +241,7 @@ def compute_summary(results: list[dict]) -> dict:
     # By difficulty
     for diff in ["easy", "medium", "hard"]:
         subset = [r for r in results if r.get("difficulty") == diff]
-        if subset:
+        if subset:     
             summary[f"avg_overall_{diff}"] = (
                 sum(r["overall_score"] for r in subset) / len(subset)
             )             
@@ -358,10 +395,11 @@ if __name__ == "__main__":
     if args.backend:
         BACKEND_URL = args.backend
 
-    # Load test set
+
+                                        
     test_set = load_test_set(TEST_SET_PATH)
     print(f"Loaded {len(test_set)} test questions from {TEST_SET_PATH}")
-
+                
     # Run evaluation
     results = run_evaluation(test_set, limit=args.limit)
 

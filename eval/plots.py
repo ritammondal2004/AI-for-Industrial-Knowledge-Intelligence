@@ -13,13 +13,13 @@ def load_results(path: Path) -> list[dict]:
         reader = csv.DictReader(f)
         return list(reader)
 
-
+              
 def generate_chart_data(results: list[dict]) -> dict:
     """                   
     Generates chart-ready data structures.
     Returns JSON-serializable dict consumed by frontend.
     """             
-    # ── 1. Score distribution histogram ─
+    # . Score distribution histogram ─
     buckets = {"0-20%": 0, "20-40%": 0, "40-60%": 0, "60-80%": 0, "80-100%": 0}
     for r in results:
         score = float(r.get("overall_score", 0))
