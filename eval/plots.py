@@ -9,9 +9,9 @@ PLOTS_DIR    = Path(__file__).parent / "plots"
 
 
 def load_results(path: Path) -> list[dict]:
+    """Loads results from JSON file."""
     with open(path, "r", encoding="utf-8") as f:
-        reader = csv.DictReader(f)
-        return list(reader)
+        return json.load(f)
 
               
 def generate_chart_data(results: list[dict]) -> dict:

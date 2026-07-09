@@ -141,16 +141,16 @@ def compute_overall_score(
     """
     Weighted aggregate score for a single question.
     Weights:
-        keyword coverage  40% — most important: is the answer correct?
+        keyword coverage  40% — is the answer correct?
         source match      25% — did it find the right documents?
         folder match      15% — did it search the right category?
         not found penalty 10% — did it incorrectly say "not found"?
         length score       5% — is the answer substantive?
-        multi doc          5% — did it use multiple sources when needed?
+        multi doc          5% — did it use multiple sources when needed? 
 
     Returns:
         float: 0.0 to 1.0
-    """
+    """  
     return (
         keyword_score      * 0.40 +
         source_score       * 0.25 +

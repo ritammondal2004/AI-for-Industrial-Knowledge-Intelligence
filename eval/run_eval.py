@@ -28,7 +28,7 @@ from eval.metrics import (
 # ── Config
 BACKEND_URL    = os.environ.get("BACKEND_URL", "http://localhost:8000")
 TEST_SET_PATH  = Path(__file__).parent / "qa_test_set.json"
-RESULTS_PATH   = Path(__file__).parent / "results.csv"
+RESULTS_PATH = Path(__file__).parent / "results.json"
 REPORT_PATH    = Path(__file__).parent / "report.md"
 DELAY_SECONDS  = 2.0    # pause between questions to avoid rate limits  
 
@@ -200,21 +200,31 @@ def run_evaluation(
     return results  
 
 
-def save_results_csv(results: list[dict], path: Path) -> None:
-    """Appends new results to CSV ."""
+def save_results_json(results: list[dict], path: Path) -> None:
+    """
+    Appends new results to results.json.  
+    """
     if not results:
-        return  
-              
-    fieldnames = list(results[0].keys())
-    file_exists = path.exists()
+        return
 
-    with open(path, "a", newline="", encoding="utf-8") as f:
-        writer = csv.DictWriter(f, fieldnames=fieldnames)
-        if not file_exists:
-            writer.writeheader()   # only write header on first run
-        writer.writerows(results)
+    # Load existing results if file exists
+    existing: list[dict] = []
+    if path.exists():
+        with open(path, "r", encoding="utf-8") as f:
+            existing = json.load(f)
 
-    print(f"✓ {len(results)} results appended to {path}")
+    # Merge: index existing by ID, overwrite with new results
+    existing_by_id = {r["id"]: r for r in existing}
+    for r in results:
+        existing_by_id[r["id"]] = r
+                    
+    # Write back sorted by ID
+    merged = sorted(existing_by_id.values(), key=lambda r: int(r["id"]))
+    with open(path, "w", encoding="utf-8") as f:
+        json.dump(merged, f, indent=2, ensure_ascii=False)
+
+    print(f"✓ {len(results)} results saved to {path} "
+          f"(total: {len(merged)})")
 
 
 def compute_summary(results: list[dict]) -> dict:
@@ -403,8 +413,8 @@ if __name__ == "__main__":
     # Run evaluation
     results = run_evaluation(test_set, limit=args.limit)
 
-    # Save CSV
-    save_results_csv(results, RESULTS_PATH)
+    # Save json
+    save_results_json(results, RESULTS_PATH)
 
     # Compute summary
     summary = compute_summary(results)
