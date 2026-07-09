@@ -17,7 +17,7 @@
 
 # Live Demo
 
-### Frontend [Application](https://YOUR_FRONTEND_URL)
+### Frontend [Application](https://industrial-ai-support.vercel.app/)
 
 ### Backend [API (Hugging Face)](https://ritammondal2004-et-hackathon-backend.hf.space/docs)
 
