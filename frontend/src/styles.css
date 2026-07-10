@@ -1,0 +1,261 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: 0.375rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-panel: var(--panel);
+  --color-surface: var(--surface);
+  --color-surface-high: var(--surface-high);
+  --color-outline-variant: var(--outline-variant);
+  --color-amber: var(--amber);
+  --color-teal: var(--teal);
+  --color-user: var(--user);
+  --color-violet: var(--violet);
+  --color-violet-glow: var(--violet-glow);
+  --color-emerald: var(--emerald);
+  --color-emerald-glow: var(--emerald-glow);
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+  --font-geist: "Geist Mono", "JetBrains Mono", ui-monospace, monospace;
+}
+
+/* Dark (default) — Cyberpunk Industrial: neon green + hot pink on charcoal */
+:root {
+  --radius: 1rem;
+  --background: #0a0a0f;
+  --foreground: #e8fff5;
+  --panel: #0f1015;
+  --surface: #12131a;
+  --surface-high: #191b24;
+  --outline-variant: #2a2d3a;
+
+  --violet: #ff2e88;         /* hot pink/magenta accent */
+  --violet-glow: #ff5ea8;
+  --emerald: #00ffcc;         /* neon green primary accent */
+  --emerald-glow: #7cffe4;
+
+  --amber: #ff2e88;
+  --teal: #00ffcc;
+  --user: #00ffcc;
+
+  --card: #12131a;
+  --card-foreground: #e8fff5;
+  --popover: #12131a;
+  --popover-foreground: #e8fff5;
+  --primary: #00ffcc;
+  --primary-foreground: #05070a;
+  --secondary: #191b24;
+  --secondary-foreground: #e8fff5;
+  --muted: #191b24;
+  --muted-foreground: #7a8391;
+  --accent: #191b24;
+  --accent-foreground: #e8fff5;
+  --destructive: #ff2e88;
+  --destructive-foreground: #ffffff;
+  --border: #2a2d3a;
+  --input: #191b24;
+  --ring: #00ffcc;
+}
+
+/* Light theme — Frosted Glass (keeps violet/emerald accent identity) */
+.light {
+  --background: #ece7f5;
+  --foreground: #1a1720;
+  --panel: rgba(255, 255, 255, 0.55);
+  --surface: rgba(255, 255, 255, 0.5);
+  --surface-high: rgba(255, 255, 255, 0.75);
+  --outline-variant: rgba(167, 139, 250, 0.28);
+
+  --violet: #a78bfa;
+  --violet-glow: #cebdff;
+  --emerald: #34d399;
+  --emerald-glow: #45dfa4;
+
+  --amber: #e6a817;
+  --teal: #2dd4bf;
+  --user: #a78bfa;
+
+  --card: rgba(255, 255, 255, 0.55);
+  --card-foreground: #1a1720;
+  --popover: rgba(255, 255, 255, 0.85);
+  --popover-foreground: #1a1720;
+  --primary: #a78bfa;
+  --primary-foreground: #ffffff;
+  --secondary: rgba(255, 255, 255, 0.6);
+  --secondary-foreground: #1a1720;
+  --muted: rgba(255, 255, 255, 0.55);
+  --muted-foreground: #6b6577;
+  --accent: rgba(167, 139, 250, 0.12);
+  --accent-foreground: #1a1720;
+  --destructive: #dc2626;
+  --destructive-foreground: #ffffff;
+  --border: rgba(167, 139, 250, 0.22);
+  --input: rgba(255, 255, 255, 0.6);
+  --ring: #a78bfa;
+}
+
+/* Ambient gradient wash behind the glass surfaces in light mode */
+.light body {
+  background-color: #ece7f5;
+  background-image:
+    radial-gradient(ellipse 60% 50% at 15% 10%, rgba(167, 139, 250, 0.35), transparent 60%),
+    radial-gradient(ellipse 55% 45% at 90% 20%, rgba(52, 211, 153, 0.22), transparent 65%),
+    radial-gradient(ellipse 70% 60% at 80% 100%, rgba(206, 189, 255, 0.4), transparent 60%),
+    radial-gradient(ellipse 50% 40% at 10% 90%, rgba(45, 212, 191, 0.18), transparent 65%);
+  background-attachment: fixed;
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+  html, body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+/* ================= Glass surfaces ================= */
+@utility glass-panel {
+  background: color-mix(in oklab, var(--surface) 78%, transparent);
+  backdrop-filter: blur(16px) saturate(140%);
+  border: 1px solid var(--outline-variant);
+  border-radius: var(--radius-lg);
+}
+
+@utility glass-card {
+  background: color-mix(in oklab, var(--surface) 65%, transparent);
+  backdrop-filter: blur(16px) saturate(140%);
+  border: 1px solid rgba(206, 189, 255, 0.15);
+  border-radius: var(--radius-lg);
+  box-shadow:
+    0 20px 40px -15px rgba(167, 139, 250, 0.08),
+    inset 0 1px 1px rgba(255, 255, 255, 0.05);
+}
+
+@utility glass-hi {
+  background: var(--surface-high);
+  border: 1px solid rgba(206, 189, 255, 0.15);
+  border-radius: var(--radius-md);
+}
+
+/* ================= Animations ================= */
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+@utility animate-spin-slow {
+  animation: spin-slow 8s linear infinite;
+}
+
+@keyframes spin-rev {
+  from { transform: rotate(360deg); }
+  to { transform: rotate(0deg); }
+}
+@utility animate-spin-rev {
+  animation: spin-rev 3.2s linear infinite;
+}
+@utility animate-spin-fwd {
+  animation: spin-slow 2.4s linear infinite;
+}
+
+@keyframes bounce-dot {
+  0%, 80%, 100% { transform: translateY(0); opacity: 0.4; }
+  40% { transform: translateY(-6px); opacity: 1; }
+}
+@utility animate-bounce-dot {
+  animation: bounce-dot 1.2s infinite ease-in-out;
+}
+
+@keyframes pulse-glow {
+  0%, 100% { opacity: 0.55; box-shadow: 0 0 0 0 rgba(167, 139, 250, 0.5); }
+  50%      { opacity: 1;    box-shadow: 0 0 0 6px rgba(167, 139, 250, 0); }
+}
+@utility animate-pulse-glow {
+  animation: pulse-glow 1.6s ease-in-out infinite;
+}
+
+@keyframes ticker-in {
+  0%   { opacity: 0; transform: translateY(6px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+@utility animate-ticker-in {
+  animation: ticker-in 0.35s ease-out;
+}
+
+@keyframes spark-dash {
+  from { stroke-dashoffset: 200; }
+  to   { stroke-dashoffset: 0; }
+}
+@utility animate-spark {
+  animation: spark-dash 2.4s ease-out forwards;
+}
+
+/* ================= Cyberpunk 3D helpers ================= */
+@keyframes word-fade-in {
+  from { opacity: 0; transform: translateY(4px); filter: blur(2px); }
+  to   { opacity: 1; transform: translateY(0); filter: blur(0); }
+}
+@utility animate-word-in {
+  animation: word-fade-in 0.28s ease-out both;
+}
+
+@utility mode-item {
+  position: relative;
+  transition: transform 0.15s ease, color 0.15s ease, text-shadow 0.15s ease, background-color 0.15s ease;
+  &:hover {
+    transform: translate(-2px, -2px);
+    color: #00ffcc;
+    text-shadow: 0 0 8px rgba(0, 255, 204, 0.65), 1px 1px 0 rgba(255, 46, 136, 0.35);
+  }
+}
+
+@utility mode-active {
+  color: #00ffcc;
+  text-shadow: 0 0 10px rgba(0, 255, 204, 0.8);
+  background: linear-gradient(90deg, rgba(0,255,204,0.10), transparent 70%);
+  border-left: 2px solid #00ffcc;
+  box-shadow: inset 0 0 12px rgba(0,255,204,0.08);
+  padding-left: 8px;
+}
+
+@utility btn-3d {
+  transition: transform 0.12s ease, box-shadow 0.12s ease, filter 0.12s ease;
+  box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.6), 0 0 12px rgba(0, 255, 204, 0.35);
+  &:hover:not(:disabled) {
+    transform: translate(-2px, -2px);
+    box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.7), 0 0 20px rgba(0, 255, 204, 0.6);
+    filter: brightness(1.1);
+  }
+  &:active:not(:disabled) {
+    transform: translate(1px, 1px);
+    box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.6), 0 0 8px rgba(0, 255, 204, 0.4);
+  }
+}
