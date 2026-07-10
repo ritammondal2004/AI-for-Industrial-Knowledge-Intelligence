@@ -321,8 +321,6 @@ http://localhost:8000/docs
 
 # Architecture Overview
 
-The complete architecture diagrams are available inside the **DESIGN.md** document.
-
 
 1. Data Ingestion Pipeline
 2. Knowledge Graph Construction Pipeline
@@ -330,30 +328,9 @@ The complete architecture diagrams are available inside the **DESIGN.md** docume
 4. Backend System Architecture
 
 These diagrams explain the complete workflow from raw industrial PDFs to the final AI-generated answer.
+<!-- 
+## Deployment architecture
 
----
+![Deployment architecture](flowchart\deployment_arch.png)
+--- -->
 
-
-### building flows
-```
-Step 1 — backend/config.py
-Step 2 — backend/storage/s3_operations.py
-Step 3 — backend/llm/key_manager.py
-Step 4 — backend/llm/gemini_client.py
-Step 5 — backend/memory/conversation.py
-Step 6 — backend/utils/folder_detector.py
-Step 7 — backend/utils/citations.py
-Step 8 — backend/retrieval/vector_store.py
-Step 9 — backend/retrieval/query_expander.py
-Step 10 — backend/retrieval/mmr_retriever.py
-Step 11 — backend/graph/graph_loader.py
-Step 12 — backend/graph/graph_retriever.py
-Step 13 — backend/prompts/knowledge_assistant.py
-Step 14 — backend/services/rag_chain.py
-Step 15 — backend/models.py
-Step 16 — backend/api/query.py
-Step 17 — backend/api/graph.py
-Step 18 — backend/main.py
-Step 19 — Dockerfile                 
-Step 20 — requirements.txt
-```
