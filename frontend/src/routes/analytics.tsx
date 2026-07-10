@@ -20,7 +20,7 @@ import { ChevronUp, ChevronDown, ChevronLeft, ChevronRight } from "lucide-react"
 import { Sidebar } from "@/components/Sidebar";
 import { BACKEND_URL } from "@/lib/api";
 import { useModeChat } from "@/lib/chat-store";
-import analyticsIcon from "@/assets/analytics-icon.png.asset.json";
+import analyticsIcon from "@/assets/analytics-icon.png";
 
 export const Route = createFileRoute("/analytics")({
   head: () => ({
@@ -384,7 +384,7 @@ function AnalyticsPage() {
           <header className="border-b border-border pb-4">
             <h1 className="font-geist text-2xl md:text-3xl font-semibold tracking-tight flex items-center gap-3">
               <img
-                src={analyticsIcon.url}
+                src={analyticsIcon}
                 alt="Analytics"
                 className="w-8 h-8 md:w-10 md:h-10 object-contain drop-shadow-[0_0_10px_rgba(43,169,184,0.5)]"
               />
