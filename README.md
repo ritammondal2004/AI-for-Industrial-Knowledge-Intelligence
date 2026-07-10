@@ -162,19 +162,14 @@ industrial-knowledge-intelligence/
 
 ## Clone Repository
 
-Clone the repository together with all Git submodules.
+Clone the repository
 
 ```bash
-git clone --recurse-submodules https://github.com/ritammondal2004/AI-for-Industrial-Knowledge-Intelligence.git
+git clone https://github.com/ritammondal2004/AI-for-Industrial-Knowledge-Intelligence.git
 
 cd AI-for-Industrial-Knowledge-Intelligence
 ```
 
-If you have already cloned the repository without submodules, initialize them using:
-
-```bash
-git submodule update --init --recursive
-```
 
 ---
 
