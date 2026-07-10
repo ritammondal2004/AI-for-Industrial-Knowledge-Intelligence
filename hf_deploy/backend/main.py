@@ -85,4 +85,4 @@ async def health_check():
         graph_nodes=stats["nodes"],
         graph_edges=stats["edges"],
         api_keys_loaded=key_count(),
-    )  
+    )
