@@ -17,10 +17,9 @@
 
 # Live Demo
 
-### Frontend [Application](https://industrial-ai-support.vercel.app/)
+### Frontend [Application](https://indus-mind-ai.vercel.app/)
 
 ### Backend [API (Hugging Face)](https://ritammondal2004-et-hackathon-backend.hf.space/docs)
-
 
 ---
 
