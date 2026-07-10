@@ -1,10 +1,9 @@
 # eval/plots.py
-# Generates charts from results.csv   
-import csv
+
 import json
 from pathlib import Path
 
-RESULTS_PATH = Path(__file__).parent / "results.csv"
+RESULTS_PATH = Path(__file__).parent / "results.json"
 PLOTS_DIR    = Path(__file__).parent / "plots"
 
 

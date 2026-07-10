@@ -1,0 +1,234 @@
+{
+  "score_distribution": {
+    "0-20%": 0,
+    "20-40%": 1,
+    "40-60%": 3,
+    "60-80%": 5,
+    "80-100%": 12
+  },
+  "by_difficulty": {
+    "easy": 0.76
+  },
+  "by_category": {
+    "Pump": 0.85,
+    "Valve": 0.72,
+    "Permit To Work": 0.85,
+    "Safety": 0.733,
+    "Mechanical Integrity": 0.8,
+    "Emergency Response": 0.65,
+    "Maintenance": 0.4,
+    "Industrial Operations": 0.9,
+    "Process Safety": 0.36,
+    "Corrosion": 0.9,
+    "Risk Based Inspection": 0.9,
+    "Regulation": 1.0,
+    "Failure Analysis": 0.55,
+    "Inspection": 0.9
+  },
+  "radar": {
+    "Keyword Coverage": 0.705,
+    "Source Retrieval": 0.571,
+    "Folder Routing": 0.905,
+    "Answer Quality": 1.0,
+    "Not-Found Guard": 1.0,
+    "Multi-Doc": 1.0
+  },
+  "question_scores": [
+    {
+      "id": 1,
+      "difficulty": "easy",
+      "category": "Pump",
+      "question": "What is the primary function of a centrifugal pump impeller?...",
+      "overall_score": 0.75,
+      "keyword_score": 1.0,
+      "source_score": 0.0
+    },
+    {
+      "id": 2,
+      "difficulty": "easy",
+      "category": "Valve",
+      "question": "What are the recommended installation positions for floating...",
+      "overall_score": 0.65,
+      "keyword_score": 0.75,
+      "source_score": 0.0
+    },
+    {
+      "id": 3,
+      "difficulty": "easy",
+      "category": "Permit To Work",
+      "question": "Who is authorized to issue a Hot Work Permit in the refinery...",
+      "overall_score": 0.9,
+      "keyword_score": 0.75,
+      "source_score": 1.0
+    },
+    {
+      "id": 4,
+      "difficulty": "easy",
+      "category": "Safety",
+      "question": "What does the abbreviation LOTO stand for in industrial safe...",
+      "overall_score": 0.65,
+      "keyword_score": 0.75,
+      "source_score": 0.0
+    },
+    {
+      "id": 6,
+      "difficulty": "easy",
+      "category": "Mechanical Integrity",
+      "question": "What is the defined frequency for testing critical interlock...",
+      "overall_score": 0.8,
+      "keyword_score": 0.5,
+      "source_score": 1.0
+    },
+    {
+      "id": 7,
+      "difficulty": "easy",
+      "category": "Emergency Response",
+      "question": "What are the initial isolation steps to take during an emerg...",
+      "overall_score": 0.65,
+      "keyword_score": 0.75,
+      "source_score": 0.0
+    },
+    {
+      "id": 8,
+      "difficulty": "easy",
+      "category": "Maintenance",
+      "question": "What type of lubricant is specified for the bearings of a st...",
+      "overall_score": 0.4,
+      "keyword_score": 0.5,
+      "source_score": 0.0
+    },
+    {
+      "id": 9,
+      "difficulty": "easy",
+      "category": "Industrial Operations",
+      "question": "What is the standard pre-start checklist for a multi-stage c...",
+      "overall_score": 0.9,
+      "keyword_score": 0.75,
+      "source_score": 1.0
+    },
+    {
+      "id": 10,
+      "difficulty": "easy",
+      "category": "Process Safety",
+      "question": "What are the mandatory PPE requirements for executing refine...",
+      "overall_score": 0.36,
+      "keyword_score": 0.4,
+      "source_score": 0.0
+    },
+    {
+      "id": 11,
+      "difficulty": "easy",
+      "category": "Corrosion",
+      "question": "Define pitting corrosion as it applies to carbon steel heat ...",
+      "overall_score": 0.9,
+      "keyword_score": 0.75,
+      "source_score": 1.0
+    },
+    {
+      "id": 13,
+      "difficulty": "easy",
+      "category": "Valve",
+      "question": "What components are connected to shaft seals?...",
+      "overall_score": 0.51,
+      "keyword_score": 0.4,
+      "source_score": 0.0
+    },
+    {
+      "id": 14,
+      "difficulty": "easy",
+      "category": "Risk Based Inspection",
+      "question": "How does RBI relate to inspection planning?...",
+      "overall_score": 0.9,
+      "keyword_score": 0.75,
+      "source_score": 1.0
+    },
+    {
+      "id": 15,
+      "difficulty": "easy",
+      "category": "Pump",
+      "question": "What equipment is associated with cavitation?...",
+      "overall_score": 0.9,
+      "keyword_score": 0.75,
+      "source_score": 1.0
+    },
+    {
+      "id": 16,
+      "difficulty": "easy",
+      "category": "Regulation",
+      "question": "What OISD standard governs the management of work permit sys...",
+      "overall_score": 1.0,
+      "keyword_score": 1.0,
+      "source_score": 1.0
+    },
+    {
+      "id": 17,
+      "difficulty": "easy",
+      "category": "Failure Analysis",
+      "question": "What is the primary cause of water hammer in compressed air ...",
+      "overall_score": 0.55,
+      "keyword_score": 0.5,
+      "source_score": 0.0
+    },
+    {
+      "id": 18,
+      "difficulty": "easy",
+      "category": "Inspection",
+      "question": "What are the thickness limits before a heat exchanger tube b...",
+      "overall_score": 0.9,
+      "keyword_score": 0.75,
+      "source_score": 1.0
+    },
+    {
+      "id": 19,
+      "difficulty": "easy",
+      "category": "Safety",
+      "question": "What is the minimum duration required for air purging before...",
+      "overall_score": 0.65,
+      "keyword_score": 0.75,
+      "source_score": 0.0
+    },
+    {
+      "id": 20,
+      "difficulty": "easy",
+      "category": "Pump",
+      "question": "Define Net Positive Suction Head Available (NPSHa)....",
+      "overall_score": 0.9,
+      "keyword_score": 0.75,
+      "source_score": 1.0
+    },
+    {
+      "id": 21,
+      "difficulty": "easy",
+      "category": "Valve",
+      "question": "What is the torque specification for tightening gland flange...",
+      "overall_score": 1.0,
+      "keyword_score": 1.0,
+      "source_score": 1.0
+    },
+    {
+      "id": 22,
+      "difficulty": "easy",
+      "category": "Permit To Work",
+      "question": "For how many hours is a standard cold work permit valid unde...",
+      "overall_score": 0.8,
+      "keyword_score": 0.5,
+      "source_score": 1.0
+    },
+    {
+      "id": 23,
+      "difficulty": "easy",
+      "category": "Safety",
+      "question": "Who must apply the primary lock on an energy isolation devic...",
+      "overall_score": 0.9,
+      "keyword_score": 0.75,
+      "source_score": 1.0
+    }
+  ],
+  "summary": {
+    "total": 21,
+    "avg_overall": 0.76,
+    "avg_keyword": 0.705,
+    "avg_source": 0.571,
+    "avg_folder": 0.905
+  }
+}

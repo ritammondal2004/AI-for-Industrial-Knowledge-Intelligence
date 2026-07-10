@@ -16,7 +16,7 @@ data/cache/hf_cache/
 *.bin  
 
 hf_deploy/data/cache/
-
+eval/report.md
 
 *.gpickle              
                       
