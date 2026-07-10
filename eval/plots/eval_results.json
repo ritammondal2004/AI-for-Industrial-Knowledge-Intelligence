@@ -2,33 +2,34 @@
   "score_distribution": {
     "0-20%": 0,
     "20-40%": 1,
-    "40-60%": 3,
-    "60-80%": 5,
-    "80-100%": 12
+    "40-60%": 9,
+    "60-80%": 9,
+    "80-100%": 17
   },
   "by_difficulty": {
-    "easy": 0.76
+    "easy": 0.717
   },
   "by_category": {
-    "Pump": 0.85,
-    "Valve": 0.72,
-    "Permit To Work": 0.85,
-    "Safety": 0.733,
-    "Mechanical Integrity": 0.8,
+    "Pump": 0.8,
+    "Valve": 0.667,
+    "Permit To Work": 0.867,
+    "Safety": 0.75,
+    "Mechanical Integrity": 0.75,
     "Emergency Response": 0.65,
-    "Maintenance": 0.4,
-    "Industrial Operations": 0.9,
-    "Process Safety": 0.36,
+    "Maintenance": 0.573,
+    "Industrial Operations": 0.84,
+    "Process Safety": 0.42,
     "Corrosion": 0.9,
     "Risk Based Inspection": 0.9,
     "Regulation": 1.0,
     "Failure Analysis": 0.55,
-    "Inspection": 0.9
+    "Inspection": 0.85,
+    "Incident Report": 0.45
   },
   "radar": {
-    "Keyword Coverage": 0.705,
-    "Source Retrieval": 0.571,
-    "Folder Routing": 0.905,
+    "Keyword Coverage": 0.661,
+    "Source Retrieval": 0.722,
+    "Folder Routing": 0.833,
     "Answer Quality": 1.0,
     "Not-Found Guard": 1.0,
     "Multi-Doc": 1.0
@@ -68,7 +69,7 @@
       "question": "What does the abbreviation LOTO stand for in industrial safe...",
       "overall_score": 0.65,
       "keyword_score": 0.75,
-      "source_score": 0.0
+      "source_score": 1.0
     },
     {
       "id": 6,
@@ -86,7 +87,7 @@
       "question": "What are the initial isolation steps to take during an emerg...",
       "overall_score": 0.65,
       "keyword_score": 0.75,
-      "source_score": 0.0
+      "source_score": 1.0
     },
     {
       "id": 8,
@@ -95,7 +96,7 @@
       "question": "What type of lubricant is specified for the bearings of a st...",
       "overall_score": 0.4,
       "keyword_score": 0.5,
-      "source_score": 0.0
+      "source_score": 1.0
     },
     {
       "id": 9,
@@ -131,7 +132,7 @@
       "question": "What components are connected to shaft seals?...",
       "overall_score": 0.51,
       "keyword_score": 0.4,
-      "source_score": 0.0
+      "source_score": 1.0
     },
     {
       "id": 14,
@@ -222,13 +223,148 @@
       "overall_score": 0.9,
       "keyword_score": 0.75,
       "source_score": 1.0
+    },
+    {
+      "id": 24,
+      "difficulty": "easy",
+      "category": "Maintenance",
+      "question": "What instrument is used to check the alignment between a pum...",
+      "overall_score": 0.92,
+      "keyword_score": 0.8,
+      "source_score": 1.0
+    },
+    {
+      "id": 25,
+      "difficulty": "easy",
+      "category": "Industrial Operations",
+      "question": "What is the recommended discharge valve position when starti...",
+      "overall_score": 0.7,
+      "keyword_score": 0.25,
+      "source_score": 1.0
+    },
+    {
+      "id": 26,
+      "difficulty": "easy",
+      "category": "Mechanical Integrity",
+      "question": "What type of nondestructive testing is recommended for ident...",
+      "overall_score": 0.75,
+      "keyword_score": 1.0,
+      "source_score": 0.0
+    },
+    {
+      "id": 27,
+      "difficulty": "easy",
+      "category": "Incident Report",
+      "question": "What root cause was identified for the compressor intercoole...",
+      "overall_score": 0.4,
+      "keyword_score": 0.5,
+      "source_score": 0.0
+    },
+    {
+      "id": 28,
+      "difficulty": "easy",
+      "category": "Process Safety",
+      "question": "What are the mandatory isolation points for line-breaking on...",
+      "overall_score": 0.5,
+      "keyword_score": 0.75,
+      "source_score": 1.0
+    },
+    {
+      "id": 29,
+      "difficulty": "easy",
+      "category": "Pump",
+      "question": "What are the common symptoms of a worn wearing ring in a cen...",
+      "overall_score": 0.65,
+      "keyword_score": 0.75,
+      "source_score": 1.0
+    },
+    {
+      "id": 30,
+      "difficulty": "easy",
+      "category": "Valve",
+      "question": "What material is used for the seats of severe service floati...",
+      "overall_score": 0.51,
+      "keyword_score": 0.4,
+      "source_score": 1.0
+    },
+    {
+      "id": 31,
+      "difficulty": "easy",
+      "category": "Permit To Work",
+      "question": "Is a separate radiation work permit required for industrial ...",
+      "overall_score": 0.9,
+      "keyword_score": 0.75,
+      "source_score": 1.0
+    },
+    {
+      "id": 32,
+      "difficulty": "easy",
+      "category": "Safety",
+      "question": "What color tags are standard for designating an electrical l...",
+      "overall_score": 0.8,
+      "keyword_score": 0.5,
+      "source_score": 1.0
+    },
+    {
+      "id": 33,
+      "difficulty": "easy",
+      "category": "Inspection",
+      "question": "How often should ultrasonic thickness measurements be carrie...",
+      "overall_score": 0.8,
+      "keyword_score": 0.5,
+      "source_score": 1.0
+    },
+    {
+      "id": 34,
+      "difficulty": "easy",
+      "category": "Maintenance",
+      "question": "What step follows the disconnection of coupling bolts during...",
+      "overall_score": 0.4,
+      "keyword_score": 0.5,
+      "source_score": 0.0
+    },
+    {
+      "id": 35,
+      "difficulty": "easy",
+      "category": "Industrial Operations",
+      "question": "What parameters must be logged hourly during the runtime of ...",
+      "overall_score": 0.92,
+      "keyword_score": 0.8,
+      "source_score": 1.0
+    },
+    {
+      "id": 36,
+      "difficulty": "easy",
+      "category": "Mechanical Integrity",
+      "question": "What is the maximum allowable oil temperature for stable ope...",
+      "overall_score": 0.7,
+      "keyword_score": 0.25,
+      "source_score": 1.0
+    },
+    {
+      "id": 37,
+      "difficulty": "easy",
+      "category": "Incident Report",
+      "question": "What emergency containment measures were deployed immediatel...",
+      "overall_score": 0.5,
+      "keyword_score": 0.75,
+      "source_score": 0.0
+    },
+    {
+      "id": 38,
+      "difficulty": "easy",
+      "category": "Process Safety",
+      "question": "What pressure relief device is mandatory on vessels storing ...",
+      "overall_score": 0.4,
+      "keyword_score": 0.5,
+      "source_score": 0.0
     }
   ],
   "summary": {
-    "total": 21,
-    "avg_overall": 0.76,
-    "avg_keyword": 0.705,
-    "avg_source": 0.571,
-    "avg_folder": 0.905
+    "total": 36,
+    "avg_overall": 0.717,
+    "avg_keyword": 0.661,
+    "avg_source": 0.722,
+    "avg_folder": 0.833
   }
 }
