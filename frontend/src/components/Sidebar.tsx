@@ -65,16 +65,17 @@ function ThemeToggle() {
 }
 
 interface ModeDef {
-  to: "/" | "/copilot" | "/rca" | "/graph";
+  to: "/" | "/copilot" | "/rca" | "/graph" | "/analytics";
   icon: ReactNode;
   label: string;
 }
 
 const MODES: ModeDef[] = [
   { to: "/", icon: <span className="text-base leading-none">⚡</span>, label: "Knowledge Assistant" },
-  { to: "/copilot", icon: <span className="text-base leading-none">🔧</span>, label: "Expert copilot" },
+  { to: "/copilot", icon: <span className="text-base leading-none">🔧</span>, label: "Industrial Expert copilot" },
   { to: "/rca", icon: <span className="text-base leading-none">🔍</span>, label: "Root Cause Analysis" },
   { to: "/graph", icon: <Network size={16} className="text-current" />, label: "Knowledge Graph" },
+  { to: "/analytics", icon: <span className="text-base leading-none">📊</span>, label: "Model Performance" },
 ];
 
 const MIN_W = 200;
