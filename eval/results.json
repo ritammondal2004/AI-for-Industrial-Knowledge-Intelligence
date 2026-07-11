@@ -1422,6 +1422,24 @@
     "requires_graph": false
   },
   {
+    "id": 80,
+    "difficulty": "medium",
+    "category": "Maintenance",
+    "question": "What structural procedures must be followed to safely clean and adjust mechanical oil level sight glasses on dangerous high-speed rotation assemblies?",
+    "expected_folder": "Manuals",
+    "expected_docs": "centrfugal_pump_maintanance.pdf",
+    "retrieved_docs": "A00_Metal_Pump.pdf|Pump_Operation.pdf|maintenance_SOP_refinary.pdf",
+    "source_score": 0.0,
+    "folder_score": 0.0,
+    "keyword_score": 0.5,
+    "length_score": 1,
+    "not_found_score": 1.0,
+    "multi_doc_score": 1.0,
+    "overall_score": 0.4,
+    "answer_preview": "We RECOMMEND use 'Industrial Copilot' mode to get better response for this query  The available documents do not contain sufficient information regarding structural procedures for safely cleaning and ",
+    "requires_graph": false
+  },
+  {
     "id": 84,
     "difficulty": "medium",
     "category": "Pump",
