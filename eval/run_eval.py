@@ -413,7 +413,7 @@ if __name__ == "__main__":
     # Save json
     save_results_json(results, RESULTS_PATH)
 
-    # Compute summary
+    # Compute summary 
     summary = compute_summary(results)
 
     # Generate report
