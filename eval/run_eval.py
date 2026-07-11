@@ -48,10 +48,10 @@ def load_eval_progress() -> set:
     return set()
 
 def save_eval_progress(completed_ids: set) -> None:
-    """Saves set of completed IDs to disk."""
+
     with open(PROGRESS_PATH, "w") as f:
         json.dump({"completed_ids": list(completed_ids)}, f, indent=2)
-
+   
 
 def load_test_set(path: Path) -> list[dict]:  
     """Loads test set from JSONL or JSON array file."""
@@ -68,7 +68,7 @@ def query_backend(question: str) -> dict | None:
     """Calls POST /query and returns the response dict."""
     try:          
         r = requests.post(
-            f"{BACKEND_URL}/query",
+            f"{BACKEND_URL}/query",  
             json={"question": question, "chat_history": [], "verbose": False},
             timeout=60,
         )
@@ -86,11 +86,11 @@ def evaluate_one(test_case: dict, response: dict) -> dict:
     """
     Scores a single test case against its API response.
     Returns a flat dict of all scores for CSV writing.
-    """
+    """  
     answer  = response.get("answer", "")
     sources = response.get("sources", [])
 
-    # ── Individual metric scores ──────────────────────────────────
+    # Individual metric scores 
     s_source  = source_match_score(
         test_case.get("expected_docs", []), sources
     )
@@ -104,11 +104,11 @@ def evaluate_one(test_case: dict, response: dict) -> dict:
     s_nf      = not_found_penalty(answer)
     s_multi   = multi_doc_score(
         sources, test_case.get("multi_document", False)
-    )
+    ) 
     s_overall = compute_overall_score(
         s_source, s_folder, s_keyword, s_length, s_nf, s_multi
     )
-
+       
     # Retrieved doc names for inspection 
     retrieved_docs = "|".join(s.get("filename", "") for s in sources)
 
@@ -132,15 +132,12 @@ def evaluate_one(test_case: dict, response: dict) -> dict:
     }         
 
 
-def run_evaluation(
-    test_set: list[dict],
-    limit: int | None = None,
-) -> list[dict]:
+def run_evaluation(test_set: list[dict], limit: int | None = None) -> list[dict]:
     """
     Picks next N pending questions when limit is given.
-    Results are APPENDED to existing results.csv (not overwritten).
+    Results are APPENDED to existing results.json (not overwritten).
     """
-    # Load which IDs are already done
+    # Load which IDs are already done 
     completed_ids = load_eval_progress()
 
     # Filter to only pending questions
@@ -149,7 +146,7 @@ def run_evaluation(
     if not pending:
         print("\n✓ All questions already evaluated. Nothing to do.")
         print(f"  Completed: {len(completed_ids)}/{len(test_set)}")
-        return []
+        return [] 
 
     # Take next N from pending
     batch = pending[:limit] if limit else pending
@@ -174,7 +171,7 @@ def run_evaluation(
         print(f"  Q: {q[:70]}...")
 
         response = query_backend(q)
-
+                   
         if response is None:
             print(f"  ✗ Skipped — no response (will retry next run)")
             # Do NOT mark as complete — retry next time
@@ -213,7 +210,7 @@ def save_results_json(results: list[dict], path: Path) -> None:
         with open(path, "r", encoding="utf-8") as f:
             existing = json.load(f)
 
-    # Merge: index existing by ID, overwrite with new results
+    # Merge: index existing by ID, overwrite with new results 
     existing_by_id = {r["id"]: r for r in existing}
     for r in results:
         existing_by_id[r["id"]] = r
@@ -228,7 +225,7 @@ def save_results_json(results: list[dict], path: Path) -> None:
 
 
 def compute_summary(results: list[dict]) -> dict:
-    """Computes aggregate statistics from results list."""
+    
     if not results:
         return {}
              
@@ -288,7 +285,7 @@ def generate_report(
     lines = [
         f"# Industrial Knowledge Copilot — Evaluation Report",
         f"",
-        f"**Generated:** {timestamp}  ",
+        f"**Last Generated:** {timestamp}  ",
         f"**Backend:** {BACKEND_URL}  ",
         f"**Total questions evaluated:** {summary.get('total_questions', 0)}",
         f"",
@@ -399,7 +396,7 @@ if __name__ == "__main__":
     parser.add_argument(
         "--backend", type=str, default=None,
         help="Backend URL override (default: http://localhost:8000)"
-    )
+    )  
     args = parser.parse_args()
 
     if args.backend:

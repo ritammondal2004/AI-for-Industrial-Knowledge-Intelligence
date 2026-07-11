@@ -1,8 +1,8 @@
 # eval/metrics.py
 # All scoring functions for the Industrial Knowledge Copilot evaluation
-
-import re
-from typing import Any
+              
+import re 
+from typing import Any  
 
 
 def source_match_score(
@@ -24,7 +24,7 @@ def source_match_score(
         1 for doc in expected_docs
         if doc.lower() in retrieved_filenames
     )
-
+           
     return matched / len(expected_docs)
 
 
@@ -56,13 +56,13 @@ def keyword_coverage_score(
     """
     if not expected_keywords:
         return 1.0
-
+                      
     answer_lower = answer_text.lower()
     matched = sum(
         1 for kw in expected_keywords
         if kw.lower() in answer_lower
     )
-
+              
     return matched / len(expected_keywords)
 
 
@@ -72,12 +72,8 @@ def answer_length_score(answer_text: str) -> float:
     Returns 1.0 for answers >= 100 chars, scales down below that.   
     """
     length = len(answer_text.strip())
-    if length >= 100:
-        return 1.0
-    elif length == 0:
-        return 0.0
-    else:
-        return length / 100.0
+         
+    return min(length/100.0, 1)  
 
 
 def not_found_penalty(answer_text: str) -> float:
@@ -145,7 +141,7 @@ def compute_overall_score(
         source match      25% — did it find the right documents?
         folder match      15% — did it search the right category?
         not found penalty 10% — did it incorrectly say "not found"?
-        length score       5% — is the answer substantive?
+        length score       5% — is the answer long enough?
         multi doc          5% — did it use multiple sources when needed? 
 
     Returns:
