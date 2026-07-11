@@ -1,37 +1,39 @@
 {
   "score_distribution": {
     "0-20%": 0,
-    "20-40%": 1,
-    "40-60%": 9,
-    "60-80%": 9,
-    "80-100%": 17
+    "20-40%": 3,
+    "40-60%": 17,
+    "60-80%": 16,
+    "80-100%": 47
   },
   "by_difficulty": {
-    "easy": 0.717
+    "easy": 0.753,
+    "medium": 0.756,
+    "hard": 0.623
   },
   "by_category": {
-    "Pump": 0.8,
-    "Valve": 0.667,
-    "Permit To Work": 0.867,
-    "Safety": 0.75,
-    "Mechanical Integrity": 0.75,
-    "Emergency Response": 0.65,
-    "Maintenance": 0.573,
-    "Industrial Operations": 0.84,
-    "Process Safety": 0.42,
+    "Pump": 0.808,
+    "Valve": 0.618,
+    "Permit To Work": 0.844,
+    "Safety": 0.825,
+    "Inspection": 0.844,
+    "Mechanical Integrity": 0.849,
+    "Emergency Response": 0.575,
+    "Maintenance": 0.567,
+    "Industrial Operations": 0.674,
+    "Process Safety": 0.637,
     "Corrosion": 0.9,
-    "Risk Based Inspection": 0.9,
-    "Regulation": 1.0,
-    "Failure Analysis": 0.55,
-    "Inspection": 0.85,
-    "Incident Report": 0.45
+    "Risk Based Inspection": 0.88,
+    "Regulation": 0.795,
+    "Failure Analysis": 0.752,
+    "Incident Report": 0.55
   },
   "radar": {
-    "Keyword Coverage": 0.661,
-    "Source Retrieval": 0.722,
-    "Folder Routing": 0.833,
+    "Keyword Coverage": 0.679,
+    "Source Retrieval": 0.723,
+    "Folder Routing": 0.855,
     "Answer Quality": 1.0,
-    "Not-Found Guard": 1.0,
+    "Not-Found Guard": 0.988,
     "Multi-Doc": 1.0
   },
   "question_scores": [
@@ -69,6 +71,15 @@
       "question": "What does the abbreviation LOTO stand for in industrial safe...",
       "overall_score": 0.65,
       "keyword_score": 0.75,
+      "source_score": 1.0
+    },
+    {
+      "id": 5,
+      "difficulty": "easy",
+      "category": "Inspection",
+      "question": "What are the primary visual inspection points for shell and ...",
+      "overall_score": 1.0,
+      "keyword_score": 1.0,
       "source_score": 1.0
     },
     {
@@ -123,6 +134,15 @@
       "question": "Define pitting corrosion as it applies to carbon steel heat ...",
       "overall_score": 0.9,
       "keyword_score": 0.75,
+      "source_score": 1.0
+    },
+    {
+      "id": 12,
+      "difficulty": "easy",
+      "category": "Pump",
+      "question": "What inspections are associated with centrifugal pumps?...",
+      "overall_score": 1.0,
+      "keyword_score": 1.0,
       "source_score": 1.0
     },
     {
@@ -256,9 +276,9 @@
       "difficulty": "easy",
       "category": "Incident Report",
       "question": "What root cause was identified for the compressor intercoole...",
-      "overall_score": 0.4,
+      "overall_score": 0.65,
       "keyword_score": 0.5,
-      "source_score": 0.0
+      "source_score": 1.0
     },
     {
       "id": 28,
@@ -348,23 +368,428 @@
       "question": "What emergency containment measures were deployed immediatel...",
       "overall_score": 0.5,
       "keyword_score": 0.75,
-      "source_score": 0.0
+      "source_score": 1.0
     },
     {
       "id": 38,
       "difficulty": "easy",
       "category": "Process Safety",
       "question": "What pressure relief device is mandatory on vessels storing ...",
+      "overall_score": 0.8,
+      "keyword_score": 0.5,
+      "source_score": 1.0
+    },
+    {
+      "id": 39,
+      "difficulty": "easy",
+      "category": "Pump",
+      "question": "What design configuration differentiates a single-suction im...",
+      "overall_score": 0.8,
+      "keyword_score": 0.5,
+      "source_score": 1.0
+    },
+    {
+      "id": 40,
+      "difficulty": "easy",
+      "category": "Valve",
+      "question": "What type of leakage limit standard applies to soft-seated f...",
+      "overall_score": 0.44,
+      "keyword_score": 0.6,
+      "source_score": 0.0
+    },
+    {
+      "id": 41,
+      "difficulty": "easy",
+      "category": "Permit To Work",
+      "question": "Does a confined space entry permit require atmospheric testi...",
+      "overall_score": 1.0,
+      "keyword_score": 1.0,
+      "source_score": 1.0
+    },
+    {
+      "id": 42,
+      "difficulty": "easy",
+      "category": "Safety",
+      "question": "What specific device is used to secure a circuit breaker tog...",
+      "overall_score": 0.9,
+      "keyword_score": 0.75,
+      "source_score": 1.0
+    },
+    {
+      "id": 43,
+      "difficulty": "medium",
+      "category": "Maintenance",
+      "question": "Explain the multi-step process for performing a wet seal rep...",
+      "overall_score": 0.5,
+      "keyword_score": 1.0,
+      "source_score": 0.0
+    },
+    {
+      "id": 44,
+      "difficulty": "medium",
+      "category": "Safety",
+      "question": "How do the requirements for a hot work permit modify when st...",
+      "overall_score": 0.92,
+      "keyword_score": 0.8,
+      "source_score": 1.0
+    },
+    {
+      "id": 45,
+      "difficulty": "medium",
+      "category": "Pump",
+      "question": "What maintenance procedures should be triggered if vibration...",
+      "overall_score": 0.92,
+      "keyword_score": 0.8,
+      "source_score": 1.0
+    },
+    {
+      "id": 46,
+      "difficulty": "medium",
+      "category": "Valve",
+      "question": "What failure modes are directly linked to abnormal torque ex...",
+      "overall_score": 0.59,
+      "keyword_score": 0.6,
+      "source_score": 0.0
+    },
+    {
+      "id": 47,
+      "difficulty": "medium",
+      "category": "Inspection",
+      "question": "Based on RBI guidelines, how do you adjust the inspection sc...",
+      "overall_score": 0.92,
+      "keyword_score": 0.8,
+      "source_score": 1.0
+    },
+    {
+      "id": 48,
+      "difficulty": "medium",
+      "category": "Process Safety",
+      "question": "What safety practices should be followed before pump startup...",
+      "overall_score": 0.635,
+      "keyword_score": 0.4,
+      "source_score": 0.5
+    },
+    {
+      "id": 49,
+      "difficulty": "medium",
+      "category": "Regulation",
+      "question": "What regulation applies before performing the maintenance pr...",
+      "overall_score": 0.59,
+      "keyword_score": 0.6,
+      "source_score": 0.0
+    },
+    {
+      "id": 50,
+      "difficulty": "medium",
+      "category": "Inspection",
+      "question": "Detail the full procedural workflow for inspecting the inter...",
+      "overall_score": 0.84,
+      "keyword_score": 0.6,
+      "source_score": 1.0
+    },
+    {
+      "id": 51,
+      "difficulty": "medium",
+      "category": "Mechanical Integrity",
+      "question": "Explain how moisture saturation in a compressed air loop imp...",
+      "overall_score": 0.92,
+      "keyword_score": 0.8,
+      "source_score": 1.0
+    },
+    {
+      "id": 52,
+      "difficulty": "medium",
+      "category": "Incident Report",
+      "question": "Compare the root cause factors of the compressor system brea...",
+      "overall_score": 0.5,
+      "keyword_score": 0.75,
+      "source_score": 0.0
+    },
+    {
+      "id": 53,
+      "difficulty": "medium",
+      "category": "Permit To Work",
+      "question": "Describe the interlocking safety actions required when a hot...",
+      "overall_score": 0.51,
+      "keyword_score": 0.4,
+      "source_score": 0.0
+    },
+    {
+      "id": 54,
+      "difficulty": "medium",
+      "category": "Safety",
+      "question": "Analyze the steps required to verify zero energy state durin...",
+      "overall_score": 0.9,
+      "keyword_score": 0.75,
+      "source_score": 1.0
+    },
+    {
+      "id": 55,
+      "difficulty": "medium",
+      "category": "Pump",
+      "question": "What operational adjustments must be completed to prevent sy...",
+      "overall_score": 0.84,
+      "keyword_score": 0.6,
+      "source_score": 1.0
+    },
+    {
+      "id": 56,
+      "difficulty": "medium",
+      "category": "Valve",
+      "question": "What are the specific steps for executing an inline seat sea...",
       "overall_score": 0.4,
       "keyword_score": 0.5,
+      "source_score": 0.0
+    },
+    {
+      "id": 57,
+      "difficulty": "medium",
+      "category": "Industrial Operations",
+      "question": "What exact sequence of valve movements must be performed to ...",
+      "overall_score": 0.28,
+      "keyword_score": 0.2,
+      "source_score": 0.0
+    },
+    {
+      "id": 58,
+      "difficulty": "medium",
+      "category": "Process Safety",
+      "question": "Detail the engineering controls required to isolate a gas pi...",
+      "overall_score": 0.65,
+      "keyword_score": 0.75,
+      "source_score": 0.0
+    },
+    {
+      "id": 59,
+      "difficulty": "medium",
+      "category": "Failure Analysis",
+      "question": "What diagnostic indicators point to mechanical fatigue rathe...",
+      "overall_score": 0.84,
+      "keyword_score": 0.6,
+      "source_score": 1.0
+    },
+    {
+      "id": 60,
+      "difficulty": "medium",
+      "category": "Mechanical Integrity",
+      "question": "What cascading component hazards emerge when an industrial a...",
+      "overall_score": 0.97,
+      "keyword_score": 0.8,
+      "source_score": 1.0
+    },
+    {
+      "id": 61,
+      "difficulty": "medium",
+      "category": "Emergency Response",
+      "question": "What clear steps must the site incident commander take to co...",
+      "overall_score": 0.5,
+      "keyword_score": 0.75,
+      "source_score": 0.0
+    },
+    {
+      "id": 62,
+      "difficulty": "medium",
+      "category": "Safety",
+      "question": "Explain the step-by-step procedure for handoff and re-testin...",
+      "overall_score": 0.92,
+      "keyword_score": 0.8,
+      "source_score": 1.0
+    },
+    {
+      "id": 63,
+      "difficulty": "medium",
+      "category": "Pump",
+      "question": "What physical structural modifications happen within an oper...",
+      "overall_score": 0.9,
+      "keyword_score": 0.75,
+      "source_score": 1.0
+    },
+    {
+      "id": 64,
+      "difficulty": "medium",
+      "category": "Valve",
+      "question": "What internal component linkages are stressed when a ball va...",
+      "overall_score": 0.84,
+      "keyword_score": 0.6,
+      "source_score": 1.0
+    },
+    {
+      "id": 65,
+      "difficulty": "medium",
+      "category": "Risk Based Inspection",
+      "question": "How do variations in system operating temperature cycles mod...",
+      "overall_score": 0.9,
+      "keyword_score": 0.75,
+      "source_score": 1.0
+    },
+    {
+      "id": 66,
+      "difficulty": "medium",
+      "category": "Inspection",
+      "question": "What explicit structural inspections must be carried out on ...",
+      "overall_score": 0.9,
+      "keyword_score": 0.75,
+      "source_score": 1.0
+    },
+    {
+      "id": 67,
+      "difficulty": "medium",
+      "category": "Permit To Work",
+      "question": "What documentation must be produced to prove isolated zero e...",
+      "overall_score": 0.9,
+      "keyword_score": 0.75,
+      "source_score": 1.0
+    },
+    {
+      "id": 68,
+      "difficulty": "medium",
+      "category": "Mechanical Integrity",
+      "question": "What operational metrics must be cross-checked across the ai...",
+      "overall_score": 0.9,
+      "keyword_score": 0.75,
+      "source_score": 1.0
+    },
+    {
+      "id": 69,
+      "difficulty": "medium",
+      "category": "Industrial Operations",
+      "question": "What structural baseline tests are common to verify alignmen...",
+      "overall_score": 0.775,
+      "keyword_score": 0.75,
+      "source_score": 0.5
+    },
+    {
+      "id": 70,
+      "difficulty": "medium",
+      "category": "Process Safety",
+      "question": "What primary hazards are introduced when a pipeline block va...",
+      "overall_score": 0.65,
+      "keyword_score": 0.75,
+      "source_score": 0.0
+    },
+    {
+      "id": 71,
+      "difficulty": "medium",
+      "category": "Safety",
+      "question": "What specific audit trails must be generated by safety coord...",
+      "overall_score": 0.8668,
+      "keyword_score": 0.667,
+      "source_score": 1.0
+    },
+    {
+      "id": 72,
+      "difficulty": "medium",
+      "category": "Maintenance",
+      "question": "Detail how you calculate the safe bolt torque progression se...",
+      "overall_score": 0.617,
+      "keyword_score": 0.667,
+      "source_score": 0.0
+    },
+    {
+      "id": 73,
+      "difficulty": "medium",
+      "category": "Failure Analysis",
+      "question": "What physical evidence paths confirm that internal impeller ...",
+      "overall_score": 0.867,
+      "keyword_score": 0.667,
+      "source_score": 1.0
+    },
+    {
+      "id": 74,
+      "difficulty": "medium",
+      "category": "Inspection",
+      "question": "What non-destructive verification tools are specified to ins...",
+      "overall_score": 0.55,
+      "keyword_score": 0.5,
+      "source_score": 0.0
+    },
+    {
+      "id": 75,
+      "difficulty": "medium",
+      "category": "Industrial Operations",
+      "question": "Explain the operational risk tradeoffs between implementing ...",
+      "overall_score": 0.467,
+      "keyword_score": 0.667,
+      "source_score": 0.0
+    },
+    {
+      "id": 76,
+      "difficulty": "medium",
+      "category": "Process Safety",
+      "question": "What structural process controls are required to execute a s...",
+      "overall_score": 0.8668,
+      "keyword_score": 0.667,
+      "source_score": 1.0
+    },
+    {
+      "id": 77,
+      "difficulty": "medium",
+      "category": "Mechanical Integrity",
+      "question": "Detail the inspection points required to ensure structural a...",
+      "overall_score": 0.9,
+      "keyword_score": 0.75,
+      "source_score": 1.0
+    },
+    {
+      "id": 78,
+      "difficulty": "medium",
+      "category": "Safety",
+      "question": "What multi-point validation steps must be carried out by fie...",
+      "overall_score": 0.9,
+      "keyword_score": 0.75,
+      "source_score": 1.0
+    },
+    {
+      "id": 79,
+      "difficulty": "medium",
+      "category": "Permit To Work",
+      "question": "Describe the operational constraints that govern the immedia...",
+      "overall_score": 0.9,
+      "keyword_score": 0.75,
+      "source_score": 1.0
+    },
+    {
+      "id": 84,
+      "difficulty": "medium",
+      "category": "Pump",
+      "question": "What structural clearance tolerances must be maintained acro...",
+      "overall_score": 0.867,
+      "keyword_score": 0.667,
+      "source_score": 1.0
+    },
+    {
+      "id": 85,
+      "difficulty": "hard",
+      "category": "Pump",
+      "question": "What pump maintnence before startup?...",
+      "overall_score": 0.36,
+      "keyword_score": 0.4,
+      "source_score": 1.0
+    },
+    {
+      "id": 86,
+      "difficulty": "hard",
+      "category": "Risk Based Inspection",
+      "question": "whats RBI and why do we use it on heat exchnger lines...",
+      "overall_score": 0.84,
+      "keyword_score": 0.6,
+      "source_score": 1.0
+    },
+    {
+      "id": 87,
+      "difficulty": "hard",
+      "category": "Safety",
+      "question": "fire happend after maintance what should operator do next ac...",
+      "overall_score": 0.67,
+      "keyword_score": 0.8,
       "source_score": 0.0
     }
   ],
   "summary": {
-    "total": 36,
-    "avg_overall": 0.717,
-    "avg_keyword": 0.661,
-    "avg_source": 0.722,
-    "avg_folder": 0.833
+    "total": 83,
+    "avg_overall": 0.749,
+    "avg_keyword": 0.679,
+    "avg_source": 0.723,
+    "avg_folder": 0.855
   }
 }
