@@ -1,27 +1,27 @@
 {
   "score_distribution": {
     "0-20%": 0,
-    "20-40%": 3,
-    "40-60%": 17,
-    "60-80%": 16,
-    "80-100%": 47
+    "20-40%": 1,
+    "40-60%": 13,
+    "60-80%": 19,
+    "80-100%": 51
   },
   "by_difficulty": {
-    "easy": 0.753,
-    "medium": 0.756,
-    "hard": 0.623
+    "easy": 0.784,
+    "medium": 0.773,
+    "hard": 0.757
   },
   "by_category": {
-    "Pump": 0.808,
-    "Valve": 0.618,
+    "Pump": 0.867,
+    "Valve": 0.649,
     "Permit To Work": 0.844,
     "Safety": 0.825,
     "Inspection": 0.844,
     "Mechanical Integrity": 0.849,
     "Emergency Response": 0.575,
-    "Maintenance": 0.567,
-    "Industrial Operations": 0.674,
-    "Process Safety": 0.637,
+    "Maintenance": 0.648,
+    "Industrial Operations": 0.807,
+    "Process Safety": 0.695,
     "Corrosion": 0.9,
     "Risk Based Inspection": 0.88,
     "Regulation": 0.795,
@@ -29,9 +29,9 @@
     "Incident Report": 0.55
   },
   "radar": {
-    "Keyword Coverage": 0.679,
-    "Source Retrieval": 0.723,
-    "Folder Routing": 0.855,
+    "Keyword Coverage": 0.677,
+    "Source Retrieval": 0.762,
+    "Folder Routing": 0.881,
     "Answer Quality": 1.0,
     "Not-Found Guard": 0.988,
     "Multi-Doc": 1.0
@@ -285,7 +285,7 @@
       "difficulty": "easy",
       "category": "Process Safety",
       "question": "What are the mandatory isolation points for line-breaking on...",
-      "overall_score": 0.5,
+      "overall_score": 0.9,
       "keyword_score": 0.75,
       "source_score": 1.0
     },
@@ -294,7 +294,7 @@
       "difficulty": "easy",
       "category": "Pump",
       "question": "What are the common symptoms of a worn wearing ring in a cen...",
-      "overall_score": 0.65,
+      "overall_score": 0.9,
       "keyword_score": 0.75,
       "source_score": 1.0
     },
@@ -303,7 +303,7 @@
       "difficulty": "easy",
       "category": "Valve",
       "question": "What material is used for the seats of severe service floati...",
-      "overall_score": 0.51,
+      "overall_score": 0.76,
       "keyword_score": 0.4,
       "source_score": 1.0
     },
@@ -339,9 +339,9 @@
       "difficulty": "easy",
       "category": "Maintenance",
       "question": "What step follows the disconnection of coupling bolts during...",
-      "overall_score": 0.4,
+      "overall_score": 0.8,
       "keyword_score": 0.5,
-      "source_score": 0.0
+      "source_score": 1.0
     },
     {
       "id": 35,
@@ -546,9 +546,9 @@
       "difficulty": "medium",
       "category": "Industrial Operations",
       "question": "What exact sequence of valve movements must be performed to ...",
-      "overall_score": 0.28,
+      "overall_score": 0.68,
       "keyword_score": 0.2,
-      "source_score": 0.0
+      "source_score": 1.0
     },
     {
       "id": 58,
@@ -708,9 +708,9 @@
       "difficulty": "medium",
       "category": "Industrial Operations",
       "question": "Explain the operational risk tradeoffs between implementing ...",
-      "overall_score": 0.467,
+      "overall_score": 0.8668,
       "keyword_score": 0.667,
-      "source_score": 0.0
+      "source_score": 1.0
     },
     {
       "id": 76,
@@ -749,6 +749,15 @@
       "source_score": 1.0
     },
     {
+      "id": 80,
+      "difficulty": "medium",
+      "category": "Maintenance",
+      "question": "What structural procedures must be followed to safely clean ...",
+      "overall_score": 0.65,
+      "keyword_score": 0.5,
+      "source_score": 1.0
+    },
+    {
       "id": 84,
       "difficulty": "medium",
       "category": "Pump",
@@ -762,7 +771,7 @@
       "difficulty": "hard",
       "category": "Pump",
       "question": "What pump maintnence before startup?...",
-      "overall_score": 0.36,
+      "overall_score": 0.76,
       "keyword_score": 0.4,
       "source_score": 1.0
     },
@@ -786,10 +795,10 @@
     }
   ],
   "summary": {
-    "total": 83,
-    "avg_overall": 0.749,
-    "avg_keyword": 0.679,
-    "avg_source": 0.723,
-    "avg_folder": 0.855
+    "total": 84,
+    "avg_overall": 0.778,
+    "avg_keyword": 0.677,
+    "avg_source": 0.762,
+    "avg_folder": 0.881
   }
 }

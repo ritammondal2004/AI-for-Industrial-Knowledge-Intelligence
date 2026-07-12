@@ -368,8 +368,8 @@
 "difficulty": "easy",
 "category": "Maintenance",
 "question": "What step follows the disconnection of coupling bolts during pump teardown?",
-"expected_folder": "Manuals",
-"expected_docs": ["centrfugal_pump_maintanance.pdf"],
+"expected_folder": "Procedures",
+"expected_docs": ["A00_Metal_Pump.pdf"],
 "expected_keywords": ["coupling bolts", "pump teardown", "casing removal", "disassembly sequence"],
 "requires_graph": false,
 "multi_document": false
@@ -621,8 +621,8 @@
 "difficulty": "medium",
 "category": "Industrial Operations",
 "question": "What exact sequence of valve movements must be performed to safely transition an operational multi-stage pump from primary running state to standby state?",
-"expected_folder": "Procedures",
-"expected_docs": ["SOP_pump.pdf"],
+"expected_folder": "Manuals",
+"expected_docs": ["Valve_Handbook_Philip.pdf"],
 "expected_keywords": ["valve movements", "multi-stage pump", "standby state", "discharge throttling", "minimum flow line"],
 "requires_graph": false,
 "multi_document": false
@@ -819,8 +819,8 @@
 "difficulty": "medium",
 "category": "Industrial Operations",
 "question": "Explain the operational risk tradeoffs between implementing a warm bypass restart versus a completely cold structural pipeline reboot sequence.",
-"expected_folder": "Procedures",
-"expected_docs": ["SOP_pump.pdf"],
+"expected_folder": "Manuals",
+"expected_docs": ["Inspection_Manual_Heat_Exchangers.pdf"],
 "expected_keywords": ["warm bypass restart", "pipeline reboot", "thermal shock pressure surges line expansion"],
 "requires_graph": false,
 "multi_document": false
@@ -874,8 +874,8 @@
 "difficulty": "medium",
 "category": "Maintenance",
 "question": "What structural procedures must be followed to safely clean and adjust mechanical oil level sight glasses on dangerous high-speed rotation assemblies?",
-"expected_folder": "Manuals",
-"expected_docs": ["centrfugal_pump_maintanance.pdf"],
+"expected_folder": "Procedures",
+"expected_docs": ["Pump_Operation.pdf"],
 "expected_keywords": ["sight glasses", "rotation assemblies", "cleaning procedure", "depressurize sump static state isolation"],
 "requires_graph": false,
 "multi_document": false
