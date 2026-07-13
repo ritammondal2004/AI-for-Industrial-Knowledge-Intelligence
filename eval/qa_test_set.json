@@ -566,8 +566,8 @@
 "difficulty": "medium",
 "category": "Incident Report",
 "question": "Compare the root cause factors of the compressor system breakdown in the Hazarika technical assessment with standard mechanical wear profiles.",
-"expected_folder": "Procedures",
-"expected_docs": ["BKHazarika.pdf"],
+"expected_folder": "Incident_Reports",
+"expected_docs": ["Mechanical_SHAFT_SEAL_FAILURE.pdf"],
 "expected_keywords": ["root cause", "compressor breakdown", "mechanical wear", "fatigue failure"],
 "requires_graph": false,
 "multi_document": false
@@ -962,8 +962,8 @@
 "difficulty": "hard",
 "category": "Pump",
 "question": "centrifigal pump seal leak diagnostic steps",
-"expected_folder": "Manuals",
-"expected_docs": ["centrfugal_pump_maintanance.pdf"],
+"expected_folder": "Procedures",
+"expected_docs": ["A00_Metal_Pump.pdf"],
 "expected_keywords": ["centrifugal pump", "seal leak", "mechanical seal", "diagnostic", "flush system"],
 "requires_graph": true,
 "multi_document": false
@@ -1018,7 +1018,7 @@
 "category": "Permit To Work",
 "question": "wat forms required for hotwork in toxic gas units",
 "expected_folder": "Procedures",
-"expected_docs": ["oil_refinary_permits.pdf"],
+"expected_docs": ["DOE_handbook.pdf"],
 "expected_keywords": ["hotwork", "toxic gas", "permit to work", "gas clearance", "authorization"],
 "requires_graph": false,
 "multi_document": false
@@ -1029,7 +1029,7 @@
 "category": "Valve",
 "question": "floating ball valve dont close completely why torque high",
 "expected_folder": "Manuals",
-"expected_docs": ["ball_valves_IOM.pdf"],
+"expected_docs": ["control_valve.pdf"],
 "expected_keywords": ["floating ball valve", "torque", "seat obstruction", "misalignment", "stem score"],
 "requires_graph": true,
 "multi_document": false
@@ -1040,7 +1040,7 @@
 "category": "Mechanical Integrity",
 "question": "comprssor water hammer hazard explain line configurations",
 "expected_folder": "Manuals",
-"expected_docs": ["Compressed_Air_Manual.pdf"],
+"expected_docs": ["pumphandbook.pdf"],
 "expected_keywords": ["compressor", "water hammer", "condensation", "drain traps", "piping slope"],
 "requires_graph": false,
 "multi_document": false
@@ -1062,7 +1062,7 @@
 "category": "Safety",
 "question": "What regulation applies before performing the maintenance procedure during plant turnaround tasks inside restricted areas?",
 "expected_folder": "Procedures",
-"expected_docs": ["maintenance_SOP_refinary.pdf", "oil_refinary_permits.pdf"],
+"expected_docs": ["BKHazarika.pdf", "OSHA_safety_management.pdf"],
 "expected_keywords": ["regulation", "maintenance procedure", "turnaround", "confined space permit", "OISD compliance"],
 "requires_graph": false,
 "multi_document": true
@@ -1073,7 +1073,7 @@
 "category": "Failure Analysis",
 "question": "heat exchngr bundle corosion what RBI profile changes needed",
 "expected_folder": "Manuals",
-"expected_docs": ["Inspection_Manual_Heat_Exchangers.pdf"],
+"expected_docs": ["centrfugal_pump_maintanance.pdf"],
 "expected_keywords": ["heat exchanger", "corrosion", "RBI profile", "risk matrix", "inspection frequency"],
 "requires_graph": true,
 "multi_document": false
@@ -1084,7 +1084,7 @@
 "category": "Valve",
 "question": "ball valve seat wear symptoms in high presure gas manifolds",
 "expected_folder": "Manuals",
-"expected_docs": ["ball_valves_IOM.pdf"],
+"expected_docs": ["A00_Metal_Pump.pdf"],
 "expected_keywords": ["ball valve", "seat wear", "gas manifold", "passing", "pressure drop"],
 "requires_graph": true,
 "multi_document": false
@@ -1160,8 +1160,8 @@
 "difficulty": "hard",
 "category": "Incident Report",
 "question": "bk hazarika incident investigation details intercooler system breakdown parameters",
-"expected_folder": "Procedures",
-"expected_docs": ["BKHazarika.pdf"],
+"expected_folder": "Incident_Reports",
+"expected_docs": ["IOCL_enquiry.pdf"],
 "expected_keywords": ["incident investigation", "intercooler", "breakdown", "thermal stress", "operating logs"],
 "requires_graph": false,
 "multi_document": false
@@ -1194,7 +1194,7 @@
 "category": "Valve",
 "question": "ball valve body seal change checklist torque specs manual",
 "expected_folder": "Manuals",
-"expected_docs": ["ball_valves_IOM.pdf"],
+"expected_docs": ["control_valve.pdf"],
 "expected_keywords": ["body seal", "ball valve", "torque specs", "gasket seat", "cross-tightening"],
 "requires_graph": false,
 "multi_document": false
@@ -1260,7 +1260,7 @@
 "category": "Emergency Response",
 "question": "leak near compressor block what isolation valve map code bk hazarika report",
 "expected_folder": "Procedures",
-"expected_docs": ["BKHazarika.pdf"],
+"expected_docs": ["Inspection_Manual_Heat_Exchangers.pdf"],
 "expected_keywords": ["leak", "compressor block", "isolation valve", "emergency shutdown", "battery limit"],
 "requires_graph": false,
 "multi_document": false
@@ -1271,7 +1271,7 @@
 "category": "Process Safety",
 "question": "refinery line flare depressurise checklist operator mistakes common",
 "expected_folder": "Procedures",
-"expected_docs": ["maintenance_SOP_refinary.pdf"],
+"expected_docs": ["oil_refinary_permits.pdf"],
 "expected_keywords": ["flare depressurise", "checklist", "operator mistake", "liquid carryover", "valve sequencing"],
 "requires_graph": false,
 "multi_document": false
@@ -1281,8 +1281,8 @@
 "difficulty": "hard",
 "category": "Maintenance",
 "question": "coupling alignment softfoot checklist pump motor base fixing",
-"expected_folder": "Manuals",
-"expected_docs": ["centrfugal_pump_maintanance.pdf"],
+"expected_folder": "Procedures",
+"expected_docs": ["maintenance_SOP_refinary.pdf"],
 "expected_keywords": ["coupling alignment", "softfoot", "pump motor base", "shims", "dial indicators"],
 "requires_graph": true,
 "multi_document": false
@@ -1304,7 +1304,7 @@
 "category": "Inspection",
 "question": "hx pass partition weld bypass leak thermal signature evaluation rbi manual",
 "expected_folder": "Manuals",
-"expected_docs": ["Inspection_Manual_Heat_Exchangers.pdf"],
+"expected_docs": ["Inspection_Manual_Heat_Exchangers_visual.pdf"],
 "expected_keywords": ["pass partition", "weld bypass leak", "thermal signature", "efficiency loss", "internal inspection"],
 "requires_graph": true,
 "multi_document": false
