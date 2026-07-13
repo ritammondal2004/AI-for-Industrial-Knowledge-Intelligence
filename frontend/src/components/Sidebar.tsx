@@ -5,9 +5,11 @@ import {
   Moon,
   ChevronLeft,
   ChevronRight,
+  ChevronDown,
   Menu,
   Network,
   FileQuestion,
+  Sparkles,
 } from "lucide-react";
 import { useEffect, useRef, useState, type ReactNode } from "react";
 import { useQuery } from "@tanstack/react-query";
@@ -64,16 +66,111 @@ function ThemeToggle() {
   );
 }
 
+function ModeItem({
+  mode,
+  active,
+  collapsed,
+  nested = false,
+}: {
+  mode: ModeDef;
+  active: boolean;
+  collapsed: boolean;
+  nested?: boolean;
+}) {
+  return (
+    <li key={mode.to}>
+      <Link
+        to={mode.to}
+        title={mode.label}
+        className={`flex items-center gap-2 py-2 px-2 rounded-md transition-colors ${
+          active
+            ? "border-l-2 border-l-[#e6a817] text-[#e6a817] bg-[#1c2128]"
+            : "text-muted-foreground hover:text-foreground hover:bg-[var(--surface-high)]"
+        } ${collapsed ? "justify-center" : ""} ${nested ? "ml-4" : ""}`}
+        style={active ? { textShadow: "0 0 10px rgba(230,168,23,0.6)" } : undefined}
+      >
+        <span className="flex items-center justify-center w-4 h-4 shrink-0">{mode.icon}</span>
+        {!collapsed && <span className="truncate">{mode.label}</span>}
+        {active && !collapsed && (
+          <span
+            className="ml-auto h-2 w-2 rounded-full bg-emerald animate-pulse-glow"
+            style={{ boxShadow: "0 0 10px 3px rgba(0,255,204,0.9)" }}
+          />
+        )}
+      </Link>
+    </li>
+  );
+}
+
+function ExploreGroup({ pathname, collapsed }: { pathname: string; collapsed: boolean }) {
+  const [open, setOpen] = useState(() => {
+    if (typeof window === "undefined") return false;
+    try {
+      return localStorage.getItem("sidebar-explore-open") === "1";
+    } catch {
+      return false;
+    }
+  });
+  const isChildActive = EXPLORE_MODES.some((m) => pathname === m.to);
+
+  useEffect(() => {
+    try {
+      localStorage.setItem("sidebar-explore-open", open ? "1" : "0");
+    } catch {
+      /* ignore */
+    }
+  }, [open]);
+
+  return (
+    <li>
+      <button
+        onClick={() => setOpen((v) => !v)}
+        aria-expanded={open}
+        className={`w-full flex items-center gap-2 py-2 px-2 rounded-md transition-colors ${
+          isChildActive
+            ? "border-l-2 border-l-[#e6a817] text-[#e6a817] bg-[#1c2128]"
+            : "text-muted-foreground hover:text-foreground hover:bg-[var(--surface-high)]"
+        } ${collapsed ? "justify-center" : ""}`}
+        style={isChildActive ? { textShadow: "0 0 10px rgba(230,168,23,0.6)" } : undefined}
+        title="Explore Model"
+      >
+        <span className="flex items-center justify-center w-4 h-4 shrink-0">
+          <Sparkles size={16} className="text-current" />
+        </span>
+        {!collapsed && (
+          <>
+            <span className="truncate flex-1 text-left">Explore Model</span>
+            <ChevronDown
+              size={14}
+              className={`shrink-0 transition-transform duration-200 ${open ? "rotate-180" : ""}`}
+            />
+          </>
+        )}
+      </button>
+      {open && (
+        <ul className="mt-1 space-y-1">
+          {EXPLORE_MODES.map((m) => (
+            <ModeItem key={m.to} mode={m} active={pathname === m.to} collapsed={collapsed} nested />
+          ))}
+        </ul>
+      )}
+    </li>
+  );
+}
+
 interface ModeDef {
   to: "/" | "/copilot" | "/rca" | "/graph" | "/analytics";
   icon: ReactNode;
   label: string;
 }
 
-const MODES: ModeDef[] = [
+const TOP_MODES: ModeDef[] = [
   { to: "/", icon: <span className="text-base leading-none">⚡</span>, label: "Knowledge Assistant" },
-  { to: "/copilot", icon: <span className="text-base leading-none">🔧</span>, label: "Industrial Expert copilot" },
+  { to: "/copilot", icon: <span className="text-base leading-none">🔧</span>, label: "Expert copilot" },
   { to: "/rca", icon: <span className="text-base leading-none">🔍</span>, label: "Root Cause Analysis" },
+];
+
+const EXPLORE_MODES: ModeDef[] = [
   { to: "/graph", icon: <Network size={16} className="text-current" />, label: "Knowledge Graph" },
   { to: "/analytics", icon: <span className="text-base leading-none">📊</span>, label: "Model Performance" },
 ];
@@ -219,32 +316,12 @@ export function Sidebar({ memoryTurns, onClear }: SidebarProps) {
             </h2>
           )}
           <ul className="space-y-1 text-xs font-geist">
-            {MODES.map((m) => {
-              const active = pathname === m.to;
-              return (
-                <li key={m.to}>
-                  <Link
-                    to={m.to}
-                    title={m.label}
-                    className={`flex items-center gap-2 py-2 px-2 rounded-md transition-colors ${
-                      active
-                        ? "border-l-2 border-l-[#e6a817] text-[#e6a817] bg-[#1c2128]"
-                        : "text-muted-foreground hover:text-foreground hover:bg-[var(--surface-high)]"
-                    } ${collapsed ? "justify-center" : ""}`}
-                    style={active ? { textShadow: "0 0 10px rgba(230,168,23,0.6)" } : undefined}
-                  >
-                    <span className="flex items-center justify-center w-4 h-4 shrink-0">{m.icon}</span>
-                    {!collapsed && <span className="truncate">{m.label}</span>}
-                    {active && !collapsed && (
-                      <span
-                        className="ml-auto h-2 w-2 rounded-full bg-emerald animate-pulse-glow"
-                        style={{ boxShadow: "0 0 10px 3px rgba(0,255,204,0.9)" }}
-                      />
-                    )}
-                  </Link>
-                </li>
-              );
-            })}
+            {TOP_MODES.map((m) => (
+              <ModeItem key={m.to} mode={m} active={pathname === m.to} collapsed={collapsed} />
+            ))}
+
+            {/* Explore Model collapsible group */}
+            <ExploreGroup pathname={pathname} collapsed={collapsed} />
           </ul>
         </div>
 
