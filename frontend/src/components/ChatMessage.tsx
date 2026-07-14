@@ -1,5 +1,6 @@
 import type { Source } from "@/lib/api";
-import { FileText } from "lucide-react";
+import type { AttachmentMeta } from "@/hooks/useAttachments";
+import { FileText, Image as ImageIcon } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
@@ -9,6 +10,7 @@ export interface Message {
   content: string;
   sources?: Source[];
   error?: boolean;
+  attachments?: AttachmentMeta[];
 }
 
 // Track which assistant answers have already been animated so historical
@@ -66,7 +68,12 @@ export function ChatMessage({ message }: { message: Message }) {
           {isUser ? "You" : "Assistant"}
         </div>
         {isUser ? (
-          <div className="text-sm leading-relaxed whitespace-pre-wrap">{body}</div>
+          <>
+            <div className="text-sm leading-relaxed whitespace-pre-wrap">{body}</div>
+            {message.attachments && message.attachments.length > 0 && (
+              <MessageAttachments attachments={message.attachments} />
+            )}
+          </>
         ) : (
           <div className="markdown text-sm leading-relaxed">
             <ReactMarkdown
@@ -152,6 +159,50 @@ export function SourceChip({ source, accent = "teal" }: { source: Source; accent
       {pages && <span className="text-muted-foreground">· p.{pages}</span>}
       {source.folder && <span className={iconCls}>[{source.folder}]</span>}
     </a>
+  );
+}
+
+function fmtSize(bytes: number) {
+  if (bytes < 1024) return `${bytes} B`;
+  if (bytes < 1024 * 1024) return `${(bytes / 1024).toFixed(0)} KB`;
+  return `${(bytes / 1024 / 1024).toFixed(1)} MB`;
+}
+
+export function MessageAttachments({ attachments }: { attachments: AttachmentMeta[] }) {
+  return (
+    <div className="mt-2 flex flex-wrap gap-2">
+      {attachments.map((a) => {
+        const Icon = a.kind === "pdf" ? FileText : ImageIcon;
+        return (
+          <a
+            key={a.id}
+            href={a.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            title={`Open ${a.name}`}
+            className="inline-flex items-center gap-2 pl-2 pr-2.5 py-1.5 rounded-md bg-background/60 border border-border hover:border-violet hover:bg-violet/5 transition-colors text-[11px] font-mono text-foreground max-w-[240px]"
+          >
+            {a.kind === "image" ? (
+              <img
+                src={a.url}
+                alt={a.name}
+                className="h-8 w-8 rounded object-cover shrink-0 border border-border"
+              />
+            ) : (
+              <span className="h-8 w-8 rounded shrink-0 border border-border bg-[var(--surface-high)] inline-flex items-center justify-center">
+                <Icon size={14} className="text-violet" />
+              </span>
+            )}
+            <span className="min-w-0 flex flex-col leading-tight">
+              <span className="truncate">{a.name}</span>
+              <span className="text-muted-foreground text-[10px]">
+                {a.kind.toUpperCase()} · {fmtSize(a.size)}
+              </span>
+            </span>
+          </a>
+        );
+      })}
+    </div>
   );
 }
 

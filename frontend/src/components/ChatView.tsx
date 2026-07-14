@@ -2,8 +2,11 @@ import { useEffect, useRef, useState } from "react";
 import { Send } from "lucide-react";
 import { Sidebar } from "./Sidebar";
 import { ChatMessage, ThinkingBubble } from "./ChatMessage";
+import { AttachButton, AttachmentChips, useDropzone } from "./AttachmentComposer";
+import { useAttachments } from "@/hooks/useAttachments";
 import { sendQuery } from "@/lib/api";
 import { useModeChat } from "@/lib/chat-store";
+
 
 const SUGGESTIONS = [
   "What are the safety precautions before starting a centrifugal pump?",
@@ -14,10 +17,12 @@ const SUGGESTIONS = [
 
 export function ChatView() {
   const chat = useModeChat("knowledge");
+  const attachments = useAttachments();
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
   const scrollRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
+  const dropzone = useDropzone(attachments.addFiles, loading);
 
   useEffect(() => {
     scrollRef.current?.scrollTo({
@@ -32,14 +37,18 @@ export function ChatView() {
 
   async function submit(question: string) {
     const q = question.trim();
-    if (!q || loading) return;
+    const hasAttachments = attachments.validCount > 0;
+    if ((!q && !hasAttachments) || loading || attachments.isBusy) return;
     setInput("");
-    chat.append({ role: "user", content: q });
+    const composed = attachments.buildComposedQuery(q);
+    const attachmentsMeta = attachments.takeAttachmentsMeta();
+    chat.append({ role: "user", content: q, attachments: attachmentsMeta });
+    attachments.clear();
     setLoading(true);
     try {
-      const res = await sendQuery(q, chat.backend);
+      const res = await sendQuery(composed, chat.backend);
       chat.append({ role: "assistant", content: res.answer, sources: res.sources });
-      chat.setBackend(res.chat_history ?? [...chat.backend, [q, res.answer]]);
+      chat.setBackend(res.chat_history ?? [...chat.backend, [composed, res.answer]]);
     } catch (err) {
       const msg = err instanceof Error ? err.message : "Request failed";
       chat.append({
@@ -52,6 +61,7 @@ export function ChatView() {
       requestAnimationFrame(() => inputRef.current?.focus());
     }
   }
+
 
   return (
     <div className="flex h-screen w-full bg-background text-foreground">
@@ -103,26 +113,49 @@ export function ChatView() {
             e.preventDefault();
             submit(input);
           }}
+          onDragOver={dropzone.onDragOver}
+          onDrop={dropzone.onDrop}
           className="border-t border-border px-4 md:px-8 py-4"
         >
+          <AttachmentChips items={attachments.items} onRemove={attachments.remove} />
           <div className="max-w-3xl mx-auto flex gap-2">
+            <AttachButton
+              onAdd={attachments.addFiles}
+              disabled={loading}
+              count={attachments.items.length}
+            />
             <input
               ref={inputRef}
               value={input}
               onChange={(e) => setInput(e.target.value)}
+              onPaste={(e) => {
+                const files = Array.from(e.clipboardData?.files ?? []);
+                if (files.length > 0) {
+                  e.preventDefault();
+                  attachments.addFiles(files);
+                }
+              }}
               placeholder="Ask about equipment, procedures, standards…"
               className="flex-1 min-w-0 bg-[var(--surface-high)] border border-border rounded-lg px-4 py-2.5 text-sm outline-none focus:border-violet focus:ring-2 focus:ring-violet/30 transition-colors font-sans"
               disabled={loading}
             />
             <button
               type="submit"
-              disabled={loading || !input.trim()}
+              disabled={
+                loading ||
+                attachments.isBusy ||
+                (!input.trim() && attachments.validCount === 0)
+              }
               className="btn-3d inline-flex items-center gap-2 px-4 md:px-5 py-2.5 rounded-lg bg-gradient-to-br from-emerald to-emerald-glow text-primary-foreground text-sm font-semibold tracking-wide disabled:opacity-40 disabled:cursor-not-allowed whitespace-nowrap"
             >
-              <Send size={14} /> <span className="hidden sm:inline">Send</span>
+              <Send size={14} />{" "}
+              <span className="hidden sm:inline">
+                {attachments.isBusy ? "Extracting…" : "Send"}
+              </span>
             </button>
           </div>
         </form>
+
       </main>
     </div>
   );

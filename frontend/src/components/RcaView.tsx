@@ -3,8 +3,11 @@ import { Zap } from "lucide-react";
 import { Sidebar } from "./Sidebar";
 import { ChatMessage, ThinkingBubble } from "./ChatMessage";
 import { AccordionMessage, type AccordionSectionSpec } from "./AccordionMessage";
+import { AttachButton, AttachmentChips, useDropzone } from "./AttachmentComposer";
+import { useAttachments } from "@/hooks/useAttachments";
 import { sendRca } from "@/lib/api";
 import { useModeChat } from "@/lib/chat-store";
+
 
 const SECTIONS: AccordionSectionSpec[] = [
   { key: "Failure Summary", label: "Failure Summary", icon: "🔎", defaultOpen: true },
@@ -33,10 +36,12 @@ const RCA_SAMPLES = [
 
 export function RcaView() {
   const chat = useModeChat("rca");
+  const attachments = useAttachments();
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
   const scrollRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLTextAreaElement>(null);
+  const dropzone = useDropzone(attachments.addFiles, loading);
 
   useEffect(() => {
     scrollRef.current?.scrollTo({ top: scrollRef.current.scrollHeight, behavior: "smooth" });
@@ -44,14 +49,18 @@ export function RcaView() {
 
   async function submit(symptom: string) {
     const s = symptom.trim();
-    if (!s || loading) return;
+    const hasAttachments = attachments.validCount > 0;
+    if ((!s && !hasAttachments) || loading || attachments.isBusy) return;
     setInput("");
-    chat.append({ role: "user", content: s });
+    const composed = attachments.buildComposedQuery(s);
+    const attachmentsMeta = attachments.takeAttachmentsMeta();
+    chat.append({ role: "user", content: s, attachments: attachmentsMeta });
+    attachments.clear();
     setLoading(true);
     try {
-      const res = await sendRca(s, chat.backend);
+      const res = await sendRca(composed, chat.backend);
       chat.append({ role: "assistant", content: res.analysis, sources: res.sources });
-      chat.setBackend(res.chat_history ?? [...chat.backend, [s, res.analysis]]);
+      chat.setBackend(res.chat_history ?? [...chat.backend, [composed, res.analysis]]);
     } catch (err) {
       const msg = err instanceof Error ? err.message : "Request failed";
       chat.append({
@@ -64,6 +73,7 @@ export function RcaView() {
       requestAnimationFrame(() => inputRef.current?.focus());
     }
   }
+
 
   return (
     <div className="flex h-screen w-full bg-background text-foreground">
@@ -124,17 +134,32 @@ export function RcaView() {
             e.preventDefault();
             submit(input);
           }}
+          onDragOver={dropzone.onDragOver}
+          onDrop={dropzone.onDrop}
           className="border-t border-border px-4 md:px-8 py-4"
         >
-          <div className="max-w-3xl mx-auto">
+          <AttachmentChips items={attachments.items} onRemove={attachments.remove} />
+          <div className="max-w-3xl mx-auto">  
             <label className="block text-[11px] font-geist uppercase tracking-widest text-muted-foreground mb-1.5">
               Describe the symptom or incident
             </label>
             <div className="flex gap-2 items-end">
+              <AttachButton
+                onAdd={attachments.addFiles}
+                disabled={loading}
+                count={attachments.items.length}
+              />
               <textarea
                 ref={inputRef}
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
+                onPaste={(e) => {
+                  const files = Array.from(e.clipboardData?.files ?? []);
+                  if (files.length > 0) {
+                    e.preventDefault();
+                    attachments.addFiles(files);
+                  }
+                }}
                 onKeyDown={(e) => {
                   if (e.key === "Enter" && !e.shiftKey) {
                     e.preventDefault();
@@ -142,20 +167,28 @@ export function RcaView() {
                   }
                 }}
                 rows={3}
-                placeholder="e.g. Centrifugal pump losing discharge pressure after 2 hours of operation. Vibration increasing. No visible leaks..."
+                placeholder="e.g. Centrifugal pump losing discharge pressure after 2 hours of operation. Vibration increasing."
                 className="flex-1 min-w-0 bg-[var(--surface-high)] border border-border rounded-lg px-4 py-2.5 text-sm outline-none focus:border-emerald focus:ring-2 focus:ring-emerald/30 transition-colors font-sans resize-none"
                 disabled={loading}
               />
               <button
                 type="submit"
-                disabled={loading || !input.trim()}
+                disabled={
+                  loading ||
+                  attachments.isBusy ||
+                  (!input.trim() && attachments.validCount === 0)
+                }
                 className="btn-3d inline-flex items-center gap-2 px-4 md:px-5 py-2.5 rounded-lg bg-gradient-to-br from-emerald to-emerald-glow text-primary-foreground text-sm font-semibold tracking-wide disabled:opacity-40 disabled:cursor-not-allowed whitespace-nowrap"
               >
-                <Zap size={14} /> <span className="hidden sm:inline">Analyse</span>
+                <Zap size={14} />{" "}
+                <span className="hidden sm:inline">
+                  {attachments.isBusy ? "Extracting…" : "Analyse"}
+                </span>
               </button>
             </div>
           </div>
         </form>
+
       </main>
     </div>
   );
