@@ -304,9 +304,39 @@ http://localhost:8000/docs
 
 ---
 
-## Start Frontend
+## Start Frontend  
 
-`soon...`
+Now open another terminal ``(ctrl + shift + `)`` and navigate to the frontend directory:
+
+```bash
+cd frontend
+```   
+
+Install the required dependencies:
+
+```bash
+npm install
+```
+
+Create a `.env` file inside the `frontend` directory and configure the backend API URL:
+
+```env
+VITE_API_URL=http://localhost:8000
+```
+
+Start the development server:
+              
+```bash
+npm run dev
+```
+
+The frontend will be available at:
+
+```text
+http://localhost:5173   
+```
+
+Make sure the FastAPI backend is running before launching the frontend.
 
 ---
 
