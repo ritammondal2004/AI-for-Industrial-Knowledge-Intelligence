@@ -9,9 +9,9 @@
 
 | Name | Role | LinkedIn | Github | Website |
 |------|------|----------|--------|---------|
-| **Ritam Mondal** | Team Leader | [Linkedin](https://www.linkedin.com/in/ritam-mondal-86a369287/) | [Github](https://github.com/ritammondal2004) | [Website](https://ritammondal.vercel.app/) |
-| **Ushasee Roy** | Team Member |  [Linkedin](https://www.linkedin.com/in/ushasee-roy-5a9a82273/) | [Github](https://github.com/) | |
-| **Mayukh Mondal** | Team Member |  [Linkedin](https://www.linkedin.com/in/mayukh-mondal-23ce300/) | [Github](https://github.com/) | |
+| **Ritam Mondal** | Team Leader | [Linkedin](https://www.linkedin.com/in/ritam-mondal-86a369287/) | [Github](https://github.com/ritammondal2004) | [Portfolio](https://ritammondal.vercel.app/) |
+| **Ushasee Roy** | Team Member |  [Linkedin](https://www.linkedin.com/in/ushasee-roy-5a9a82273/) | [Github](https://github.com/Ushasee04) | |
+| **Mayukh Mondal** | Team Member |  [Linkedin](https://www.linkedin.com/in/mayukh-mondal-23ce300/) | [Github](https://github.com/mayukh2-0) | | 
 
 ---
 
@@ -19,7 +19,9 @@
 
 ### Frontend [Application](https://indus-mind-ai.vercel.app/)
 
-### Backend [API (Hugging Face)](https://ritammondal2004-et-hackathon-backend.hf.space/docs)
+### Backend [API (Hugging Face)](https://ritammondal2004-et-hackathon-backend.hf.space/docs) 
+
+### Detailed Report [doc link](https://docs.google.com/document/d/1s0cFTho1chCjyxvxvjMIIcgM_qWUv0lIbSLohvtMoYg/edit?usp=sharing)
 
 ---
 
