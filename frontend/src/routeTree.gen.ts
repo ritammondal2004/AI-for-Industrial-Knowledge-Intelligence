@@ -14,6 +14,7 @@ import { Route as GraphRouteImport } from './routes/graph'
 import { Route as CopilotRouteImport } from './routes/copilot'
 import { Route as AnalyticsRouteImport } from './routes/analytics'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as ApiCaptionRouteImport } from './routes/api/caption'
 
 const RcaRoute = RcaRouteImport.update({
   id: '/rca',
@@ -40,6 +41,11 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ApiCaptionRoute = ApiCaptionRouteImport.update({
+  id: '/api/caption',
+  path: '/api/caption',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -47,6 +53,7 @@ export interface FileRoutesByFullPath {
   '/copilot': typeof CopilotRoute
   '/graph': typeof GraphRoute
   '/rca': typeof RcaRoute
+  '/api/caption': typeof ApiCaptionRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -54,6 +61,7 @@ export interface FileRoutesByTo {
   '/copilot': typeof CopilotRoute
   '/graph': typeof GraphRoute
   '/rca': typeof RcaRoute
+  '/api/caption': typeof ApiCaptionRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -62,13 +70,27 @@ export interface FileRoutesById {
   '/copilot': typeof CopilotRoute
   '/graph': typeof GraphRoute
   '/rca': typeof RcaRoute
+  '/api/caption': typeof ApiCaptionRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/analytics' | '/copilot' | '/graph' | '/rca'
+  fullPaths:
+    | '/'
+    | '/analytics'
+    | '/copilot'
+    | '/graph'
+    | '/rca'
+    | '/api/caption'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/analytics' | '/copilot' | '/graph' | '/rca'
-  id: '__root__' | '/' | '/analytics' | '/copilot' | '/graph' | '/rca'
+  to: '/' | '/analytics' | '/copilot' | '/graph' | '/rca' | '/api/caption'
+  id:
+    | '__root__'
+    | '/'
+    | '/analytics'
+    | '/copilot'
+    | '/graph'
+    | '/rca'
+    | '/api/caption'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -77,6 +99,7 @@ export interface RootRouteChildren {
   CopilotRoute: typeof CopilotRoute
   GraphRoute: typeof GraphRoute
   RcaRoute: typeof RcaRoute
+  ApiCaptionRoute: typeof ApiCaptionRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -116,6 +139,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/api/caption': {
+      id: '/api/caption'
+      path: '/api/caption'
+      fullPath: '/api/caption'
+      preLoaderRoute: typeof ApiCaptionRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -125,6 +155,7 @@ const rootRouteChildren: RootRouteChildren = {
   CopilotRoute: CopilotRoute,
   GraphRoute: GraphRoute,
   RcaRoute: RcaRoute,
+  ApiCaptionRoute: ApiCaptionRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
