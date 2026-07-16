@@ -16,20 +16,13 @@ at three difficulty levels (Easy / Medium / Hard).
 | Answer Quality     |  5%    | Answer length proxy (< 100 chars penalised)           |
 | Multi-Document     |  5%    | Multi-source retrieval for cross-document questions   |
 
-**Preliminary Results (36 / 120 questions):**
+**Results (120 / 120 questions):**
 
 | Metric           | Score  |
 |------------------|--------|
-| Overall Score    | 71.7%  |
-| Keyword Coverage | 66.1%  |
-| Source Retrieval | 72.2%  |
-| Folder Routing   | 83.3%  |
+| Overall Score    | 78.8%  |
+| Keyword Coverage | 65.5%  |
+| Source Retrieval | 79.6%  |
+| Folder Routing   | 92.5%  |
 
-**Key observation:** Folder routing accuracy (83.3%) significantly
-exceeds source retrieval (72.2%), confirming that the metadata-based
-query routing is working correctly — the system searches the right
-category but occasionally retrieves a different document within
-that category than the expected one. This is expected behaviour
-for questions with multiple valid source documents in the same folder.
-
-Full 120-question results will be included in the final submission.
+**Key observation:** The high 92.5% folder routing accuracy demonstrates that the query routing pipeline consistently identifies the correct document category. Differences between folder routing and source retrieval accuracy are primarily caused by multiple valid documents within the same category, resulting in alternative but relevant source selections.

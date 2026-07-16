@@ -75,7 +75,7 @@ industrial-knowledge-intelligence/
 ├── backend/
 │   │
 │   ├── main.py                     # FastAPI app, lifespan startup, router registration
-│   ├── config.py                   # all constants — S3 paths, model names, thresholds
+│   ├── config.py                   # all constants
 │   │
 │   ├── api/
 │   │   ├── __init__.py
@@ -93,7 +93,7 @@ industrial-knowledge-intelligence/
 │   ├── graph/
 │   │   ├── __init__.py
 │   │   ├── graph_loader.py         # load .gpickle from local cache
-│   │   └── graph_retriever.py      # graph_context() — keyword match + neighbor expansion
+│   │   └── graph_retriever.py      # graph_context() 
 │   │
 │   ├── memory/
 │   │   ├── __init__.py
@@ -106,13 +106,13 @@ industrial-knowledge-intelligence/
 │   │
 │   ├── prompts/
 │   │   ├── __init__.py
-│   │   ├── knowledge_assistant.py  # conversational_prompt (current)
-│   │   ├── industrial_copilot.py   #  (mode 2 — add later)
-│   │   └── rca_assistant.py        #  (mode 3 — add later)
+│   │   ├── knowledge_assistant.py  # conversational prompt
+│   │   ├── industrial_copilot.py   #  guidance prompt
+│   │   └── rca_assistant.py        #  root cause analysis prompt
 │   │
 │   ├── services/
 │   │   ├── __init__.py
-│   │   └── rag_chain.py            # ask() — main pipeline 
+│   │   └── rag_chain.py            # ask() — main pipeline  
 │   │
 │   ├── utils/
 │   │   ├── __init__.py
@@ -142,12 +142,12 @@ industrial-knowledge-intelligence/
 │   └── Retrieval_Context_and_response_experiment.ipynb
 │
 ├── eval/
-│     ├── qa_test_set.jsonl          (100 benchmark questions)
+│     ├── qa_test_set.jsonl          (120 benchmark questions)
 │     ├── run_eval.py                (main evaluator)
 │     ├── metrics.py                 (all scoring functions)
-│     ├── results.csv
-│     ├── report.md
-│     └── plots.py                   (optional graphs)
+│     ├── results.json
+│     ├── report.md 
+│     └── plots.py                 
 │
 ├── .env
 ├── .gitignore

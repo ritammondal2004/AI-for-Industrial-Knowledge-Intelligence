@@ -1,11 +1,11 @@
-# ── chroma_db — never commit as its large  
+#  never commit as its large  
 data/processed/chroma_db/
 
 
 # Ignore everything inside cache
 data/cache/*
 
-# But keep the folder itself
+
 !data/cache/.gitkeep
 
 data/cache/chroma_db/
@@ -20,7 +20,6 @@ eval/report.md
 
 *.gpickle              
                       
-# ── Environment & secrets 
 .env
 .env.*
                          
