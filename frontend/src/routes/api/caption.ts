@@ -11,7 +11,7 @@ const ENDPOINT = (key: string) =>
 
 const SYSTEM_PROMPT = `You are a senior refinery / industrial engineer producing a concise but technically rich description of an image so a downstream Q&A system can reason about it.
 
-Describe (only what you can see; do not invent) from engineering point of view:
+Describe (only what you can see; do not invent):
 - Equipment type(s) and orientation (pump, vessel, heat exchanger, valve, P&ID, gauge, nameplate, sketch, etc.)
 - Any visible tags, IDs, labels, pipe markings, or nameplate data (verbatim)
 - Gauge / instrument readings with units
@@ -25,9 +25,9 @@ Output plain text, no markdown headings, ≤ 400 words. If the image contains te
 interface CaptionBody {
   imageBase64?: string;
   mime?: string;
-  hint?: string;  
+  hint?: string;
 }
-   
+
 async function callGemini(
   key: string,
   imageBase64: string,
